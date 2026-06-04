@@ -33,11 +33,16 @@ type ProductsSectionProps = {
   showHeader?: boolean;
 };
 
-function badgeClass(badge: string | null) {
+type ProductBadge = NonNullable<Product["badge"]>;
+
+function previewBadgeClass(badge: ProductBadge) {
+  if (badge === "Popular") return "bg-indigo-500/20 text-indigo-600";
+  return "bg-emerald-500/20 text-emerald-400";
+}
+
+function showcaseBadgeClass(badge: ProductBadge) {
   if (badge === "Popular") return "bg-indigo-600 text-white shadow-sm";
-  if (badge === "New") return "bg-emerald-600 text-white shadow-sm";
-  if (badge === "Soon") return "bg-violet-600 text-white shadow-sm";
-  return "";
+  return "bg-emerald-600 text-white shadow-sm";
 }
 
 function ProductPreviewCard({
@@ -56,9 +61,7 @@ function ProductPreviewCard({
           <span
             className={cn(
               "absolute top-4 right-4 z-10 rounded-full px-2.5 py-0.5 text-[10px] font-bold tracking-wider uppercase",
-              product.badge === "Popular" && "bg-indigo-500/20 text-indigo-600",
-              product.badge === "New" && "bg-emerald-500/20 text-emerald-400",
-              product.badge === "Soon" && "bg-violet-500/20 text-violet-400"
+              previewBadgeClass(product.badge)
             )}
           >
             {product.badge}
@@ -114,7 +117,7 @@ function ProductShowcaseCard({
               <span
                 className={cn(
                   "absolute top-5 right-5 z-10 rounded-full px-3 py-1 text-[10px] font-bold tracking-wider uppercase",
-                  badgeClass(product.badge)
+                  showcaseBadgeClass(product.badge)
                 )}
               >
                 {product.badge}

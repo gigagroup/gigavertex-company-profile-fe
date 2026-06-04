@@ -85,7 +85,9 @@ export function Footer() {
               <li className="flex items-start gap-3">
                 <Phone className="mt-0.5 h-4 w-4 shrink-0 text-indigo-500" />
                 <a
-                  href={`tel:${company.phone}`}
+                  href={company.whatsapp}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-sm text-zinc-600 transition-colors hover:text-indigo-600"
                 >
                   {company.phone}

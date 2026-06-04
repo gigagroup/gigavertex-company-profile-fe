@@ -7,7 +7,12 @@ import { company } from "@/lib/constants";
 
 const contactItems = [
   { icon: Mail, label: "Email", value: company.email, href: `mailto:${company.email}` },
-  { icon: Phone, label: "Telepon", value: company.phone, href: `tel:${company.phone}` },
+  {
+    icon: Phone,
+    label: "Telepon / WA",
+    value: company.phone,
+    href: company.whatsapp,
+  },
   { icon: MapPin, label: "Alamat", value: company.address },
   { icon: Clock, label: "Jam Operasional", value: "Senin - Jumat, 09:00 - 18:00 WIB" },
 ];
