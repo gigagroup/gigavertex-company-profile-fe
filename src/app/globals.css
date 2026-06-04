@@ -48,34 +48,6 @@ body {
   box-shadow: 0 4px 24px -4px rgba(15, 23, 42, 0.08);
 }
 
-.navbar-dark {
-  background: linear-gradient(
-    135deg,
-    #0a0a0c 0%,
-    #121218 45%,
-    #16162a 100%
-  );
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(99, 102, 241, 0.28);
-  box-shadow:
-    0 4px 28px -8px rgba(0, 0, 0, 0.55),
-    inset 0 1px 0 rgba(255, 255, 255, 0.05);
-}
-
-.navbar-dark-overlay {
-  background: linear-gradient(
-    135deg,
-    rgba(0, 0, 0, 0.82) 0%,
-    rgba(12, 12, 18, 0.78) 50%,
-    rgba(18, 18, 30, 0.8) 100%
-  );
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgba(129, 140, 248, 0.22);
-  box-shadow: 0 4px 24px -8px rgba(0, 0, 0, 0.5);
-}
-
 .glass-card {
   background: var(--surface);
   border: 1px solid var(--border-default);
@@ -104,22 +76,6 @@ body {
   color: rgba(255, 255, 255, 0.9);
   letter-spacing: 0.12em;
   backdrop-filter: blur(8px);
-}
-
-/* Logo — gradasi hitam di belakang logo (warna logo tidak diubah) */
-.logo-wrap {
-  background: linear-gradient(
-    145deg,
-    #000000 0%,
-    #0c0c0e 30%,
-    #151520 55%,
-    #1a1a24 100%
-  );
-  border: 1px solid rgba(99, 102, 241, 0.45);
-  box-shadow:
-    0 4px 20px -4px rgba(0, 0, 0, 0.65),
-    inset 0 1px 0 rgba(255, 255, 255, 0.08);
-  isolation: isolate;
 }
 
 .text-gradient-brand {

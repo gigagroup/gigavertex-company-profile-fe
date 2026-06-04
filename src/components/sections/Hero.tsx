@@ -9,7 +9,10 @@ export function Hero() {
   const taglineEnd = company.tagline.split(" ").slice(3).join(" ");
 
   return (
-    <section className="relative h-svh min-h-[640px] w-full overflow-hidden">
+    <section
+      id="home-hero"
+      className="relative h-svh min-h-[640px] w-full overflow-hidden"
+    >
       <video
         className="absolute inset-0 h-full w-full object-cover"
         autoPlay

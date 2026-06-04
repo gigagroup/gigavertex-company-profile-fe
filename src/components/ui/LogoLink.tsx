@@ -12,7 +12,7 @@ export function LogoLink({ size = "sm", className }: LogoLinkProps) {
     <Link
       href="/"
       className={cn(
-        "logo-wrap inline-flex shrink-0 items-center rounded-xl px-3 py-2 transition-opacity hover:opacity-95",
+        "inline-flex shrink-0 items-center transition-opacity hover:opacity-90",
         className
       )}
     >

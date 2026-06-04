@@ -10,39 +10,54 @@ import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
 
 const linkClass =
-  "rounded-lg px-4 py-2 text-[13px] font-medium tracking-wide text-zinc-300 transition-colors hover:bg-white/10 hover:text-white";
+  "rounded-lg px-4 py-1 text-[13px] font-medium tracking-wide text-zinc-300 transition-colors hover:bg-white/10 hover:text-white";
+
+const navButtonClass = "py-1.5";
 
 const linkClassMobile =
   "rounded-lg px-4 py-3 text-sm font-medium text-zinc-300 transition-colors hover:bg-white/10 hover:text-white";
 
 export function Navbar() {
   const pathname = usePathname();
-  const [isOpen, setIsOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
   const isHome = pathname === "/";
-  const onHero = isHome && !scrolled;
-
-  useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 24);
-    handleScroll();
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  const [isOpen, setIsOpen] = useState(false);
+  const [pastHero, setPastHero] = useState(!isHome);
 
   useEffect(() => {
     setIsOpen(false);
   }, [pathname]);
 
+  useEffect(() => {
+    if (!isHome) {
+      setPastHero(true);
+      return;
+    }
+
+    const hero = document.getElementById("home-hero");
+    if (!hero) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => setPastHero(!entry.isIntersecting),
+      { threshold: 0 }
+    );
+
+    observer.observe(hero);
+    return () => observer.disconnect();
+  }, [isHome, pathname]);
+
+  const showDarkBar = !isHome || pastHero;
+
   return (
-    <header className="animate-nav-enter fixed top-0 right-0 left-0 z-50 px-4 pt-4 lg:px-8">
+    <header className="animate-nav-enter fixed top-0 right-0 left-0 z-50 px-4 pt-3 lg:px-8">
       <div
         className={cn(
-          "mx-auto max-w-7xl rounded-2xl px-2 py-2 transition-all duration-500",
-          onHero ? "navbar-dark-overlay" : "navbar-dark"
+          "mx-auto max-w-7xl rounded-xl px-1 py-0.5 transition-all duration-500",
+          showDarkBar
+            ? "border border-indigo-500/30 bg-zinc-950 shadow-[0_4px_28px_-8px_rgba(0,0,0,0.55)] backdrop-blur-md"
+            : "border-transparent bg-transparent shadow-none"
         )}
       >
-        <nav className="flex items-center justify-between px-4 py-3 lg:px-6">
+        <nav className="flex items-center justify-between px-3 py-1.5 lg:px-5">
           <LogoLink />
 
           <div className="hidden items-center gap-0.5 lg:flex">
@@ -61,17 +76,17 @@ export function Navbar() {
           </div>
 
           <div className="hidden items-center gap-2 lg:flex">
-            <Button href="/contact" variant="hero-ghost" size="sm">
+            <Button href="/contact" variant="hero-ghost" size="sm" className={navButtonClass}>
               Masuk
             </Button>
-            <Button href="/pricing" variant="primary" size="sm">
+            <Button href="/pricing" variant="primary" size="sm" className={navButtonClass}>
               Mulai Sekarang
             </Button>
           </div>
 
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="rounded-lg p-2.5 text-zinc-300 transition-colors hover:bg-white/10 hover:text-white lg:hidden"
+            className="rounded-lg p-2 text-zinc-300 transition-colors hover:bg-white/10 hover:text-white lg:hidden"
             aria-label="Toggle menu"
           >
             {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -79,7 +94,14 @@ export function Navbar() {
         </nav>
 
         {isOpen && (
-          <div className="rounded-b-2xl border-t border-white/10 px-4 py-4 lg:hidden">
+          <div
+            className={cn(
+              "rounded-b-2xl px-4 py-4 lg:hidden",
+              showDarkBar
+                ? "border-t border-white/10"
+                : "border-t border-white/20 bg-black/50 backdrop-blur-md"
+            )}
+          >
             <div className="flex flex-col gap-0.5">
               {navLinks.map((link) => (
                 <Link
