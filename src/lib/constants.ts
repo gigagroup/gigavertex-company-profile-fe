@@ -27,7 +27,6 @@ export const navLinks = [
   { href: "/products", label: "Produk" },
   { href: "/roadmap", label: "Roadmap" },
   { href: "/pasar", label: "Pasar" },
-  { href: "/pricing", label: "Harga" },
   { href: "/contact", label: "Kontak" },
 ];
 
@@ -72,6 +71,7 @@ export const services = [
 
 export const products = aiEcosystemPillars.map((pillar) => ({
   icon: pillar.icon,
+  image: pillar.image,
   name: pillar.name,
   category: pillar.focus,
   summary: pillar.summary,

@@ -1,3 +1,7 @@
+import { assets } from "@/lib/assets";
+
+const { products: productImages } = assets.images;
+
 export const aiMeta = {
   badge: "Kecerdasan Buatan",
   title: "Ekosistem Kecerdasan Buatan Giga Vertex",
@@ -41,6 +45,7 @@ export const aiCapabilities = [
 export const aiEcosystemPillars = [
   {
     name: "Autonix",
+    image: productImages.autonix,
     icon: "Share2",
     focus: "Konten video & distribusi otomatis",
     summary:
@@ -52,6 +57,7 @@ export const aiEcosystemPillars = [
   },
   {
     name: "Terabyte",
+    image: productImages.terabyte,
     icon: "Calendar",
     focus: "Media sosial & AI Autopilot",
     summary:
@@ -63,6 +69,7 @@ export const aiEcosystemPillars = [
   },
   {
     name: "Giga",
+    image: productImages.giga,
     icon: "Video",
     focus: "Video AI generatif unlimited",
     summary:
@@ -74,6 +81,7 @@ export const aiEcosystemPillars = [
   },
   {
     name: "Newton AI",
+    image: productImages.newtonAi,
     icon: "Brain",
     focus: "Multi-model AI studio",
     summary:
@@ -85,6 +93,7 @@ export const aiEcosystemPillars = [
   },
   {
     name: "Growi",
+    image: productImages.growi,
     icon: "LineChart",
     focus: "CRM & manajemen penjualan",
     summary:

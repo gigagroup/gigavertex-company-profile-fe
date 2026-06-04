@@ -81,7 +81,7 @@ export function Navbar() {
             <Button href="/contact" variant="hero-ghost" size="sm" className={navButtonClass}>
               Masuk
             </Button>
-            <Button href="/pricing" variant="primary" size="sm" className={navButtonClass}>
+            <Button href="/contact" variant="primary" size="sm" className={navButtonClass}>
               Mulai Sekarang
             </Button>
           </div>
@@ -122,7 +122,7 @@ export function Navbar() {
                 <Button href="/contact" variant="hero-outline" size="sm">
                   Masuk
                 </Button>
-                <Button href="/pricing" size="sm">
+                <Button href="/contact" size="sm">
                   Mulai Sekarang
                 </Button>
               </div>

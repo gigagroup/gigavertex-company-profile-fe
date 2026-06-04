@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   Brain,
   Sparkles,
@@ -224,14 +225,26 @@ export function ArtificialIntelligenceSection() {
               const Icon = productIcons[product.icon] ?? Sparkles;
               return (
                 <AnimateIn key={product.name} delay={i * 40} variant="scale">
-                  <div className="glass-card h-full rounded-2xl p-6">
-                    <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl border border-zinc-200 bg-indigo-50 text-indigo-600">
-                      <Icon className="h-5 w-5" />
+                  <div className="glass-card h-full overflow-hidden rounded-2xl">
+                    <div className="relative aspect-[16/10] w-full bg-zinc-50">
+                      <Image
+                        src={product.image}
+                        alt={product.name}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 1024px) 50vw, 33vw"
+                      />
                     </div>
-                    <span className="text-[10px] font-semibold tracking-wide text-indigo-600 uppercase">
-                      {product.category}
-                    </span>
-                    <h3 className="mt-1 font-semibold text-zinc-900">{product.name}</h3>
+                    <div className="p-6">
+                    <div className="mb-3 flex items-center gap-2">
+                      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-zinc-200 bg-indigo-50 text-indigo-600">
+                        <Icon className="h-4 w-4" />
+                      </div>
+                      <span className="text-[10px] font-semibold tracking-wide text-indigo-600 uppercase">
+                        {product.category}
+                      </span>
+                    </div>
+                    <h3 className="font-semibold text-zinc-900">{product.name}</h3>
                     <p className="mt-2 text-sm leading-relaxed text-zinc-500">
                       {product.description}
                     </p>
@@ -245,6 +258,7 @@ export function ArtificialIntelligenceSection() {
                         </li>
                       ))}
                     </ul>
+                    </div>
                   </div>
                 </AnimateIn>
               );

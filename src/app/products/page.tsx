@@ -16,7 +16,7 @@ export default function ProductsPage() {
       <PageHeader
         badge="Produk"
         title="Produk & Platform SaaS"
-        description="Autonix, Terabyte, Giga, Newton AI, dan Growi — solusi AI & CRM untuk creator, bisnis, dan agency."
+        description="Lima platform SaaS dalam satu ekosistem — dirancang untuk skala dari creator hingga tim bisnis."
       />
       <ProductsSection showHeader={false} />
       <FeaturesSection />

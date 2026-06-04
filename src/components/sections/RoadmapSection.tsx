@@ -125,10 +125,6 @@ export function RoadmapSection() {
                       )}
                     </div>
 
-                    <p className="mt-4 rounded-xl border border-zinc-100 bg-zinc-50/80 px-4 py-3 text-sm font-medium text-zinc-700">
-                      {phase.revenueTarget}
-                    </p>
-
                     <ul className="mt-6 space-y-3">
                       {phase.items.map((item) => (
                         <li

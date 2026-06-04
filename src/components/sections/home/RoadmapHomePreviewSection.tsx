@@ -12,7 +12,7 @@ export function RoadmapHomePreviewSection() {
         <SectionHeader
           badge={roadmapMeta.badge}
           title="Roadmap Growth Ecosystem 2026+"
-          description="Dari fondasi Indonesia & ASEAN hingga ekspansi global — perkiraan fase dan target omzet."
+          description="Dari fondasi Indonesia & ASEAN hingga ekspansi global — perkiraan fase pertumbuhan ekosistem."
         />
 
         <div className="space-y-4">
@@ -32,7 +32,6 @@ export function RoadmapHomePreviewSection() {
                     )}
                   </div>
                   <p className="mt-1 text-sm text-indigo-600">{phase.quarter}</p>
-                  <p className="mt-2 text-sm text-zinc-600">{phase.revenueTarget}</p>
                 </div>
               </div>
             </AnimateIn>

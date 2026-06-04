@@ -21,7 +21,6 @@ export type RoadmapPhase = {
   period: string;
   quarter: string;
   badge?: string;
-  revenueTarget: string;
   items: string[];
 };
 
@@ -31,8 +30,6 @@ export const roadmapPhases: RoadmapPhase[] = [
     period: "Januari – Juni 2026",
     quarter: "Kuartal I–II 2026",
     badge: "posisi saat ini",
-    revenueTarget:
-      "Target omzet: saat ini 100–170 juta · target 170–200 juta per bulan",
     items: [
       "Proses pembangunan atau pendirian Perseroan Terbatas (PT) dengan nama PT Giga Vertex Technology, pada bulan Mei 2026.",
       "Fokus bangun tiga pilar produk: Autonix, Terabyte, dan Giga.",
@@ -49,7 +46,6 @@ export const roadmapPhases: RoadmapPhase[] = [
     step: 2,
     period: "Juli – September 2026",
     quarter: "Kuartal III 2026",
-    revenueTarget: "Target omzet: 200–300 juta per bulan",
     items: [
       "Dominasi ekosistem Meta Ads sebagai kanal utama pembelian pelanggan.",
       "Rapikan pipeline penjualan pakai CRM Scalev.",
@@ -66,7 +62,6 @@ export const roadmapPhases: RoadmapPhase[] = [
     step: 3,
     period: "Oktober – Desember 2026",
     quarter: "Kuartal IV 2026 · akhir Fase 1",
-    revenueTarget: "Target omzet: 300 juta ke atas per bulan",
     items: [
       "Bangun “Winning Creative System”: target 100+ materi iklan unggul.",
       "Basis data creative internal + produksi dibantu AI.",
@@ -81,7 +76,6 @@ export const roadmapPhases: RoadmapPhase[] = [
     step: 4,
     period: "Januari – Juni 2027",
     quarter: "Kuartal I–II 2027 · Fase 1 — ekspansi internasional & infrastruktur",
-    revenueTarget: "Target omzet: 300–500 juta per bulan",
     items: [
       "Lanjut ekspansi ke TikTok Ads dan Google Ads secara terukur.",
       "Bangun sistem akuisisi multi-platform yang satu tim bisa jalankan.",
@@ -96,7 +90,6 @@ export const roadmapPhases: RoadmapPhase[] = [
     step: 5,
     period: "Januari – Desember 2027",
     quarter: "Kuartal I–IV 2027 · Fase dua · Penguatan pasar global",
-    revenueTarget: "Target omzet: 500 juta ke atas per bulan",
     items: [
       "Penguatan pasar global di Asia Tenggara, Amerika, dan Eropa.",
       "Miliki CRM sendiri, dashboard analitik internal, alur kerja otomatis.",
@@ -110,8 +103,6 @@ export const roadmapPhases: RoadmapPhase[] = [
     step: 6,
     period: "Januari 2028 ke depan",
     quarter: "Next journey · B2B & infrastruktur AI",
-    revenueTarget:
-      "Target omzet: skala enterprise & pasar global (peninjauan berkala)",
     items: [
       "Solusi B2B: AI untuk UMKM, otomatisasi operasi, dashboard enterprise.",
       "Infrastruktur pemasaran AI & otomatisasi khusus sesuai kebutuhan klien.",

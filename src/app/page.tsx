@@ -7,7 +7,6 @@ import { AdsStrategyHomePreviewSection } from "@/components/sections/home/AdsStr
 import { ProductsSection } from "@/components/sections/ProductsSection";
 import { RoadmapHomePreviewSection } from "@/components/sections/home/RoadmapHomePreviewSection";
 import { MarketReachSection } from "@/components/sections/MarketReachSection";
-import { PricingSection } from "@/components/sections/PricingSection";
 import { ContactHomePreviewSection } from "@/components/sections/home/ContactHomePreviewSection";
 import { CTASection } from "@/components/sections/CTASection";
 
@@ -23,7 +22,6 @@ export default function HomePage() {
       <ProductsSection preview />
       <RoadmapHomePreviewSection />
       <MarketReachSection />
-      <PricingSection preview />
       <ContactHomePreviewSection />
       <CTASection />
     </>
