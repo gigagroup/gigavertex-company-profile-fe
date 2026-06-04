@@ -1,6 +1,7 @@
 import { Hero } from "@/components/sections/Hero";
 import { StatsSection } from "@/components/sections/StatsSection";
 import { IntroPreviewSection } from "@/components/sections/IntroPreviewSection";
+import { MarketReachSection } from "@/components/sections/MarketReachSection";
 import { ServicesSection } from "@/components/sections/ServicesSection";
 import { ProductsSection } from "@/components/sections/ProductsSection";
 import { HomeExploreSection } from "@/components/sections/HomeExploreSection";
@@ -12,6 +13,7 @@ export default function HomePage() {
       <Hero />
       <StatsSection />
       <IntroPreviewSection />
+      <MarketReachSection />
       <ServicesSection preview />
       <ProductsSection preview />
       <HomeExploreSection />

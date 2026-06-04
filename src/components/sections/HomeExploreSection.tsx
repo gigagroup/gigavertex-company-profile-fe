@@ -7,6 +7,7 @@ import {
   Mail,
   Users,
   Map,
+  Megaphone,
 } from "lucide-react";
 import { AnimateIn } from "@/components/ui/AnimateIn";
 import { SectionHeader } from "@/components/ui/SectionHeader";
@@ -23,6 +24,12 @@ const pages = [
     icon: Brain,
     title: "Layanan",
     description: "Solusi AI, software, website, dan konsultasi teknologi.",
+  },
+  {
+    href: "/strategi-iklan",
+    icon: Megaphone,
+    title: "Strategi Iklan",
+    description: "Meta Ads, TikTok Ads, dan Google Ads — mesin akuisisi pelanggan.",
   },
   {
     href: "/products",

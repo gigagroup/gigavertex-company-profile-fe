@@ -20,6 +20,7 @@ export const navLinks = [
   { href: "/", label: "Beranda" },
   { href: "/about", label: "Tentang Kami" },
   { href: "/services", label: "Layanan" },
+  { href: "/strategi-iklan", label: "Strategi Iklan" },
   { href: "/products", label: "Produk" },
   { href: "/roadmap", label: "Roadmap" },
   { href: "/pricing", label: "Harga" },
@@ -145,6 +146,40 @@ export const stats = [
   { value: "10K+", label: "Pengguna Aktif" },
   { value: "99.9%", label: "Uptime" },
   { value: "24/7", label: "Support" },
+];
+
+export const marketRegions = [
+  {
+    title: "Indonesia & Asia Tenggara",
+    description:
+      "Fondasi pasar utama — dari Indonesia ke negara tetangga di kawasan ASEAN.",
+    countries: [
+      "Indonesia",
+      "Singapura",
+      "Malaysia",
+      "Thailand",
+      "Vietnam",
+      "Filipina",
+    ],
+  },
+  {
+    title: "Amerika, Oseania & Inggris",
+    description:
+      "Ekspansi ke pasar berbahasa Inggris dengan potensi SaaS dan tools AI global.",
+    countries: [
+      "Amerika Serikat",
+      "Australia",
+      "Inggris (UK)",
+      "Selandia Baru",
+      "Kanada",
+    ],
+  },
+  {
+    title: "Eropa",
+    description:
+      "Jangkauan ke pasar Eropa Barat dengan landing multi-bahasa dan pembayaran internasional.",
+    countries: ["Jerman", "Prancis", "Italia", "Belanda"],
+  },
 ];
 
 export const features = [
