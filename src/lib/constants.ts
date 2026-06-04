@@ -1,0 +1,283 @@
+export const company = {
+  name: "PT Tera Vertex Technology",
+  shortName: "Tera Vertex",
+  tagline: "Membangun Masa Depan dengan Kecerdasan Buatan",
+  description:
+    "Perusahaan teknologi yang berfokus pada pengembangan solusi AI, perangkat lunak, aplikasi, dan platform digital berbasis subscription untuk bisnis dan individu.",
+  email: "hello@teravertex.com",
+  phone: "+62 812-3456-7890",
+  address: "Jakarta, Indonesia",
+  founded: "2024",
+  social: {
+    linkedin: "#",
+    instagram: "#",
+    twitter: "#",
+    youtube: "#",
+  },
+};
+
+export const navLinks = [
+  { href: "/", label: "Beranda" },
+  { href: "/about", label: "Tentang Kami" },
+  { href: "/services", label: "Layanan" },
+  { href: "/products", label: "Produk" },
+  { href: "/pricing", label: "Harga" },
+  { href: "/contact", label: "Kontak" },
+];
+
+export const services = [
+  {
+    icon: "Brain",
+    title: "Solusi AI",
+    description:
+      "Pengembangan model AI, chatbot, automasi cerdas, dan integrasi LLM untuk transformasi digital bisnis Anda.",
+  },
+  {
+    icon: "Code2",
+    title: "Pengembangan Software",
+    description:
+      "Aplikasi desktop, mobile, dan enterprise yang scalable, aman, dan dirancang sesuai kebutuhan bisnis.",
+  },
+  {
+    icon: "Globe",
+    title: "Website & Platform",
+    description:
+      "Website corporate, landing page, dan platform web modern dengan performa tinggi dan UX premium.",
+  },
+  {
+    icon: "Layers",
+    title: "SaaS & Subscription",
+    description:
+      "Platform berlangganan dengan billing terintegrasi, dashboard analytics, dan manajemen pengguna.",
+  },
+  {
+    icon: "Wrench",
+    title: "AI Tools Development",
+    description:
+      "Pembuatan tools AI khusus — dari generator konten hingga workflow automation untuk tim kreatif.",
+  },
+  {
+    icon: "HeadphonesIcon",
+    title: "Konsultasi & Support",
+    description:
+      "Konsultasi teknologi, implementasi, maintenance, dan dukungan teknis berkelanjutan 24/7.",
+  },
+];
+
+export const products = [
+  {
+    icon: "Sparkles",
+    name: "Tera AI Studio",
+    category: "AI Tools",
+    description:
+      "Suite lengkap tools AI untuk produktivitas — dari penulisan, analisis, hingga automasi workflow.",
+    features: ["Multi-model AI", "Custom prompts", "Team workspace"],
+    badge: "Popular",
+  },
+  {
+    icon: "Video",
+    name: "Tera Video Gen",
+    category: "Video Generation",
+    description:
+      "Generate video berkualitas tinggi dari teks atau gambar dengan AI generatif terdepan.",
+    features: ["Text-to-video", "HD export", "Template library"],
+    badge: "New",
+  },
+  {
+    icon: "Image",
+    name: "Tera Photo Gen",
+    category: "Photo Generation",
+    description:
+      "Buat foto dan gambar profesional dalam hitungan detik dengan kontrol kreatif penuh.",
+    features: ["Photo realistic", "Style transfer", "Batch generation"],
+    badge: null,
+  },
+  {
+    icon: "Palette",
+    name: "Tera Image AI",
+    category: "Image Generation",
+    description:
+      "Generator gambar AI untuk ilustrasi, desain grafis, dan asset kreatif berkualitas premium.",
+    features: ["4K resolution", "Brand kit", "Commercial license"],
+    badge: null,
+  },
+  {
+    icon: "Calendar",
+    name: "Tera Social Scheduler",
+    category: "Social Media",
+    description:
+      "Jadwalkan dan kelola konten di semua platform sosial media dari satu dashboard.",
+    features: ["Multi-platform", "Analytics", "Auto-posting"],
+    badge: "Popular",
+  },
+  {
+    icon: "Languages",
+    name: "Tera Lang Learn",
+    category: "Language Learning",
+    description:
+      "Platform belajar bahasa dengan AI tutor interaktif, latihan percakapan, dan progress tracking.",
+    features: ["AI tutor", "50+ bahasa", "Gamification"],
+    badge: null,
+  },
+  {
+    icon: "Scissors",
+    name: "Tera Auto Clipper",
+    category: "Content Tools",
+    description:
+      "Potong dan edit video panjang menjadi clip viral otomatis dengan deteksi highlight AI.",
+    features: ["Auto highlight", "Subtitle AI", "Multi-format export"],
+    badge: "New",
+  },
+  {
+    icon: "Plus",
+    name: "Dan Masih Banyak Lagi",
+    category: "Coming Soon",
+    description:
+      "Kami terus mengembangkan tools baru setiap bulan. Daftar newsletter untuk update terbaru.",
+    features: ["Regular updates", "Beta access", "Community"],
+    badge: "Soon",
+  },
+];
+
+export const stats = [
+  { value: "50+", label: "AI Tools" },
+  { value: "10K+", label: "Pengguna Aktif" },
+  { value: "99.9%", label: "Uptime" },
+  { value: "24/7", label: "Support" },
+];
+
+export const features = [
+  {
+    title: "Teknologi Terdepan",
+    description:
+      "Menggunakan model AI dan infrastruktur cloud terbaru untuk performa optimal.",
+  },
+  {
+    title: "Keamanan Enterprise",
+    description:
+      "Enkripsi end-to-end, compliance standar industri, dan proteksi data pengguna.",
+  },
+  {
+    title: "Skalabilitas Tanpa Batas",
+    description:
+      "Arsitektur cloud-native yang tumbuh bersama kebutuhan bisnis Anda.",
+  },
+  {
+    title: "UI/UX Premium",
+    description:
+      "Desain intuitif dan modern yang membuat setiap interaksi terasa mulus.",
+  },
+];
+
+export const pricingPlans = [
+  {
+    name: "Starter",
+    price: "Rp 99.000",
+    period: "/bulan",
+    description: "Ideal untuk individu dan freelancer yang baru memulai.",
+    features: [
+      "5 AI tools dasar",
+      "100 generasi/bulan",
+      "1 user",
+      "Email support",
+      "Community access",
+    ],
+    highlighted: false,
+    cta: "Mulai Gratis",
+  },
+  {
+    name: "Professional",
+    price: "Rp 299.000",
+    period: "/bulan",
+    description: "Untuk profesional kreatif dan tim kecil yang butuh lebih.",
+    features: [
+      "Semua AI tools",
+      "Unlimited generasi",
+      "5 users",
+      "Priority support",
+      "API access",
+      "Custom branding",
+    ],
+    highlighted: true,
+    cta: "Pilih Professional",
+  },
+  {
+    name: "Enterprise",
+    price: "Custom",
+    period: "",
+    description: "Solusi khusus untuk perusahaan dengan kebutuhan skala besar.",
+    features: [
+      "Semua fitur Professional",
+      "Unlimited users",
+      "Dedicated account manager",
+      "SLA guarantee",
+      "On-premise option",
+      "Custom development",
+    ],
+    highlighted: false,
+    cta: "Hubungi Sales",
+  },
+];
+
+export const testimonials = [
+  {
+    quote:
+      "Tera Vertex mengubah cara tim kami membuat konten. Produktivitas naik 3x lipat sejak menggunakan platform mereka.",
+    author: "Sarah Wijaya",
+    role: "Head of Marketing, TechCorp",
+  },
+  {
+    quote:
+      "Auto Clipper mereka luar biasa! Video podcast kami otomatis jadi 10+ clip viral setiap minggu.",
+    author: "Budi Santoso",
+    role: "Content Creator",
+  },
+  {
+    quote:
+      "Solusi AI custom yang mereka kembangkan untuk perusahaan kami presisi dan scalable. Partner teknologi terbaik.",
+    author: "Diana Putri",
+    role: "CTO, FinStart Indonesia",
+  },
+];
+
+export const team = [
+  {
+    name: "Founder & CEO",
+    role: "Vision & Strategy",
+    bio: "Memimpin visi Tera Vertex dalam democratisasi AI untuk semua.",
+  },
+  {
+    name: "CTO",
+    role: "Technology",
+    bio: "Arsitek teknologi di balik semua produk AI dan platform kami.",
+  },
+  {
+    name: "Head of Product",
+    role: "Product Design",
+    bio: "Merancang pengalaman produk yang intuitif dan impactful.",
+  },
+  {
+    name: "Head of Engineering",
+    role: "Engineering",
+    bio: "Membangun infrastruktur scalable untuk jutaan pengguna.",
+  },
+];
+
+export const values = [
+  {
+    title: "Inovasi",
+    description: "Terus mendorong batas teknologi AI untuk solusi yang lebih baik.",
+  },
+  {
+    title: "Integritas",
+    description: "Transparansi dan kejujuran dalam setiap produk dan layanan kami.",
+  },
+  {
+    title: "Excellence",
+    description: "Standar kualitas tertinggi dalam setiap baris kode dan desain.",
+  },
+  {
+    title: "Impact",
+    description: "Memberikan dampak nyata bagi bisnis dan individu di Indonesia.",
+  },
+];
