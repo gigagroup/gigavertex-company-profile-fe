@@ -1,10 +1,10 @@
+import Image from "next/image";
 import {
   Megaphone,
   Sparkles,
   Palette,
   Server,
   Globe2,
-  User,
   Target,
 } from "lucide-react";
 import { AnimateIn } from "@/components/ui/AnimateIn";
@@ -55,8 +55,14 @@ export function RoadmapSection() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <AnimateIn>
             <div className="glass-card mx-auto max-w-2xl rounded-2xl p-8 text-center lg:max-w-3xl">
-              <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-2xl border border-indigo-200 bg-indigo-50 text-indigo-600">
-                <User className="h-8 w-8" />
+              <div className="relative mx-auto mb-5 h-28 w-28 overflow-hidden rounded-full border-4 border-indigo-100 shadow-md">
+                <Image
+                  src={roadmapFounder.image}
+                  alt={`${roadmapFounder.name}, ${roadmapFounder.role}`}
+                  fill
+                  className="object-cover object-top"
+                  sizes="112px"
+                />
               </div>
               <span className="badge-elegant mb-3 inline-block rounded-full px-3 py-1 text-[10px] font-semibold uppercase">
                 {roadmapFounder.role}

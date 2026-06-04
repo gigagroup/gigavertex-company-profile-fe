@@ -1,3 +1,5 @@
+import { assets } from "@/lib/assets";
+
 export const roadmapMeta = {
   badge: "Growth Ecosystem",
   title: "Roadmap Growth Ecosystem 2026+",
@@ -8,8 +10,9 @@ export const roadmapMeta = {
 
 export const roadmapFounder = {
   name: "Muhamad Aziz",
-  role: "Founder",
-  since: "2021",
+  role: "Founder & CEO",
+  since: "2020",
+  image: assets.images.founderCeo,
   bio: "Memimpin visi Giga Vertex Technology dan Growth Ecosystem menuju ekosistem tools AI & otomatisasi untuk pelaku bisnis.",
 };
 
