@@ -21,6 +21,7 @@ export const navLinks = [
   { href: "/about", label: "Tentang Kami" },
   { href: "/services", label: "Layanan" },
   { href: "/products", label: "Produk" },
+  { href: "/roadmap", label: "Roadmap" },
   { href: "/pricing", label: "Harga" },
   { href: "/contact", label: "Kontak" },
 ];

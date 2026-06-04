@@ -1,5 +1,13 @@
 import Link from "next/link";
-import { ArrowRight, Brain, Package, CreditCard, Mail, Users } from "lucide-react";
+import {
+  ArrowRight,
+  Brain,
+  Package,
+  CreditCard,
+  Mail,
+  Users,
+  Map,
+} from "lucide-react";
 import { AnimateIn } from "@/components/ui/AnimateIn";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 
@@ -21,6 +29,12 @@ const pages = [
     icon: Package,
     title: "Produk",
     description: "Tools AI untuk video, foto, sosial media, dan lainnya.",
+  },
+  {
+    href: "/roadmap",
+    icon: Map,
+    title: "Roadmap",
+    description: "Growth Ecosystem 2026+ — timeline, pilar, dan visi global.",
   },
   {
     href: "/pricing",
