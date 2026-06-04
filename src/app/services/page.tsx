@@ -3,7 +3,6 @@ import { PageHeader } from "@/components/ui/PageHeader";
 import { ServicesSection } from "@/components/sections/ServicesSection";
 import { ServicesProcessSection } from "@/components/sections/ServicesProcessSection";
 import { FeaturesSection } from "@/components/sections/FeaturesSection";
-import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
 import { CTASection } from "@/components/sections/CTASection";
 
 export const metadata: Metadata = {
@@ -23,7 +22,6 @@ export default function ServicesPage() {
       <ServicesSection showHeader={false} />
       <ServicesProcessSection />
       <FeaturesSection showHeader={false} />
-      <TestimonialsSection />
       <CTASection />
     </>
   );

@@ -7,5 +7,6 @@ export const assets = {
   videos: {
     beranda: "/assets/videos/beranda.mp4",
     growthEcosystem: "/assets/videos/growth-ecosystem.mp4",
+    aiEcosystem: "/assets/videos/ai-ecosystem.mp4",
   },
 } as const;

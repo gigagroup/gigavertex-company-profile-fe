@@ -18,6 +18,7 @@ import {
 import { AnimateIn } from "@/components/ui/AnimateIn";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { products } from "@/lib/constants";
+import { assets } from "@/lib/assets";
 import {
   aiMeta,
   aiCapabilities,
@@ -45,7 +46,25 @@ export function ArtificialIntelligenceSection() {
 
   return (
     <>
-      <section className="relative pt-32 pb-12 lg:pt-36">
+      <section className="relative pt-28 pb-6 lg:pt-32 lg:pb-8">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="relative mx-auto w-full max-w-2xl overflow-hidden rounded-2xl bg-zinc-900 shadow-md ring-1 ring-zinc-200/60 lg:max-w-3xl">
+            <video
+              className="aspect-video w-full object-cover"
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="auto"
+              aria-label="Video ekosistem kecerdasan buatan Giga Vertex"
+            >
+              <source src={assets.videos.aiEcosystem} type="video/mp4" />
+            </video>
+          </div>
+        </div>
+      </section>
+
+      <section className="relative pb-12 lg:pb-16">
         <div className="pointer-events-none absolute inset-0">
           <div className="absolute top-0 left-1/2 h-[420px] w-[640px] -translate-x-1/2 rounded-full bg-violet-600/[0.08] blur-[120px] animate-float" />
         </div>
