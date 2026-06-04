@@ -20,6 +20,12 @@ const pages = [
     description: "Visi, misi, nilai, dan tim di balik Giga Vertex.",
   },
   {
+    href: "/kecerdasan-buatan",
+    icon: Brain,
+    title: "Kecerdasan Buatan",
+    description: "Generative AI, LLM, automasi, ekosistem Autonix · Terabyte · Giga.",
+  },
+  {
     href: "/services",
     icon: Brain,
     title: "Layanan",

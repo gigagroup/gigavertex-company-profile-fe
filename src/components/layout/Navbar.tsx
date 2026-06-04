@@ -10,9 +10,9 @@ import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
 
 const linkClass =
-  "rounded-lg px-4 py-1 text-[13px] font-medium tracking-wide text-zinc-300 transition-colors hover:bg-white/10 hover:text-white";
+  "shrink-0 whitespace-nowrap rounded-lg px-2 py-1 text-[13px] font-medium text-zinc-300 transition-colors hover:bg-white/10 hover:text-white lg:px-2.5 xl:px-3";
 
-const navButtonClass = "py-1.5";
+const navButtonClass = "shrink-0 whitespace-nowrap py-1.5 px-4 text-[13px]";
 
 const linkClassMobile =
   "rounded-lg px-4 py-3 text-sm font-medium text-zinc-300 transition-colors hover:bg-white/10 hover:text-white";
@@ -48,34 +48,36 @@ export function Navbar() {
   const showDarkBar = !isHome || pastHero;
 
   return (
-    <header className="animate-nav-enter fixed top-0 right-0 left-0 z-50 px-4 pt-3 lg:px-8">
+    <header className="animate-nav-enter fixed top-0 right-0 left-0 z-50 px-3 pt-3 sm:px-4 xl:px-6">
       <div
         className={cn(
-          "mx-auto max-w-7xl rounded-xl px-1 py-0.5 transition-all duration-500",
+          "mx-auto w-full max-w-[100rem] rounded-xl px-1 py-0.5 transition-all duration-500",
           showDarkBar
             ? "border border-indigo-500/30 bg-zinc-950 shadow-[0_4px_28px_-8px_rgba(0,0,0,0.55)] backdrop-blur-md"
             : "border-transparent bg-transparent shadow-none"
         )}
       >
-        <nav className="flex items-center justify-between px-3 py-1.5 lg:px-5">
-          <LogoLink />
+        <nav className="grid w-full grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-2 px-3 py-1.5 xl:px-4">
+          <LogoLink className="shrink-0 [&_img]:max-h-8 [&_img]:min-w-0 [&_img]:max-w-[128px] xl:[&_img]:max-h-9 xl:[&_img]:max-w-[155px]" />
 
-          <div className="hidden items-center gap-0.5 lg:flex">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={cn(
-                  linkClass,
-                  pathname === link.href && "bg-white/10 text-white"
-                )}
-              >
-                {link.label}
-              </Link>
-            ))}
+          <div className="hidden justify-center overflow-x-auto lg:flex [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+            <div className="flex flex-nowrap items-center">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={cn(
+                    linkClass,
+                    pathname === link.href && "bg-white/10 text-white"
+                  )}
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
           </div>
 
-          <div className="hidden items-center gap-2 lg:flex">
+          <div className="hidden shrink-0 items-center justify-end gap-1.5 lg:flex">
             <Button href="/contact" variant="hero-ghost" size="sm" className={navButtonClass}>
               Masuk
             </Button>
@@ -86,7 +88,7 @@ export function Navbar() {
 
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="rounded-lg p-2 text-zinc-300 transition-colors hover:bg-white/10 hover:text-white lg:hidden"
+            className="col-start-3 rounded-lg p-2 text-zinc-300 transition-colors hover:bg-white/10 hover:text-white lg:hidden"
             aria-label="Toggle menu"
           >
             {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}

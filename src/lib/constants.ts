@@ -19,6 +19,7 @@ export const company = {
 export const navLinks = [
   { href: "/", label: "Beranda" },
   { href: "/about", label: "Tentang Kami" },
+  { href: "/kecerdasan-buatan", label: "Kecerdasan Buatan" },
   { href: "/services", label: "Layanan" },
   { href: "/strategi-iklan", label: "Strategi Iklan" },
   { href: "/products", label: "Produk" },
