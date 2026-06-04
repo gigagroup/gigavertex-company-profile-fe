@@ -7,9 +7,9 @@ export const company = {
   description:
     "Perusahaan teknologi yang berfokus pada pengembangan solusi AI, perangkat lunak, aplikasi, dan platform digital berbasis subscription untuk bisnis dan individu.",
   email: "support@gigavertex.com",
-  phone: "081211193832",
-  phoneTel: "+6281211193832",
-  whatsapp: "https://wa.me/6281211193832",
+  phone: "+62 812-2852-2550",
+  phoneTel: "+6281228522550",
+  whatsapp: "https://wa.me/6281228522550",
   address: "Bogor, Indonesia",
   founded: "2024",
   social: {
