@@ -33,12 +33,12 @@ export function AnimatedProgress({ value, color, label, delay = 0 }: AnimatedPro
   }, [value, delay]);
 
   return (
-    <div ref={ref} className="rounded-2xl border border-white/5 bg-[#111118] p-6">
+    <div ref={ref} className="glass-card rounded-2xl p-6">
       <div className="mb-3 flex items-center justify-between">
-        <span className="text-sm text-zinc-400">{label}</span>
-        <span className="text-sm font-bold text-white">{value}%</span>
+        <span className="text-sm text-zinc-600">{label}</span>
+        <span className="text-sm font-bold text-zinc-900">{value}%</span>
       </div>
-      <div className="h-2 overflow-hidden rounded-full bg-white/5">
+      <div className="h-2 overflow-hidden rounded-full bg-zinc-100">
         <div
           className={cn("h-full rounded-full transition-all duration-1000 ease-out", color)}
           style={{ width: `${width}%` }}

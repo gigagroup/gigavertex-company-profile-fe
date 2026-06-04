@@ -7,7 +7,11 @@ import { AnimateIn } from "@/components/ui/AnimateIn";
 import { Button } from "@/components/ui/Button";
 import { company } from "@/lib/constants";
 
-export function ContactSection() {
+type ContactSectionProps = {
+  showHeader?: boolean;
+};
+
+export function ContactSection({ showHeader = true }: ContactSectionProps) {
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -16,13 +20,15 @@ export function ContactSection() {
   };
 
   return (
-    <section className="relative py-24 lg:py-32">
+    <section className="section-spacing relative">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <SectionHeader
-          badge="Kontak"
-          title="Hubungi Kami"
-          description="Punya pertanyaan atau ingin diskusi project? Tim kami siap membantu Anda."
-        />
+        {showHeader && (
+          <SectionHeader
+            badge="Kontak"
+            title="Hubungi Kami"
+            description="Punya pertanyaan atau ingin diskusi project? Tim kami siap membantu Anda."
+          />
+        )}
 
         <div className="grid gap-12 lg:grid-cols-5">
           <AnimateIn variant="left" className="space-y-6 lg:col-span-2">
@@ -34,7 +40,7 @@ export function ContactSection() {
             ].map((item, i) => (
               <AnimateIn key={item.label} delay={i * 80} variant="left">
               <div className="flex gap-4">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-cyan-500/10 text-cyan-400">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-zinc-200 bg-indigo-50 text-indigo-600">
                   <item.icon className="h-5 w-5" />
                 </div>
                 <div>
@@ -44,12 +50,12 @@ export function ContactSection() {
                   {item.href ? (
                     <a
                       href={item.href}
-                      className="text-sm text-zinc-300 transition-colors hover:text-cyan-400"
+                      className="text-sm text-zinc-700 transition-colors hover:text-indigo-600"
                     >
                       {item.value}
                     </a>
                   ) : (
-                    <div className="text-sm text-zinc-300">{item.value}</div>
+                    <div className="text-sm text-zinc-700">{item.value}</div>
                   )}
                 </div>
               </div>
@@ -60,14 +66,14 @@ export function ContactSection() {
           <AnimateIn variant="right" delay={100} className="lg:col-span-3">
             <form
               onSubmit={handleSubmit}
-              className="rounded-2xl border border-white/5 bg-[#111118] p-8"
+              className="glass-card rounded-2xl p-8 lg:p-10"
             >
               {submitted ? (
                 <div className="py-12 text-center">
                   <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-emerald-500/20 text-emerald-400">
                     <Send className="h-7 w-7" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white">Pesan Terkirim!</h3>
+                  <h3 className="text-xl font-semibold text-zinc-900">Pesan Terkirim!</h3>
                   <p className="mt-2 text-sm text-zinc-500">
                     Terima kasih! Tim kami akan menghubungi Anda segera.
                   </p>
@@ -76,48 +82,48 @@ export function ContactSection() {
                 <>
                   <div className="grid gap-6 sm:grid-cols-2">
                     <div>
-                      <label className="mb-2 block text-sm font-medium text-zinc-400">
+                      <label className="mb-2 block text-sm font-medium text-zinc-600">
                         Nama Lengkap
                       </label>
                       <input
                         type="text"
                         required
                         placeholder="John Doe"
-                        className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-zinc-600 focus:border-cyan-500/50 focus:outline-none"
+                        className="w-full rounded-xl border border-zinc-200 bg-zinc-50 px-4 py-3.5 text-sm text-zinc-900 placeholder:text-zinc-600 transition-colors focus:border-indigo-500/40 focus:outline-none focus:ring-1 focus:ring-indigo-500/20"
                       />
                     </div>
                     <div>
-                      <label className="mb-2 block text-sm font-medium text-zinc-400">
+                      <label className="mb-2 block text-sm font-medium text-zinc-600">
                         Email
                       </label>
                       <input
                         type="email"
                         required
                         placeholder="john@example.com"
-                        className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-zinc-600 focus:border-cyan-500/50 focus:outline-none"
+                        className="w-full rounded-xl border border-zinc-200 bg-zinc-50 px-4 py-3.5 text-sm text-zinc-900 placeholder:text-zinc-600 transition-colors focus:border-indigo-500/40 focus:outline-none focus:ring-1 focus:ring-indigo-500/20"
                       />
                     </div>
                   </div>
                   <div className="mt-6">
-                    <label className="mb-2 block text-sm font-medium text-zinc-400">
+                    <label className="mb-2 block text-sm font-medium text-zinc-600">
                       Subjek
                     </label>
                     <input
                       type="text"
                       required
                       placeholder="Konsultasi Project AI"
-                      className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-zinc-600 focus:border-cyan-500/50 focus:outline-none"
+                      className="w-full rounded-xl border border-zinc-200 bg-zinc-50 px-4 py-3.5 text-sm text-zinc-900 placeholder:text-zinc-600 transition-colors focus:border-indigo-500/40 focus:outline-none focus:ring-1 focus:ring-indigo-500/20"
                     />
                   </div>
                   <div className="mt-6">
-                    <label className="mb-2 block text-sm font-medium text-zinc-400">
+                    <label className="mb-2 block text-sm font-medium text-zinc-600">
                       Pesan
                     </label>
                     <textarea
                       required
                       rows={5}
                       placeholder="Ceritakan kebutuhan project Anda..."
-                      className="w-full resize-none rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-zinc-600 focus:border-cyan-500/50 focus:outline-none"
+                      className="w-full resize-none rounded-xl border border-zinc-200 bg-zinc-50 px-4 py-3.5 text-sm text-zinc-900 placeholder:text-zinc-600 transition-colors focus:border-indigo-500/40 focus:outline-none focus:ring-1 focus:ring-indigo-500/20"
                     />
                   </div>
                   <div className="mt-6">

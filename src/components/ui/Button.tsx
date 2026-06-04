@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 
 type ButtonProps = {
   href?: string;
-  variant?: "primary" | "secondary" | "outline" | "ghost";
+  variant?: "primary" | "secondary" | "outline" | "ghost" | "hero-ghost" | "hero-outline";
   size?: "sm" | "md" | "lg";
   className?: string;
   children: React.ReactNode;
@@ -12,19 +12,21 @@ type ButtonProps = {
 };
 
 const variants = {
-  primary:
-    "bg-gradient-to-r from-cyan-500 to-violet-600 text-white hover:from-cyan-400 hover:to-violet-500 shadow-lg shadow-cyan-500/25",
+  primary: "btn-primary-glow text-white hover:brightness-105",
   secondary:
-    "bg-white/10 text-white hover:bg-white/15 border border-white/10 backdrop-blur-sm",
+    "bg-white text-zinc-700 border border-zinc-200 shadow-sm hover:bg-zinc-50 hover:text-zinc-900 hover:border-zinc-300",
   outline:
-    "border border-white/20 text-white hover:bg-white/5 hover:border-white/30",
-  ghost: "text-zinc-400 hover:text-white hover:bg-white/5",
+    "border border-zinc-300 text-zinc-700 bg-white hover:bg-zinc-50 hover:border-indigo-300 hover:text-indigo-700",
+  ghost: "text-zinc-600 hover:text-zinc-900 hover:bg-zinc-100",
+  "hero-ghost": "text-white/90 hover:text-white hover:bg-white/10",
+  "hero-outline":
+    "border border-white/50 text-white bg-white/5 backdrop-blur-sm hover:border-white hover:bg-white/15",
 };
 
 const sizes = {
-  sm: "px-4 py-2 text-sm",
-  md: "px-6 py-2.5 text-sm",
-  lg: "px-8 py-3.5 text-base",
+  sm: "px-4 py-2 text-sm tracking-wide",
+  md: "px-6 py-2.5 text-sm tracking-wide",
+  lg: "px-8 py-3.5 text-[15px] tracking-wide",
 };
 
 export function Button({

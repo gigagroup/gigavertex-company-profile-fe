@@ -22,14 +22,14 @@ export function SectionHeader({
   return (
     <div
       className={cn(
-        "mb-16 max-w-3xl",
+        "mb-20 max-w-3xl",
         align === "center" && "mx-auto text-center",
         className
       )}
     >
       {badge && (
         <AnimateIn>
-          <span className="mb-4 inline-block rounded-full border border-cyan-500/30 bg-cyan-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-cyan-400">
+          <span className="badge-elegant mb-5 inline-block rounded-full px-4 py-1.5 text-[10px] font-semibold uppercase">
             {badge}
           </span>
         </AnimateIn>
@@ -38,13 +38,15 @@ export function SectionHeader({
         <AnimatedText
           text={title}
           as="h2"
-          className="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl"
+          className="font-display text-3xl font-normal tracking-tight text-zinc-900 sm:text-4xl lg:text-[2.75rem] lg:leading-tight"
           triggerOnView
         />
       </AnimateIn>
       {description && (
         <AnimateIn delay={160}>
-          <p className="mt-4 text-lg leading-relaxed text-zinc-400">{description}</p>
+          <p className="mt-5 text-base leading-relaxed font-light text-zinc-600 lg:text-lg">
+            {description}
+          </p>
         </AnimateIn>
       )}
     </div>

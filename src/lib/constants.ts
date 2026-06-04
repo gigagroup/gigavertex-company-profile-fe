@@ -1,10 +1,10 @@
 export const company = {
-  name: "PT Tera Vertex Technology",
-  shortName: "Tera Vertex",
+  name: "PT Giga Vertex Technology",
+  shortName: "Giga Vertex",
   tagline: "Membangun Masa Depan dengan Kecerdasan Buatan",
   description:
     "Perusahaan teknologi yang berfokus pada pengembangan solusi AI, perangkat lunak, aplikasi, dan platform digital berbasis subscription untuk bisnis dan individu.",
-  email: "hello@teravertex.com",
+  email: "hello@gigavertex.com",
   phone: "+62 812-3456-7890",
   address: "Jakarta, Indonesia",
   founded: "2024",
@@ -67,7 +67,7 @@ export const services = [
 export const products = [
   {
     icon: "Sparkles",
-    name: "Tera AI Studio",
+    name: "Giga AI Studio",
     category: "AI Tools",
     description:
       "Suite lengkap tools AI untuk produktivitas — dari penulisan, analisis, hingga automasi workflow.",
@@ -76,7 +76,7 @@ export const products = [
   },
   {
     icon: "Video",
-    name: "Tera Video Gen",
+    name: "Giga Video Gen",
     category: "Video Generation",
     description:
       "Generate video berkualitas tinggi dari teks atau gambar dengan AI generatif terdepan.",
@@ -85,7 +85,7 @@ export const products = [
   },
   {
     icon: "Image",
-    name: "Tera Photo Gen",
+    name: "Giga Photo Gen",
     category: "Photo Generation",
     description:
       "Buat foto dan gambar profesional dalam hitungan detik dengan kontrol kreatif penuh.",
@@ -94,7 +94,7 @@ export const products = [
   },
   {
     icon: "Palette",
-    name: "Tera Image AI",
+    name: "Giga Image AI",
     category: "Image Generation",
     description:
       "Generator gambar AI untuk ilustrasi, desain grafis, dan asset kreatif berkualitas premium.",
@@ -103,7 +103,7 @@ export const products = [
   },
   {
     icon: "Calendar",
-    name: "Tera Social Scheduler",
+    name: "Giga Social Scheduler",
     category: "Social Media",
     description:
       "Jadwalkan dan kelola konten di semua platform sosial media dari satu dashboard.",
@@ -112,7 +112,7 @@ export const products = [
   },
   {
     icon: "Languages",
-    name: "Tera Lang Learn",
+    name: "Giga Lang Learn",
     category: "Language Learning",
     description:
       "Platform belajar bahasa dengan AI tutor interaktif, latihan percakapan, dan progress tracking.",
@@ -121,7 +121,7 @@ export const products = [
   },
   {
     icon: "Scissors",
-    name: "Tera Auto Clipper",
+    name: "Giga Auto Clipper",
     category: "Content Tools",
     description:
       "Potong dan edit video panjang menjadi clip viral otomatis dengan deteksi highlight AI.",
@@ -222,7 +222,7 @@ export const pricingPlans = [
 export const testimonials = [
   {
     quote:
-      "Tera Vertex mengubah cara tim kami membuat konten. Produktivitas naik 3x lipat sejak menggunakan platform mereka.",
+      "Giga Vertex mengubah cara tim kami membuat konten. Produktivitas naik 3x lipat sejak menggunakan platform mereka.",
     author: "Sarah Wijaya",
     role: "Head of Marketing, TechCorp",
   },
@@ -244,7 +244,7 @@ export const team = [
   {
     name: "Founder & CEO",
     role: "Vision & Strategy",
-    bio: "Memimpin visi Tera Vertex dalam democratisasi AI untuk semua.",
+    bio: "Memimpin visi Giga Vertex dalam democratisasi AI untuk semua.",
   },
   {
     name: "CTO",
@@ -260,6 +260,52 @@ export const team = [
     name: "Head of Engineering",
     role: "Engineering",
     bio: "Membangun infrastruktur scalable untuk jutaan pengguna.",
+  },
+];
+
+export const serviceProcess = [
+  {
+    step: "01",
+    title: "Konsultasi",
+    description: "Memahami kebutuhan bisnis, target, dan tantangan teknologi Anda.",
+  },
+  {
+    step: "02",
+    title: "Perancangan",
+    description: "Merancang solusi, arsitektur, dan roadmap implementasi yang jelas.",
+  },
+  {
+    step: "03",
+    title: "Implementasi",
+    description: "Pengembangan, integrasi, testing, dan deployment ke production.",
+  },
+  {
+    step: "04",
+    title: "Dukungan",
+    description: "Maintenance, monitoring, dan optimasi berkelanjutan pasca-launch.",
+  },
+];
+
+export const pricingFaqs = [
+  {
+    question: "Apakah bisa upgrade paket kapan saja?",
+    answer:
+      "Ya. Anda dapat upgrade atau downgrade paket subscription kapan saja melalui dashboard atau menghubungi tim support kami.",
+  },
+  {
+    question: "Apakah ada trial gratis?",
+    answer:
+      "Paket Starter menyediakan periode trial untuk mencoba fitur dasar sebelum berlangganan penuh.",
+  },
+  {
+    question: "Bagaimana pembayaran Enterprise?",
+    answer:
+      "Paket Enterprise menggunakan penawaran custom dengan invoice, SLA, dan opsi pembayaran sesuai kebutuhan perusahaan.",
+  },
+  {
+    question: "Apakah data saya aman?",
+    answer:
+      "Kami menerapkan enkripsi, kontrol akses, dan praktik keamanan standar industri untuk melindungi data pengguna.",
   },
 ];
 
