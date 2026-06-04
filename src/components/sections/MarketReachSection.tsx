@@ -19,7 +19,7 @@ export function MarketReachSection() {
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
         <SectionHeader
-          badge="Jangkauan Pasar"
+          badge="Pasar"
           title="Hadir untuk Pasar Lokal & Global"
           description="Strategi ekspansi bertahap — dari Indonesia dan Asia Tenggara, ke pasar berbahasa Inggris, hingga Eropa."
         />

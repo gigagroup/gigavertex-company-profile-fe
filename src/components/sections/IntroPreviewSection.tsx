@@ -10,7 +10,7 @@ export function IntroPreviewSection() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <SectionHeader
-            badge="Tentang"
+            badge="Tentang Kami"
             title="Partner Teknologi untuk Bisnis Modern"
             description={company.description}
             align="left"

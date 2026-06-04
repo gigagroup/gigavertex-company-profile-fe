@@ -1,10 +1,14 @@
 import { Hero } from "@/components/sections/Hero";
 import { StatsSection } from "@/components/sections/StatsSection";
 import { IntroPreviewSection } from "@/components/sections/IntroPreviewSection";
-import { MarketReachSection } from "@/components/sections/MarketReachSection";
+import { AiHomePreviewSection } from "@/components/sections/home/AiHomePreviewSection";
 import { ServicesSection } from "@/components/sections/ServicesSection";
+import { AdsStrategyHomePreviewSection } from "@/components/sections/home/AdsStrategyHomePreviewSection";
 import { ProductsSection } from "@/components/sections/ProductsSection";
-import { HomeExploreSection } from "@/components/sections/HomeExploreSection";
+import { RoadmapHomePreviewSection } from "@/components/sections/home/RoadmapHomePreviewSection";
+import { MarketReachSection } from "@/components/sections/MarketReachSection";
+import { PricingSection } from "@/components/sections/PricingSection";
+import { ContactHomePreviewSection } from "@/components/sections/home/ContactHomePreviewSection";
 import { CTASection } from "@/components/sections/CTASection";
 
 export default function HomePage() {
@@ -13,10 +17,14 @@ export default function HomePage() {
       <Hero />
       <StatsSection />
       <IntroPreviewSection />
-      <MarketReachSection />
+      <AiHomePreviewSection />
       <ServicesSection preview />
+      <AdsStrategyHomePreviewSection />
       <ProductsSection preview />
-      <HomeExploreSection />
+      <RoadmapHomePreviewSection />
+      <MarketReachSection />
+      <PricingSection preview />
+      <ContactHomePreviewSection />
       <CTASection />
     </>
   );
