@@ -8,6 +8,7 @@ import {
   Users,
   Map,
   Megaphone,
+  Globe2,
 } from "lucide-react";
 import { AnimateIn } from "@/components/ui/AnimateIn";
 import { SectionHeader } from "@/components/ui/SectionHeader";
@@ -48,6 +49,12 @@ const pages = [
     icon: Map,
     title: "Roadmap",
     description: "Growth Ecosystem 2026+ — timeline, pilar, dan visi global.",
+  },
+  {
+    href: "/pasar",
+    icon: Globe2,
+    title: "Pasar",
+    description: "Indonesia, ASEAN, Amerika, Oseania, Inggris, dan Eropa.",
   },
   {
     href: "/pricing",

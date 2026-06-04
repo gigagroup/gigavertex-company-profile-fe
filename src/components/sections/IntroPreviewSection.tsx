@@ -20,8 +20,8 @@ export function IntroPreviewSection() {
             <div className="glass-card rounded-2xl p-8 lg:p-10">
               <p className="text-sm leading-relaxed text-zinc-500">
                 Kami mengembangkan ekosistem AI tools, software, dan platform subscription
-                yang membantu tim kreatif, marketer, dan perusahaan bekerja lebih cepat
-                dan lebih cerdas.
+                yang membantu pebisnis, UMKM, tim kreatif, marketer, perusahaan, dan semua
+                kalangan bekerja lebih cepat dan lebih cerdas.
               </p>
               <ul className="mt-6 space-y-3">
                 {["Solusi AI end-to-end", "50+ tools siap pakai", "Dukungan 24/7"].map(

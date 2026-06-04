@@ -1,7 +1,8 @@
 import { Globe2, MapPin } from "lucide-react";
 import { AnimateIn } from "@/components/ui/AnimateIn";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { marketRegions } from "@/lib/constants";
+import { marketRegions } from "@/lib/markets";
+import { SectionFooterLink } from "@/components/ui/SectionFooterLink";
 
 const regionAccent = [
   "from-indigo-500/15 to-violet-500/10 border-indigo-200/80",
@@ -58,6 +59,8 @@ export function MarketReachSection() {
             </AnimateIn>
           ))}
         </div>
+
+        <SectionFooterLink href="/pasar" label="Detail jangkauan pasar" />
       </div>
     </section>
   );
