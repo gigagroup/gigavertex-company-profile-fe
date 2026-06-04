@@ -1,12 +1,10 @@
 import {
   Sparkles,
   Video,
-  Image,
-  Palette,
   Calendar,
-  Languages,
-  Scissors,
-  Plus,
+  Share2,
+  Brain,
+  LineChart,
   type LucideIcon,
 } from "lucide-react";
 import { SectionHeader } from "@/components/ui/SectionHeader";
@@ -18,12 +16,10 @@ import { cn } from "@/lib/utils";
 const iconMap: Record<string, LucideIcon> = {
   Sparkles,
   Video,
-  Image,
-  Palette,
   Calendar,
-  Languages,
-  Scissors,
-  Plus,
+  Share2,
+  Brain,
+  LineChart,
 };
 
 type ProductsSectionProps = {
@@ -35,7 +31,7 @@ export function ProductsSection({
   preview = false,
   showHeader = true,
 }: ProductsSectionProps) {
-  const displayProducts = preview ? products.slice(0, 3) : products;
+  const displayProducts = products;
 
   return (
     <section className={cn("relative", preview ? "py-20 lg:py-24" : "section-spacing")}>
@@ -46,11 +42,11 @@ export function ProductsSection({
         {showHeader && (
           <SectionHeader
             badge="Produk"
-            title={preview ? "Produk Populer" : "Ekosistem Tools AI Kami"}
+            title={preview ? "Portofolio Produk SaaS" : "Ekosistem Produk SaaS AI"}
             description={
               preview
-                ? "Beberapa tools AI andalan kami. Lihat katalog lengkap di halaman Produk."
-                : "Suite lengkap tools AI untuk kreator, marketer, dan bisnis — dari generate video hingga social media scheduler."
+                ? "Autonix, Terabyte, Giga, Newton AI, dan Growi — platform andalan kami."
+                : "Lima platform SaaS AI & CRM untuk creator, bisnis, dan agency — dari konten, video, hingga penjualan."
             }
           />
         )}
@@ -89,7 +85,7 @@ export function ProductsSection({
                     </span>
                     <h3 className="mt-1 mb-2 text-lg font-semibold text-zinc-900">{product.name}</h3>
                     <p className="mb-4 text-sm leading-relaxed text-zinc-500">
-                      {product.description}
+                      {preview ? product.summary : product.description}
                     </p>
                     <ul className="space-y-1.5">
                       {product.features.map((feature) => (

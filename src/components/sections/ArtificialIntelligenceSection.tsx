@@ -3,12 +3,9 @@ import {
   Brain,
   Sparkles,
   Video,
-  Image,
-  Palette,
   Calendar,
-  Languages,
-  Scissors,
-  Plus,
+  Share2,
+  LineChart,
   ArrowRight,
   Cpu,
   Shield,
@@ -35,18 +32,16 @@ import {
 const productIcons: Record<string, LucideIcon> = {
   Sparkles,
   Video,
-  Image,
-  Palette,
   Calendar,
-  Languages,
-  Scissors,
-  Plus,
+  Share2,
+  Brain,
+  LineChart,
 };
 
 const useCaseIcons = [Building2, Sparkles, Cpu, User];
 
 export function ArtificialIntelligenceSection() {
-  const aiProducts = products.filter((p) => p.category !== "Coming Soon");
+  const aiProducts = products;
 
   return (
     <>
@@ -111,14 +106,14 @@ export function ArtificialIntelligenceSection() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <SectionHeader
             badge="Ekosistem"
-            title="Tiga Pilar Produk AI"
-            description="Autonix, Terabyte, dan Giga — fondasi Growth Ecosystem kami."
+            title="Ekosistem Produk SaaS AI"
+            description="Autonix, Terabyte, Giga, Newton AI, dan Growi — fondasi Growth Ecosystem kami."
             className="mb-14"
           />
-          <div className="grid gap-6 lg:grid-cols-3">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {aiEcosystemPillars.map((pillar, i) => (
               <AnimateIn key={pillar.name} delay={i * 70}>
-                <div className="glass-card h-full rounded-2xl border-indigo-100/80 p-8 text-center">
+                <div className="glass-card h-full rounded-2xl border-indigo-100/80 p-6 text-left sm:p-8">
                   <div className="font-display text-3xl text-gradient-brand">{pillar.name}</div>
                   <p className="mt-2 text-xs font-semibold tracking-wide text-indigo-600 uppercase">
                     {pillar.focus}
@@ -201,8 +196,8 @@ export function ArtificialIntelligenceSection() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <SectionHeader
             badge="Produk"
-            title="Portofolio Produk AI"
-            description="Tools subscription yang aktif dan terus bertambah setiap bulan."
+            title="Portofolio Produk SaaS"
+            description="Autonix, Terabyte, Giga, Newton AI, dan Growi — platform subscription aktif dalam ekosistem Giga Vertex."
             className="mb-14"
           />
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">

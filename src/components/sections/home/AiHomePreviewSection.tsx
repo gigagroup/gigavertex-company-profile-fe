@@ -13,19 +13,19 @@ export function AiHomePreviewSection() {
         <SectionHeader
           badge={aiMeta.badge}
           title="Ekosistem AI untuk Semua Kalangan"
-          description="Generative AI, LLM, automasi, dan solusi enterprise — pilar Autonix, Terabyte, dan Giga."
+          description="Generative AI, LLM, automasi, dan solusi enterprise — Autonix, Terabyte, Giga, Newton AI, dan Growi."
         />
 
-        <div className="mb-10 grid gap-4 sm:grid-cols-3">
+        <div className="mb-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {aiEcosystemPillars.map((pillar, i) => (
             <AnimateIn key={pillar.name} delay={i * 60} variant="scale">
-              <div className="glass-card rounded-2xl p-6 text-center">
+              <div className="glass-card h-full rounded-2xl p-6 text-center">
                 <div className="font-display text-2xl text-gradient-brand">{pillar.name}</div>
                 <p className="mt-1 text-[10px] font-semibold tracking-wide text-indigo-600 uppercase">
                   {pillar.focus}
                 </p>
                 <p className="mt-3 text-sm leading-relaxed text-zinc-600">
-                  {pillar.description}
+                  {pillar.summary}
                 </p>
               </div>
             </AnimateIn>

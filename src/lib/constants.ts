@@ -1,3 +1,5 @@
+import { aiEcosystemPillars } from "@/lib/ai-intelligence";
+
 export const company = {
   name: "PT Giga Vertex Technology",
   shortName: "Giga Vertex",
@@ -68,80 +70,15 @@ export const services = [
   },
 ];
 
-export const products = [
-  {
-    icon: "Sparkles",
-    name: "Giga AI Studio",
-    category: "AI Tools",
-    description:
-      "Suite lengkap tools AI untuk produktivitas — dari penulisan, analisis, hingga automasi workflow.",
-    features: ["Multi-model AI", "Custom prompts", "Team workspace"],
-    badge: "Popular",
-  },
-  {
-    icon: "Video",
-    name: "Giga Video Gen",
-    category: "Video Generation",
-    description:
-      "Generate video berkualitas tinggi dari teks atau gambar dengan AI generatif terdepan.",
-    features: ["Text-to-video", "HD export", "Template library"],
-    badge: "New",
-  },
-  {
-    icon: "Image",
-    name: "Giga Photo Gen",
-    category: "Photo Generation",
-    description:
-      "Buat foto dan gambar profesional dalam hitungan detik dengan kontrol kreatif penuh.",
-    features: ["Photo realistic", "Style transfer", "Batch generation"],
-    badge: null,
-  },
-  {
-    icon: "Palette",
-    name: "Giga Image AI",
-    category: "Image Generation",
-    description:
-      "Generator gambar AI untuk ilustrasi, desain grafis, dan asset kreatif berkualitas premium.",
-    features: ["4K resolution", "Brand kit", "Commercial license"],
-    badge: null,
-  },
-  {
-    icon: "Calendar",
-    name: "Giga Social Scheduler",
-    category: "Social Media",
-    description:
-      "Jadwalkan dan kelola konten di semua platform sosial media dari satu dashboard.",
-    features: ["Multi-platform", "Analytics", "Auto-posting"],
-    badge: "Popular",
-  },
-  {
-    icon: "Languages",
-    name: "Giga Lang Learn",
-    category: "Language Learning",
-    description:
-      "Platform belajar bahasa dengan AI tutor interaktif, latihan percakapan, dan progress tracking.",
-    features: ["AI tutor", "50+ bahasa", "Gamification"],
-    badge: null,
-  },
-  {
-    icon: "Scissors",
-    name: "Giga Auto Clipper",
-    category: "Content Tools",
-    description:
-      "Potong dan edit video panjang menjadi clip viral otomatis dengan deteksi highlight AI.",
-    features: ["Auto highlight", "Subtitle AI", "Multi-format export"],
-    badge: "New",
-  },
-  {
-    icon: "Plus",
-    name: "Dan Masih Banyak Lagi",
-    category: "Coming Soon",
-    description:
-      "Kami terus mengembangkan tools baru setiap bulan. Daftar newsletter untuk update terbaru.",
-    features: ["Regular updates", "Beta access", "Community"],
-    badge: "Soon",
-  },
-];
+export const products = aiEcosystemPillars.map((pillar) => ({
+  icon: pillar.icon,
+  name: pillar.name,
+  category: pillar.focus,
+  summary: pillar.summary,
+  description: pillar.description,
+  features: pillar.features,
+  badge: pillar.badge,
+}));
 
 export const stats = [
   { value: "5+", label: "AI Tools" },

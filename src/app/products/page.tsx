@@ -7,7 +7,7 @@ import { CTASection } from "@/components/sections/CTASection";
 export const metadata: Metadata = {
   title: "Produk",
   description:
-    "Ekosistem produk AI Giga Vertex — video generator, photo generator, social media scheduler, auto clipper, dan lebih banyak lagi.",
+    "Ekosistem produk SaaS Giga Vertex — Autonix, Terabyte, Giga, Newton AI, dan Growi untuk konten, video AI, dan CRM.",
 };
 
 export default function ProductsPage() {
@@ -15,8 +15,8 @@ export default function ProductsPage() {
     <>
       <PageHeader
         badge="Produk"
-        title="Produk & Tools AI"
-        description="Suite lengkap tools AI untuk kreator, marketer, dan bisnis modern."
+        title="Produk & Platform SaaS"
+        description="Autonix, Terabyte, Giga, Newton AI, dan Growi — solusi AI & CRM untuk creator, bisnis, dan agency."
       />
       <ProductsSection showHeader={false} />
       <FeaturesSection />

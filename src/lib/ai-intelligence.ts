@@ -41,21 +41,58 @@ export const aiCapabilities = [
 export const aiEcosystemPillars = [
   {
     name: "Autonix",
-    focus: "Otomatisasi & agent AI",
+    icon: "Share2",
+    focus: "Konten video & distribusi otomatis",
+    summary:
+      "Buat video, susun konten, dan publikasikan ke berbagai platform sosial secara otomatis dari satu dashboard.",
     description:
-      "Pilar untuk automasi operasional, integrasi sistem, dan agent yang menjalankan tugas berulang secara cerdas.",
+      "Autonix adalah platform SaaS berbasis AI yang membantu creator, bisnis, dan agency membuat video, menyusun konten, serta mendistribusikannya ke berbagai platform media sosial secara otomatis dari satu dashboard. Dengan dukungan berbagai model AI dan fitur multi-platform publishing, Autonix memungkinkan pengguna memproduksi dan mengelola konten dengan lebih cepat, mudah, dan efisien.",
+    features: ["Multi-platform", "AI video", "Distribusi otomatis"],
+    badge: "Popular" as const,
   },
   {
     name: "Terabyte",
-    focus: "Data & infrastruktur",
+    icon: "Calendar",
+    focus: "Media sosial & AI Autopilot",
+    summary:
+      "Buat, jadwalkan, dan publikasikan konten sosial dengan AI Autopilot, smart scheduler, dan multi-akun.",
     description:
-      "Pilar data, analytics, CRM intelligence, dan fondasi teknis yang menopang semua produk AI.",
+      "Terabyte adalah platform SaaS berbasis AI yang membantu bisnis, creator, dan agency membuat, menjadwalkan, serta mempublikasikan konten ke berbagai platform media sosial dari satu dashboard. Dengan fitur AI Autopilot, smart scheduler, dan multi-account management, Terabyte memungkinkan pengguna mengelola konten secara konsisten dengan lebih cepat, mudah, dan efisien.",
+    features: ["AI Autopilot", "Smart scheduler", "Multi-akun"],
+    badge: "Popular" as const,
   },
   {
     name: "Giga",
-    focus: "Tools kreatif & SaaS",
+    icon: "Video",
+    focus: "Video AI generatif unlimited",
+    summary:
+      "Video AI dari teks atau gambar tanpa batas token — text-to-video dan image-to-video dalam satu dashboard.",
     description:
-      "Pilar produk subscription — Giga AI Studio, video/photo gen, social scheduler, dan tools untuk kreator & marketer.",
+      "Giga adalah platform SaaS berbasis AI yang memungkinkan pengguna membuat video AI dari teks maupun gambar secara unlimited dalam satu dashboard. Dengan teknologi text-to-video dan image-to-video, Giga membantu bisnis, creator, dan agency menghasilkan konten video berkualitas secara cepat, mudah, dan efisien tanpa batasan token atau kredit.",
+    features: ["Text-to-video", "Image-to-video", "Unlimited"],
+    badge: "New" as const,
+  },
+  {
+    name: "Newton AI",
+    icon: "Brain",
+    focus: "Multi-model AI studio",
+    summary:
+      "Berbagai model AI dalam satu dashboard untuk video, gambar, teks, storyboard, dan konten digital.",
+    description:
+      "Newton AI adalah platform SaaS berbasis AI yang menyediakan berbagai model kecerdasan buatan dalam satu dashboard untuk menghasilkan video, gambar, teks, storyboard, dan konten digital lainnya. Dengan dukungan multi-model AI, antarmuka yang mudah digunakan, serta proses generasi yang cepat, Newton AI membantu bisnis, creator, dan agency meningkatkan produktivitas dan kreativitas secara lebih efisien.",
+    features: ["Multi-model AI", "Storyboard", "Generasi cepat"],
+    badge: null,
+  },
+  {
+    name: "Growi",
+    icon: "LineChart",
+    focus: "CRM & manajemen penjualan",
+    summary:
+      "Kelola prospek, pelanggan, order, dan follow-up dalam satu dashboard CRM terpusat.",
+    description:
+      "Growi adalah platform SaaS CRM yang membantu bisnis mengelola prospek, pelanggan, order, dan aktivitas follow-up dalam satu dashboard terpusat. Dengan fitur manajemen database pelanggan, pelacakan penjualan, dan otomatisasi follow-up, Growi membantu tim meningkatkan produktivitas, menjaga hubungan pelanggan, dan mempercepat pertumbuhan bisnis.",
+    features: ["CRM terpusat", "Follow-up otomatis", "Pipeline penjualan"],
+    badge: null,
   },
 ];
 
@@ -141,7 +178,7 @@ export const aiProcess = [
 ];
 
 export const aiDifferentiators = [
-  "50+ tools AI siap pakai dalam satu ekosistem subscription",
+  "5+ tools AI siap pakai dalam satu ekosistem subscription",
   "Produk dikembangkan di Indonesia, diperluas ke ASEAN & global",
   "Winning creative & growth terintegrasi dengan strategi Meta, TikTok, Google Ads",
   "Roadmap jelas dari UMKM lokal hingga infrastruktur B2B enterprise",
