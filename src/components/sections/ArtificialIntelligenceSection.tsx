@@ -46,10 +46,10 @@ export function ArtificialIntelligenceSection() {
   const aiProducts = products;
 
   return (
-    <>
-      <section className="relative pt-28 pb-6 lg:pt-32 lg:pb-8">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="relative mx-auto w-full max-w-2xl overflow-hidden rounded-2xl bg-zinc-900 shadow-md ring-1 ring-zinc-200/60 lg:max-w-3xl">
+    <div className="overflow-x-hidden">
+      <section className="relative overflow-hidden pt-24 pb-6 sm:pt-28 lg:pt-32 lg:pb-8">
+        <div className="mx-auto w-full min-w-0 max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="relative mx-auto w-full min-w-0 max-w-2xl overflow-hidden rounded-2xl bg-zinc-900 shadow-md ring-1 ring-zinc-200/60 lg:max-w-3xl">
             <video
               className="aspect-video w-full object-cover"
               autoPlay
@@ -65,33 +65,35 @@ export function ArtificialIntelligenceSection() {
         </div>
       </section>
 
-      <section className="relative pb-12 lg:pb-16">
-        <div className="pointer-events-none absolute inset-0">
-          <div className="absolute top-0 left-1/2 h-[420px] w-[640px] -translate-x-1/2 rounded-full bg-violet-600/[0.08] blur-[120px] animate-float" />
+      <section className="relative overflow-hidden pb-12 lg:pb-16">
+        <div className="pointer-events-none absolute inset-0 overflow-hidden">
+          <div className="absolute top-0 left-1/2 h-[280px] w-[min(100%,36rem)] max-w-full -translate-x-1/2 rounded-full bg-violet-600/[0.08] blur-[100px] animate-float sm:h-[420px]" />
         </div>
-        <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-3xl text-center">
+        <div className="relative mx-auto w-full min-w-0 max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto w-full min-w-0 max-w-3xl text-center">
             <span className="badge-elegant mb-4 inline-block rounded-full px-4 py-1.5 text-[10px] font-semibold uppercase">
               {aiMeta.badge}
             </span>
-            <h1 className="font-display text-4xl font-normal tracking-tight text-zinc-900 sm:text-5xl">
+            <h1 className="font-display text-[1.75rem] leading-[1.15] font-normal tracking-tight text-balance text-zinc-900 sm:text-4xl lg:text-5xl">
               {aiMeta.title}
             </h1>
-            <p className="mt-6 text-lg leading-relaxed text-zinc-600">{aiMeta.intro}</p>
-            <div className="animate-on-load mt-10 flex flex-wrap justify-center gap-4">
+            <p className="mt-4 text-base leading-relaxed text-zinc-600 sm:mt-6 sm:text-lg">
+              {aiMeta.intro}
+            </p>
+            <div className="mt-8 flex w-full flex-col items-stretch gap-3 sm:mt-10 sm:flex-row sm:flex-wrap sm:items-center sm:justify-center sm:gap-4">
               <Link
                 href="/products"
-                className="btn-primary-glow inline-flex items-center gap-2 rounded-full px-7 py-3 text-sm font-medium text-white"
+                className="btn-primary-glow inline-flex w-full items-center justify-center gap-2 rounded-full px-7 py-3 text-sm font-medium text-white sm:w-auto"
               >
                 Lihat Produk AI
-                <ArrowRight className="h-4 w-4" />
+                <ArrowRight className="h-4 w-4 shrink-0" />
               </Link>
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 rounded-full border border-zinc-300 bg-white px-7 py-3 text-sm font-medium text-zinc-700 transition-colors hover:border-indigo-300 hover:text-indigo-700"
+                className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-zinc-300 bg-white px-7 py-3 text-sm font-medium text-zinc-700 transition-colors hover:border-indigo-300 hover:text-indigo-700 sm:w-auto"
               >
                 Konsultasi AI
-                <ArrowRight className="h-4 w-4" />
+                <ArrowRight className="h-4 w-4 shrink-0" />
               </Link>
             </div>
           </div>
@@ -99,7 +101,7 @@ export function ArtificialIntelligenceSection() {
       </section>
 
       <section className="py-12 lg:py-16">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto w-full min-w-0 max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeader
             badge="Kemampuan"
             title="Apa yang Kami Kembangkan"
@@ -123,23 +125,25 @@ export function ArtificialIntelligenceSection() {
       </section>
 
       <section className="border-y border-zinc-200/80 bg-indigo-50/25 py-16 lg:py-20">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto w-full min-w-0 max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeader
             badge="Ekosistem"
             title="Ekosistem Produk SaaS AI"
             description="Autonix, Terabyte, Giga, Newton AI, dan Growi — fondasi Growth Ecosystem kami."
             className="mb-14"
           />
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {aiEcosystemPillars.map((pillar, i) => (
               <AnimateIn key={pillar.name} delay={i * 70}>
-                <div className="glass-card h-full rounded-2xl border-indigo-100/80 p-6 text-left sm:p-8">
-                  <div className="font-display text-3xl text-gradient-brand">{pillar.name}</div>
+                <div className="glass-card h-full min-w-0 rounded-2xl border-indigo-100/80 p-5 text-left sm:p-8">
+                  <div className="font-display text-2xl break-words text-gradient-brand sm:text-3xl">
+                    {pillar.name}
+                  </div>
                   <p className="mt-2 text-xs font-semibold tracking-wide text-indigo-600 uppercase">
                     {pillar.focus}
                   </p>
                   <p className="mt-4 text-sm leading-relaxed text-zinc-600">
-                    {pillar.description}
+                    {pillar.summary}
                   </p>
                 </div>
               </AnimateIn>
@@ -149,7 +153,7 @@ export function ArtificialIntelligenceSection() {
       </section>
 
       <section className="py-16 lg:py-20">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto w-full min-w-0 max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeader
             badge="Use case"
             title="AI untuk Siapa?"
@@ -188,7 +192,7 @@ export function ArtificialIntelligenceSection() {
       </section>
 
       <section className="py-12 lg:py-16">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto w-full min-w-0 max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeader
             badge="Teknologi"
             title="Pendekatan Teknis"
@@ -213,30 +217,30 @@ export function ArtificialIntelligenceSection() {
       </section>
 
       <section className="border-t border-zinc-200/80 py-16 lg:py-20">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto w-full min-w-0 max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeader
             badge="Produk"
             title="Portofolio Produk SaaS"
             description="Autonix, Terabyte, Giga, Newton AI, dan Growi — platform subscription aktif dalam ekosistem Giga Vertex."
             className="mb-14"
           />
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {aiProducts.map((product, i) => {
               const Icon = productIcons[product.icon] ?? Sparkles;
               return (
                 <AnimateIn key={product.name} delay={i * 40} variant="scale">
-                  <div className="glass-card h-full overflow-hidden rounded-2xl">
-                    <div className="relative aspect-[16/10] w-full bg-zinc-50">
+                  <div className="glass-card h-full min-w-0 overflow-hidden rounded-2xl">
+                    <div className="relative aspect-[16/10] w-full min-w-0 bg-zinc-50">
                       <Image
                         src={product.image}
                         alt={product.name}
                         fill
                         className="object-cover"
-                        sizes="(max-width: 1024px) 50vw, 33vw"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       />
                     </div>
-                    <div className="p-6">
-                    <div className="mb-3 flex items-center gap-2">
+                    <div className="min-w-0 p-5 sm:p-6">
+                    <div className="mb-3 flex min-w-0 items-center gap-2">
                       <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-zinc-200 bg-indigo-50 text-indigo-600">
                         <Icon className="h-4 w-4" />
                       </div>
@@ -277,7 +281,7 @@ export function ArtificialIntelligenceSection() {
       </section>
 
       <section className="bg-zinc-50/80 py-16 lg:py-20">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto w-full min-w-0 max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeader
             badge="Proses"
             title="Dari Ide ke Produksi AI"
@@ -300,14 +304,14 @@ export function ArtificialIntelligenceSection() {
       </section>
 
       <section className="py-16 lg:py-20">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
-            <AnimateIn>
+        <div className="mx-auto w-full min-w-0 max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid min-w-0 grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-16">
+            <AnimateIn className="min-w-0">
               <SectionHeader
                 badge="Keunggulan"
                 title="Mengapa Giga Vertex?"
                 align="left"
-                className="mb-8"
+                className="mb-8 !max-w-none"
               />
               <ul className="space-y-3">
                 {aiDifferentiators.map((item) => (
@@ -347,6 +351,6 @@ export function ArtificialIntelligenceSection() {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }

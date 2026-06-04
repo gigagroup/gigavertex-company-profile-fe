@@ -48,11 +48,15 @@ export function AnimatedText({
   }, [triggerOnView]);
 
   return (
-    <Tag ref={ref as React.RefObject<HTMLHeadingElement>} className={className}>
+    <Tag
+      ref={ref as React.RefObject<HTMLHeadingElement>}
+      className={cn("max-w-full break-words", className)}
+    >
       {words.map((word, i) => (
         <span
           key={`${word}-${i}`}
           className={cn(
+            "inline-block max-w-full",
             active ? "animate-word" : "opacity-0",
             wordClassName
           )}

@@ -22,7 +22,7 @@ export function SectionHeader({
   return (
     <div
       className={cn(
-        "mb-20 max-w-3xl",
+        "mb-12 w-full min-w-0 max-w-3xl sm:mb-20",
         align === "center" && "mx-auto text-center",
         className
       )}
@@ -38,7 +38,7 @@ export function SectionHeader({
         <AnimatedText
           text={title}
           as="h2"
-          className="font-display text-3xl font-normal tracking-tight text-zinc-900 sm:text-4xl lg:text-[2.75rem] lg:leading-tight"
+          className="font-display max-w-full text-[1.65rem] leading-tight font-normal tracking-tight text-balance text-zinc-900 sm:text-4xl lg:text-[2.75rem] lg:leading-tight"
           triggerOnView
         />
       </AnimateIn>
