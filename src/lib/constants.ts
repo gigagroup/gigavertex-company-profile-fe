@@ -145,8 +145,7 @@ export const products = [
 
 export const stats = [
   { value: "5+", label: "AI Tools" },
-  { value: "10K+", label: "Pengguna Aktif" },
-  { value: "99.9%", label: "Uptime" },
+  { value: "5K+", label: "Pengguna Aktif" },
   { value: "24/7", label: "Support" },
 ];
 
