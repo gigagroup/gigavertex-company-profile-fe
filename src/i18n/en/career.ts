@@ -29,7 +29,12 @@ export const career = {
     title: "Open Positions",
     description: "There are no active openings at the moment.",
     emptyNote: "Feel free to send your CV via our contact page — we're always open to top talent.",
-    positions: [],
+    positions: [] as {
+      title: string;
+      department: string;
+      type: string;
+      location: string;
+    }[],
   },
   careerProcess: {
     title: "Hiring Process",

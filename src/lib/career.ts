@@ -32,7 +32,12 @@ const careerId = {
     title: "Posisi Terbuka",
     description: "Saat ini belum ada lowongan aktif.",
     emptyNote: "Tetap kirim CV Anda melalui halaman kontak — kami selalu terbuka untuk talenta terbaik.",
-    positions: [],
+    positions: [] as {
+      title: string;
+      department: string;
+      type: string;
+      location: string;
+    }[],
   },
   careerProcess: {
     title: "Proses Rekrutmen",

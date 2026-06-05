@@ -33,9 +33,12 @@ export const metadata: Metadata = {
     "Indonesia",
   ],
   icons: {
-    icon: [{ url: "/assets/images/logo-gigavertex-favicon.png", type: "image/png" }],
-    shortcut: "/assets/images/logo-gigavertex-favicon.png",
-    apple: "/assets/images/logo-gigavertex-favicon.png",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.png", type: "image/png", sizes: "512x512" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/apple-icon.png",
   },
 };
 
