@@ -92,7 +92,7 @@ export function ArtificialIntelligenceSection() {
                 href="/contact"
                 className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-zinc-300 bg-white px-7 py-3 text-sm font-medium text-zinc-700 transition-colors hover:border-indigo-300 hover:text-indigo-700 sm:w-auto"
               >
-                Konsultasi AI
+                Coba Gratis
                 <ArrowRight className="h-4 w-4 shrink-0" />
               </Link>
             </div>
@@ -104,8 +104,8 @@ export function ArtificialIntelligenceSection() {
         <div className="mx-auto w-full min-w-0 max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeader
             badge="Kemampuan"
-            title="Apa yang Kami Kembangkan"
-            description="Spektrum lengkap kecerdasan buatan untuk produk digital, pemasaran, dan operasional bisnis."
+            title="Teknologi di Balik Platform Kami"
+            description="Spektrum kecerdasan buatan yang menggerakkan setiap produk SaaS dalam ekosistem Giga Vertex."
             className="mb-14"
           />
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -157,7 +157,7 @@ export function ArtificialIntelligenceSection() {
           <SectionHeader
             badge="Use case"
             title="AI untuk Siapa?"
-            description="Solusi yang disesuaikan dengan skala dan kebutuhan pengguna."
+            description="Setiap platform SaaS kami dirancang untuk kebutuhan pengguna di berbagai skala."
             className="mb-14"
           />
           <div className="grid gap-6 sm:grid-cols-2">
@@ -249,6 +249,11 @@ export function ArtificialIntelligenceSection() {
                       </span>
                     </div>
                     <h3 className="font-semibold text-zinc-900">{product.name}</h3>
+                    {product.users && (
+                      <p className="mt-1 text-xs font-medium text-indigo-600">
+                        {product.users} pengguna aktif
+                      </p>
+                    )}
                     <p className="mt-2 text-sm leading-relaxed text-zinc-500">
                       {product.description}
                     </p>
@@ -284,7 +289,7 @@ export function ArtificialIntelligenceSection() {
         <div className="mx-auto w-full min-w-0 max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeader
             badge="Proses"
-            title="Dari Ide ke Produksi AI"
+            title="Cara Memulai Berlangganan"
             className="mb-14"
           />
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">

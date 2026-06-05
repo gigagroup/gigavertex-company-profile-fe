@@ -11,8 +11,8 @@ export function ServicesProcessSection() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <SectionHeader
           badge="Proses"
-          title="Cara Kami Bekerja"
-          description="Alur kolaborasi yang terstruktur dari konsultasi awal hingga dukungan berkelanjutan."
+          title="Cara Memulai"
+          description="Alur berlangganan yang sederhana — dari trial gratis hingga dukungan berkelanjutan."
         />
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {serviceProcess.map((step, i) => {

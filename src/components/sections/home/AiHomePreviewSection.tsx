@@ -13,7 +13,7 @@ export function AiHomePreviewSection() {
         <SectionHeader
           badge={aiMeta.badge}
           title="Ekosistem AI untuk Semua Kalangan"
-          description="Generative AI, LLM, automasi, dan solusi enterprise — Autonix, Terabyte, Giga, Newton AI, dan Growi."
+          description="Platform berbasis langganan (SaaS) untuk generative AI, LLM, automasi, dan CRM — Autonix, Terabyte, Giga, Newton AI, dan Growi dengan ribuan pengguna aktif."
         />
 
         <div className="mb-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

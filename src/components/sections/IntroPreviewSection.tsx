@@ -11,7 +11,7 @@ export function IntroPreviewSection() {
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <SectionHeader
             badge="Tentang Kami"
-            title="Partner Teknologi untuk Bisnis Modern"
+            title="Penyedia Produk Kecerdasan Buatan untuk Bisnis Modern"
             description={company.description}
             align="left"
             className="mb-0"
@@ -19,12 +19,12 @@ export function IntroPreviewSection() {
           <AnimateIn variant="right" delay={100}>
             <div className="glass-card rounded-2xl p-8 lg:p-10">
               <p className="text-sm leading-relaxed text-zinc-500">
-                Kami mengembangkan ekosistem AI tools, software, dan platform subscription
-                yang membantu pebisnis, UMKM, tim kreatif, marketer, perusahaan, dan semua
-                kalangan bekerja lebih cepat dan lebih cerdas.
+                Kami mengembangkan dan mengoperasikan ekosistem produk kecerdasan buatan (AI)
+                dan platform berbasis langganan (SaaS) yang membantu pebisnis, UMKM, tim kreatif,
+                marketer, perusahaan, dan semua kalangan bekerja lebih cepat dan lebih cerdas.
               </p>
               <ul className="mt-6 space-y-3">
-                {["Solusi AI end-to-end", "5+ tools siap pakai", "Dukungan 24/7"].map(
+                {["5+ platform SaaS siap pakai", "5.000+ pengguna aktif", "Dukungan 24/7"].map(
                   (item) => (
                     <li key={item} className="flex items-center gap-3 text-sm text-zinc-600">
                       <span className="h-1 w-1 rounded-full bg-indigo-400" />

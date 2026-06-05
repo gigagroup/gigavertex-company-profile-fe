@@ -2,14 +2,14 @@ import { assets } from "@/lib/assets";
 
 export const aboutIntro = {
   badge: "Tentang Kami",
-  headline: "Membangun Ekosistem AI & Teknologi untuk Indonesia dan Dunia",
+  headline: "Penyedia Produk Kecerdasan Buatan & Platform SaaS untuk Indonesia dan Dunia",
   narrative:
-    "PT Giga Vertex Technology berfokus pada pengembangan solusi kecerdasan buatan, perangkat lunak, dan platform digital berbasis subscription. Dengan kemampuan rekayasa produk yang terintegrasi — dari tools kreatif hingga automasi bisnis — kami berdedikasi membantu pebisnis, UMKM, kreator, dan perusahaan bekerja lebih cepat, rapi, dan terukur. Di tengah percepatan adopsi AI, kami menghadirkan produk yang praktis dan scalable, menjadikan Giga Vertex mitra teknologi yang memaksimalkan nilai tambah sepanjang perjalanan digital pelanggan kami.",
+    "PT Giga Vertex Technology adalah penyedia produk kecerdasan buatan (AI), perangkat lunak, dan platform berbasis langganan (SaaS). Kami merancang, mengembangkan, dan mengoperasikan rangkaian solusi digital — dari produksi konten kreatif hingga automasi bisnis dan CRM — yang membantu pebisnis, UMKM, kreator, dan perusahaan mengakses teknologi AI terkini secara praktis dan terukur.",
 };
 
 export const aboutVision = {
   title: "Visi Giga Vertex",
-  tagline: "Membangun ekosistem AI & software yang demokratis, inovatif, dan berdampak global",
+  tagline: "Menyediakan ekosistem produk kecerdasan buatan dan platform SaaS yang demokratis, inovatif, dan berdampak global",
   pillars: [
     {
       title: "AI untuk Semua",
@@ -33,9 +33,9 @@ export const aboutMission = {
   title: "Misi Kami",
   intro: "Langkah strategis yang kami jalankan setiap hari untuk mewujudkan visi bersama.",
   items: [
-    "Mengembangkan dan merilis produk AI & software yang relevan untuk pasar Indonesia dan global.",
+    "Mengembangkan dan merilis produk kecerdasan buatan (AI) serta platform berbasis langganan (SaaS) yang relevan untuk pasar Indonesia dan global.",
     "Memberdayakan UMKM, pebisnis, dan tim kreatif dengan tools subscription yang mudah dipakai.",
-    "Membangun infrastruktur data, CRM, dan automasi untuk pipeline penjualan yang efisien.",
+    "Menyediakan infrastruktur data, CRM, dan automasi sebagai bagian dari ekosistem tools berlangganan.",
     "Menerapkan strategi akuisisi pelanggan terukur melalui Meta, TikTok, dan Google Ads.",
     "Menjaga standar keamanan data, etika AI, dan kualitas produk tertinggi.",
     "Berkolaborasi dengan mitra, kreator, dan komunitas untuk inovasi berkelanjutan.",
@@ -78,19 +78,19 @@ export const aboutCoreValues = [
 
 export const aboutJourney = {
   title: "Jejak Langkah",
-  subtitle: "Perjalanan membangun Growth Ecosystem dari fondasi lokal menuju visi global.",
+  subtitle: "Perjalanan mengembangkan dan mengoperasikan Growth Ecosystem dari fondasi lokal menuju visi global.",
   milestones: [
     {
       year: "2020",
       title: "Awal perjalanan",
       description:
-        "Founder memulai visi membangun ekosistem tools AI & otomatisasi untuk pelaku bisnis Indonesia.",
+        "Founder memulai visi menyediakan ekosistem produk kecerdasan buatan berbasis langganan untuk pelaku bisnis Indonesia.",
     },
     {
       year: "2024",
       title: "Giga Vertex Technology",
       description:
-        "Pengembangan produk awal, validasi pasar, dan fondasi brand di ranah AI & software subscription.",
+        "Peluncuran produk berbasis langganan (SaaS) awal, validasi pasar, dan fondasi brand sebagai penyedia produk kecerdasan buatan.",
     },
     {
       year: "2026",
@@ -102,7 +102,7 @@ export const aboutJourney = {
       year: "2027+",
       title: "Global & mobile",
       description:
-        "Ekspansi pasar internasional, aplikasi mobile, dan infrastruktur AI untuk B2B enterprise.",
+        "Ekspansi pasar internasional, aplikasi mobile, dan paket enterprise untuk pengguna B2B skala besar.",
     },
   ],
 };
@@ -112,5 +112,5 @@ export const aboutFounder = {
   role: "Founder & CEO",
   since: "Memimpin sejak 2020",
   image: assets.images.founderCeo,
-  bio: "Memimpin visi Giga Vertex Technology dan Growth Ecosystem menuju ekosistem tools AI & otomatisasi untuk pelaku bisnis di Indonesia dan pasar global.",
+  bio: "Memimpin visi Giga Vertex Technology sebagai penyedia produk kecerdasan buatan (AI) dan platform berbasis langganan (SaaS) untuk pelaku bisnis di Indonesia dan pasar global.",
 };

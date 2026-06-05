@@ -26,7 +26,8 @@ export const metadata: Metadata = {
   keywords: [
     "AI",
     "artificial intelligence",
-    "software",
+    "penyedia produk AI",
+    "SaaS platform",
     "Giga Vertex",
     "video generation",
     "photo generation",

@@ -75,6 +75,11 @@ function ProductPreviewCard({
             {product.category}
           </span>
           <h3 className="mt-1 mb-2 text-lg font-semibold text-zinc-900">{product.name}</h3>
+          {product.users && (
+            <p className="mb-2 text-xs font-medium text-indigo-600">
+              {product.users} pengguna aktif
+            </p>
+          )}
           <p className="mb-4 text-sm leading-relaxed text-zinc-500">{product.summary}</p>
           <ul className="space-y-1.5">
             {product.features.map((feature) => (
@@ -150,6 +155,12 @@ function ProductShowcaseCard({
               {product.name}
             </h2>
 
+            {product.users && (
+              <p className="mt-2 text-sm font-medium text-indigo-600">
+                {product.users} pengguna aktif
+              </p>
+            )}
+
             <p className="mt-4 text-sm leading-relaxed text-zinc-600 sm:text-base">
               {product.description}
             </p>
@@ -210,8 +221,8 @@ export function ProductsSection({
             title={preview ? "Portofolio Produk SaaS" : "Ekosistem Produk SaaS AI"}
             description={
               preview
-                ? "Autonix, Terabyte, Giga, Newton AI, dan Growi — platform andalan kami."
-                : "Lima platform SaaS AI & CRM untuk creator, bisnis, dan agency — dari konten, video, hingga penjualan."
+                ? "Autonix, Terabyte, Giga, Newton AI, dan Growi — platform SaaS andalan kami dengan ribuan pengguna aktif."
+                : "Lima platform SaaS AI & CRM untuk creator, bisnis, dan agency — dari konten, video, hingga penjualan. Sudah dipercaya ribuan pengguna."
             }
             className={preview ? undefined : "mb-12 lg:mb-16"}
           />

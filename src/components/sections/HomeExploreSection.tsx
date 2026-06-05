@@ -29,8 +29,8 @@ const pages = [
   {
     href: "/services",
     icon: Brain,
-    title: "Layanan",
-    description: "Solusi AI, software, website, dan konsultasi teknologi.",
+    title: "Platform",
+    description: "Ekosistem produk kecerdasan buatan (SaaS) — kreatif, sosial media, video AI, CRM, dan multi-model studio.",
   },
   {
     href: "/strategi-iklan",

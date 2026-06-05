@@ -72,7 +72,7 @@ export function FeaturesSection({ showHeader = true }: FeaturesSectionProps) {
                     dengan infrastruktur yang handal dan support yang responsif.&rdquo;
                   </p>
                   <p className="mt-3 text-xs font-medium tracking-wide text-indigo-600">
-                    — Engineering Team, Giga Vertex
+                    — Product Team, Giga Vertex
                   </p>
                 </div>
               </div>

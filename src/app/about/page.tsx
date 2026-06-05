@@ -6,7 +6,7 @@ import { CTASection } from "@/components/sections/CTASection";
 export const metadata: Metadata = {
   title: "Tentang Kami",
   description:
-    "Pelajari lebih lanjut tentang PT Giga Vertex Technology — visi, misi, nilai, dan tim di balik platform AI kami.",
+    "Pelajari lebih lanjut tentang PT Giga Vertex Technology — penyedia produk kecerdasan buatan (AI), perangkat lunak, dan platform berbasis langganan (SaaS).",
 };
 
 export default function AboutPage() {

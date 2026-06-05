@@ -2,7 +2,7 @@ export const marketMeta = {
   badge: "Pasar",
   title: "Jangkauan Pasar Lokal & Global",
   intro:
-    "PT Giga Vertex Technology menjalankan ekspansi bertahap — memperkuat fondasi di Indonesia dan Asia Tenggara, lalu merambah pasar berbahasa Inggris serta Eropa Barat dengan produk AI, software, dan platform subscription yang siap dilokalisasi.",
+    "PT Giga Vertex Technology menjalankan ekspansi bertahap — memperkuat fondasi di Indonesia dan Asia Tenggara, lalu merambah pasar berbahasa Inggris serta Eropa Barat dengan produk kecerdasan buatan dan platform berbasis langganan (SaaS) yang siap dilokalisasi.",
 };
 
 export type MarketCountry = {
@@ -95,7 +95,7 @@ export const marketRegionsDetail: MarketRegionDetail[] = [
     strategies: [
       "Dominasi Meta Ads sebagai kanal akuisisi utama di setiap negara target.",
       "Landing page & ad creative dalam bahasa negara terkait.",
-      "Software tools multi-bahasa dengan dukungan lokal payment (Xendit ASEAN).",
+      "Produk kecerdasan buatan multi-bahasa dengan dukungan lokal payment (Xendit ASEAN).",
       "CRM & auto follow-up (email, WhatsApp) untuk pipeline penjualan regional.",
       "Otoritas niche AI & otomatisasi di Indonesia sebelum scale agresif ke luar.",
     ],

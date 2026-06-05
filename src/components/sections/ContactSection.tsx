@@ -26,7 +26,7 @@ export function ContactSection({ showHeader = true }: ContactSectionProps) {
           <SectionHeader
             badge="Kontak"
             title="Hubungi Kami"
-            description="Punya pertanyaan atau ingin diskusi project? Tim kami siap membantu Anda."
+            description="Punya pertanyaan, ingin demo produk, atau butuh bantuan berlangganan? Tim kami siap membantu Anda."
           />
         )}
 
@@ -116,7 +116,7 @@ export function ContactSection({ showHeader = true }: ContactSectionProps) {
                     <input
                       type="text"
                       required
-                      placeholder="Konsultasi Project AI"
+                      placeholder="Demo Produk / Berlangganan"
                       className="w-full rounded-xl border border-zinc-200 bg-zinc-50 px-4 py-3.5 text-sm text-zinc-900 placeholder:text-zinc-600 transition-colors focus:border-indigo-500/40 focus:outline-none focus:ring-1 focus:ring-indigo-500/20"
                     />
                   </div>
@@ -127,7 +127,7 @@ export function ContactSection({ showHeader = true }: ContactSectionProps) {
                     <textarea
                       required
                       rows={5}
-                      placeholder="Ceritakan kebutuhan project Anda..."
+                      placeholder="Ceritakan produk yang ingin Anda coba atau kebutuhan berlangganan Anda..."
                       className="w-full resize-none rounded-xl border border-zinc-200 bg-zinc-50 px-4 py-3.5 text-sm text-zinc-900 placeholder:text-zinc-600 transition-colors focus:border-indigo-500/40 focus:outline-none focus:ring-1 focus:ring-indigo-500/20"
                     />
                   </div>

@@ -9,7 +9,7 @@ export function PricingFaqSection() {
         <SectionHeader
           badge="FAQ"
           title="Pertanyaan Umum"
-          description="Jawaban singkat seputar paket berlangganan dan layanan kami."
+          description="Jawaban singkat seputar paket berlangganan dan platform kecerdasan buatan kami."
         />
         <div className="space-y-4">
           {pricingFaqs.map((faq, i) => (

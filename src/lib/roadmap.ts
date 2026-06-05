@@ -54,7 +54,7 @@ export const roadmapPhases: RoadmapPhase[] = [
       "Pengembangan produk baru seperti Auto Clipper dan belajar bahasa dengan AI.",
       "Menambahkan pembayaran lewat payment gateway Xendit yang mendukung negara di Asia Tenggara.",
       "Landing page dan materi iklan (ad creative) dalam bahasa negara terkait.",
-      "Software tools yang mendukung multi-bahasa.",
+      "Produk kecerdasan buatan yang mendukung multi-bahasa.",
       "Ekspansi ke pengguna individual atau pemilik bisnis kecil di Malaysia, Singapura, Thailand, Vietnam, dan Filipina.",
     ],
   },
@@ -68,7 +68,7 @@ export const roadmapPhases: RoadmapPhase[] = [
       "Punya framework hook & angle sendiri + rutinitas tes creative harian.",
       "Kuatkan branding personal & perusahaan; konten organik & komunitas.",
       "Bangun otoritas di niche AI & otomatisasi di Indonesia.",
-      "Penambahan produk tools/software di berbagai niche populer — kesehatan, parenting, dan sejenisnya.",
+      "Penambahan produk kecerdasan buatan di berbagai niche populer — kesehatan, parenting, dan sejenisnya.",
       "Penguatan sistem CRM untuk penjualan di Asia Tenggara.",
     ],
   },
@@ -140,7 +140,7 @@ export const roadmapPillars = [
 
 export const roadmapVision = {
   description:
-    "Membangun ekosistem AI & otomatisasi terbesar dari Indonesia untuk pasar global — multi-produk, SaaS global, infrastruktur AI, ekosistem web & mobile, dan posisi pemimpin pasar AI automation di Indonesia serta Asia Tenggara.",
+    "Menyediakan ekosistem produk kecerdasan buatan & otomatisasi terbesar dari Indonesia untuk pasar global — multi-produk, SaaS global, infrastruktur AI, ekosistem web & mobile, dan posisi pemimpin penyedia produk AI di Indonesia serta Asia Tenggara.",
   tags: [
     "Ekosistem AI multi-produk",
     "Perusahaan SaaS global",

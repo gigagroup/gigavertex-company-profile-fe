@@ -263,7 +263,7 @@ export function AboutSection() {
           <SectionHeader
             badge="Kepemimpinan"
             title="Founder & CEO"
-            description="Visi dan arah Growth Ecosystem Giga Vertex Technology."
+            description="Visi dan arah penyedia produk kecerdasan buatan dan platform SaaS Giga Vertex Technology."
           />
 
           <AnimateIn>

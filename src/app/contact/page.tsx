@@ -15,7 +15,7 @@ export default function ContactPage() {
       <PageHeader
         badge="Kontak"
         title="Hubungi Kami"
-        description="Punya pertanyaan atau ingin diskusi project? Tim kami siap membantu Anda."
+        description="Punya pertanyaan, ingin demo produk, atau butuh bantuan berlangganan? Tim kami siap membantu Anda."
       />
       <ContactSection showHeader={false} />
       <CTASection />

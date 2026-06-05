@@ -5,7 +5,7 @@ export const company = {
   shortName: "Giga Vertex",
   tagline: "Membangun Masa Depan dengan Kecerdasan Buatan",
   description:
-    "Perusahaan teknologi yang berfokus pada pengembangan solusi AI, perangkat lunak, aplikasi, dan platform digital berbasis subscription untuk bisnis dan individu.",
+    "Penyedia produk kecerdasan buatan (AI), perangkat lunak, dan platform berbasis langganan (SaaS) untuk bisnis, kreator, dan individu.",
   email: "support@gigavertex.com",
   phone: "+62 812-2852-2550",
   phoneTel: "+6281228522550",
@@ -24,7 +24,7 @@ export const navLinks = [
   { href: "/", label: "Beranda" },
   { href: "/about", label: "Tentang Kami" },
   { href: "/kecerdasan-buatan", label: "Kecerdasan Buatan" },
-  { href: "/services", label: "Layanan" },
+  { href: "/services", label: "Platform" },
   { href: "/strategi-iklan", label: "Strategi Iklan" },
   { href: "/products", label: "Produk" },
   { href: "/roadmap", label: "Roadmap" },
@@ -35,39 +35,39 @@ export const navLinks = [
 export const services = [
   {
     icon: "Brain",
-    title: "Solusi AI",
+    title: "Tools AI Kreatif",
     description:
-      "Pengembangan model AI, chatbot, automasi cerdas, dan integrasi LLM untuk transformasi digital bisnis Anda.",
+      "Platform SaaS generatif untuk teks, gambar, video, dan audio — siap pakai dengan model AI terkini.",
   },
   {
     icon: "Code2",
-    title: "Pengembangan Software",
+    title: "Automasi Media Sosial",
     description:
-      "Aplikasi desktop, mobile, dan enterprise yang scalable, aman, dan dirancang sesuai kebutuhan bisnis.",
+      "Tools berlangganan untuk membuat, menjadwalkan, dan mempublikasikan konten ke berbagai platform sosial.",
   },
   {
     icon: "Globe",
-    title: "Website & Platform",
+    title: "Video AI Generatif",
     description:
-      "Website corporate, landing page, dan platform web modern dengan performa tinggi dan UX premium.",
+      "Produksi video AI unlimited dari teks atau gambar — tanpa batas token, langsung dari dashboard.",
   },
   {
     icon: "Layers",
-    title: "SaaS & Subscription",
+    title: "CRM & Penjualan",
     description:
-      "Platform berlangganan dengan billing terintegrasi, dashboard analytics, dan manajemen pengguna.",
+      "Platform SaaS CRM untuk mengelola prospek, pelanggan, order, dan follow-up dalam satu dashboard.",
   },
   {
     icon: "Wrench",
-    title: "AI Tools Development",
+    title: "Multi-Model AI Studio",
     description:
-      "Pembuatan tools AI khusus — dari generator konten hingga workflow automation untuk tim kreatif.",
+      "Berbagai model AI dalam satu dashboard subscription — video, gambar, teks, dan storyboard.",
   },
   {
     icon: "HeadphonesIcon",
-    title: "Konsultasi & Support",
+    title: "Dukungan & Onboarding",
     description:
-      "Konsultasi teknologi, implementasi, maintenance, dan dukungan teknis berkelanjutan 24/7.",
+      "Panduan aktivasi, onboarding pengguna baru, dan dukungan teknis berkelanjutan 24/7.",
   },
 ];
 
@@ -80,10 +80,11 @@ export const products = aiEcosystemPillars.map((pillar) => ({
   description: pillar.description,
   features: pillar.features,
   badge: pillar.badge,
+  users: pillar.users,
 }));
 
 export const stats = [
-  { value: "5+", label: "AI Tools" },
+  { value: "5+", label: "Produk AI" },
   { value: "5K+", label: "Pengguna Aktif" },
   { value: "24/7", label: "Support" },
 ];
@@ -120,7 +121,7 @@ export const pricingPlans = [
     period: "/bulan",
     description: "Ideal untuk individu dan freelancer yang baru memulai.",
     features: [
-      "5 AI tools dasar",
+      "5 produk AI dasar",
       "100 generasi/bulan",
       "1 user",
       "Email support",
@@ -135,7 +136,7 @@ export const pricingPlans = [
     period: "/bulan",
     description: "Untuk profesional kreatif dan tim kecil yang butuh lebih.",
     features: [
-      "Semua AI tools",
+      "Semua produk AI",
       "Unlimited generasi",
       "5 users",
       "Priority support",
@@ -149,14 +150,14 @@ export const pricingPlans = [
     name: "Enterprise",
     price: "Custom",
     period: "",
-    description: "Solusi khusus untuk perusahaan dengan kebutuhan skala besar.",
+    description: "Paket khusus untuk perusahaan dengan kebutuhan skala besar dan multi-tim.",
     features: [
       "Semua fitur Professional",
       "Unlimited users",
       "Dedicated account manager",
       "SLA guarantee",
       "On-premise option",
-      "Custom development",
+      "Integrasi kustom",
     ],
     highlighted: false,
     cta: "Hubungi Sales",
@@ -178,7 +179,7 @@ export const testimonials = [
   },
   {
     quote:
-      "Solusi AI custom yang mereka kembangkan untuk perusahaan kami presisi dan scalable. Partner teknologi terbaik.",
+      "Growi CRM dan Newton AI mengubah cara tim kami bekerja. Satu subscription, semua tools yang kami butuhkan.",
     author: "Diana Putri",
     role: "CTO, FinStart Indonesia",
   },
@@ -203,30 +204,30 @@ export const team = [
   {
     name: "Head of Engineering",
     role: "Engineering",
-    bio: "Membangun infrastruktur scalable untuk jutaan pengguna.",
+    bio: "Mengoperasikan infrastruktur cloud yang menopang ribuan pengguna aktif di seluruh platform.",
   },
 ];
 
 export const serviceProcess = [
   {
     step: "01",
-    title: "Konsultasi",
-    description: "Memahami kebutuhan bisnis, target, dan tantangan teknologi Anda.",
+    title: "Daftar & Trial",
+    description: "Buat akun gratis dan coba fitur dasar platform pilihan Anda.",
   },
   {
     step: "02",
-    title: "Perancangan",
-    description: "Merancang solusi, arsitektur, dan roadmap implementasi yang jelas.",
+    title: "Pilih Paket",
+    description: "Pilih paket subscription yang sesuai — Starter, Professional, atau Enterprise.",
   },
   {
     step: "03",
-    title: "Implementasi",
-    description: "Pengembangan, integrasi, testing, dan deployment ke production.",
+    title: "Aktivasi & Setup",
+    description: "Akses dashboard, konfigurasi akun, dan mulai produksi konten dalam hitungan menit.",
   },
   {
     step: "04",
-    title: "Dukungan",
-    description: "Maintenance, monitoring, dan optimasi berkelanjutan pasca-launch.",
+    title: "Dukungan Berkelanjutan",
+    description: "Update fitur rutin, dukungan teknis 24/7, dan optimasi penggunaan platform.",
   },
 ];
 
@@ -260,11 +261,11 @@ export const values = [
   },
   {
     title: "Integritas",
-    description: "Transparansi dan kejujuran dalam setiap produk dan layanan kami.",
+    description: "Transparansi dan kejujuran dalam setiap produk dan platform kami.",
   },
   {
     title: "Excellence",
-    description: "Standar kualitas tertinggi dalam setiap baris kode dan desain.",
+    description: "Standar kualitas tertinggi dalam setiap produk dan pengalaman pengguna platform.",
   },
   {
     title: "Impact",

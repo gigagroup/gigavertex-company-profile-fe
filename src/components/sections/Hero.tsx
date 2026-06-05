@@ -41,7 +41,7 @@ export function Hero() {
               className="animate-on-load badge-hero mb-6 inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-[10px] font-semibold tracking-[0.2em] uppercase"
             >
               <span className="h-1 w-1 rounded-full bg-white" />
-              Platform AI & Software Terdepan di Indonesia
+              Penyedia Produk AI & Platform SaaS Terdepan di Indonesia
             </div>
 
             <h1 className="font-display text-4xl leading-[1.08] font-normal tracking-tight text-white sm:text-5xl lg:text-6xl xl:text-7xl">
@@ -54,8 +54,8 @@ export function Hero() {
               className="animate-on-load mt-6 max-w-xl text-base leading-relaxed text-white/75 sm:text-lg"
               style={{ animationDelay: "550ms" }}
             >
-              {company.name} — pengembang solusi AI, tools kreatif, software, aplikasi,
-              dan platform subscription untuk mempercepat inovasi bisnis Anda.
+              {company.name} — penyedia produk kecerdasan buatan (AI), perangkat lunak,
+              dan platform berbasis langganan (SaaS) untuk kreator, bisnis, dan individu.
             </p>
 
             <div

@@ -16,7 +16,7 @@ export default function ProductsPage() {
       <PageHeader
         badge="Produk"
         title="Produk & Platform SaaS"
-        description="Lima platform SaaS dalam satu ekosistem — dirancang untuk skala dari creator hingga tim bisnis."
+        description="Lima platform SaaS dalam satu ekosistem — sudah dipercaya ribuan pengguna dari creator hingga tim bisnis."
       />
       <ProductsSection showHeader={false} />
       <FeaturesSection />

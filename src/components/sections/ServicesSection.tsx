@@ -38,12 +38,12 @@ export function ServicesSection({
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {showHeader && (
           <SectionHeader
-            badge="Layanan"
-            title={preview ? "Layanan Unggulan" : "Solusi Teknologi Lengkap"}
+            badge="Platform"
+            title={preview ? "Platform Unggulan" : "Ekosistem Platform SaaS"}
             description={
               preview
-                ? "Cuplikan layanan utama kami. Detail lengkap tersedia di halaman Layanan."
-                : "Dari ide hingga implementasi — kami menyediakan layanan end-to-end untuk transformasi digital bisnis Anda."
+                ? "Cuplikan platform kecerdasan buatan kami. Detail lengkap tersedia di halaman Platform."
+                : "Lima platform berbasis langganan (SaaS) — dari konten kreatif, video AI, hingga CRM penjualan."
             }
           />
         )}
@@ -70,7 +70,7 @@ export function ServicesSection({
           })}
         </div>
 
-        {preview && <SectionFooterLink href="/services" label="Semua layanan" />}
+        {preview && <SectionFooterLink href="/services" label="Semua platform" />}
       </div>
     </section>
   );

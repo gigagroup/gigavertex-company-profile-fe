@@ -6,18 +6,18 @@ import { FeaturesSection } from "@/components/sections/FeaturesSection";
 import { CTASection } from "@/components/sections/CTASection";
 
 export const metadata: Metadata = {
-  title: "Layanan",
+  title: "Platform",
   description:
-    "Layanan PT Giga Vertex Technology — solusi AI, pengembangan software, website, SaaS, dan konsultasi teknologi.",
+    "Platform kecerdasan buatan (SaaS) PT Giga Vertex Technology — produk kreatif, automasi sosial media, video AI, CRM, dan multi-model studio.",
 };
 
 export default function ServicesPage() {
   return (
     <>
       <PageHeader
-        badge="Layanan"
-        title="Layanan Kami"
-        description="Solusi teknologi end-to-end untuk membantu bisnis Anda tumbuh di era digital."
+        badge="Platform"
+        title="Platform SaaS Kami"
+        description="Ekosistem produk kecerdasan buatan berbasis langganan (SaaS) — langsung pakai, bayar bulanan, tanpa setup rumit."
       />
       <ServicesSection showHeader={false} />
       <ServicesProcessSection />

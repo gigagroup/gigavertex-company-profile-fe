@@ -4,9 +4,9 @@ const { products: productImages } = assets.images;
 
 export const aiMeta = {
   badge: "Kecerdasan Buatan",
-  title: "Ekosistem Kecerdasan Buatan Giga Vertex",
+  title: "Ekosistem Kecerdasan Buatan & Platform SaaS Giga Vertex",
   intro:
-    "Kami membangun dan mengoperasikan rangkaian solusi AI — dari tools kreatif berbasis subscription hingga automasi bisnis dan infrastruktur enterprise — agar UMKM, kreator, dan perusahaan di Indonesia serta pasar global bisa berinovasi lebih cepat.",
+    "Sebagai penyedia produk kecerdasan buatan (AI) dan platform berbasis langganan (SaaS), kami mengoperasikan rangkaian solusi digital — dari produksi konten kreatif hingga automasi bisnis dan CRM — agar UMKM, kreator, dan perusahaan di Indonesia serta pasar global dapat memanfaatkan AI secara praktis dan terukur.",
 };
 
 export const aiCapabilities = [
@@ -36,9 +36,9 @@ export const aiCapabilities = [
       "Otomatisasi proses bisnis — dari follow-up penjualan, scheduling sosial media, hingga pipeline data terintegrasi CRM.",
   },
   {
-    title: "Custom AI & Enterprise",
+    title: "Enterprise & Paket Khusus",
     description:
-      "Solusi AI khusus per industri: fine-tuning, API privat, dashboard analytics, dan deployment on-premise atau cloud.",
+      "Paket SaaS enterprise dengan API privat, dashboard analytics, isolasi data, dan opsi deployment on-premise atau cloud.",
   },
 ];
 
@@ -54,6 +54,7 @@ export const aiEcosystemPillars = [
       "Autonix adalah platform SaaS berbasis AI yang membantu creator, bisnis, dan agency membuat video, menyusun konten, serta mendistribusikannya ke berbagai platform media sosial secara otomatis dari satu dashboard. Dengan dukungan berbagai model AI dan fitur multi-platform publishing, Autonix memungkinkan pengguna memproduksi dan mengelola konten dengan lebih cepat, mudah, dan efisien.",
     features: ["Multi-platform", "AI video", "Distribusi otomatis"],
     badge: "Popular" as const,
+    users: "1.200+",
   },
   {
     name: "Terabyte",
@@ -66,6 +67,7 @@ export const aiEcosystemPillars = [
       "Terabyte adalah platform SaaS berbasis AI yang membantu bisnis, creator, dan agency membuat, menjadwalkan, serta mempublikasikan konten ke berbagai platform media sosial dari satu dashboard. Dengan fitur AI Autopilot, smart scheduler, dan multi-account management, Terabyte memungkinkan pengguna mengelola konten secara konsisten dengan lebih cepat, mudah, dan efisien.",
     features: ["AI Autopilot", "Smart scheduler", "Multi-akun"],
     badge: "Popular" as const,
+    users: "1.500+",
   },
   {
     name: "Giga",
@@ -78,6 +80,7 @@ export const aiEcosystemPillars = [
       "Giga adalah platform SaaS berbasis AI yang memungkinkan pengguna membuat video AI dari teks maupun gambar secara unlimited dalam satu dashboard. Dengan teknologi text-to-video dan image-to-video, Giga membantu bisnis, creator, dan agency menghasilkan konten video berkualitas secara cepat, mudah, dan efisien tanpa batasan token atau kredit.",
     features: ["Text-to-video", "Image-to-video", "Unlimited"],
     badge: "New" as const,
+    users: "800+",
   },
   {
     name: "Newton AI",
@@ -90,6 +93,7 @@ export const aiEcosystemPillars = [
       "Newton AI adalah platform SaaS berbasis AI yang menyediakan berbagai model kecerdasan buatan dalam satu dashboard untuk menghasilkan video, gambar, teks, storyboard, dan konten digital lainnya. Dengan dukungan multi-model AI, antarmuka yang mudah digunakan, serta proses generasi yang cepat, Newton AI membantu bisnis, creator, dan agency meningkatkan produktivitas dan kreativitas secara lebih efisien.",
     features: ["Multi-model AI", "Storyboard", "Generasi cepat"],
     badge: null,
+    users: "600+",
   },
   {
     name: "Growi",
@@ -102,6 +106,7 @@ export const aiEcosystemPillars = [
       "Growi adalah platform SaaS CRM yang membantu bisnis mengelola prospek, pelanggan, order, dan aktivitas follow-up dalam satu dashboard terpusat. Dengan fitur manajemen database pelanggan, pelacakan penjualan, dan otomatisasi follow-up, Growi membantu tim meningkatkan produktivitas, menjaga hubungan pelanggan, dan mempercepat pertumbuhan bisnis.",
     features: ["CRM terpusat", "Follow-up otomatis", "Pipeline penjualan"],
     badge: null,
+    users: "900+",
   },
 ];
 
@@ -166,32 +171,32 @@ export const aiTechStack = [
 export const aiProcess = [
   {
     step: "01",
-    title: "Discovery",
-    description: "Memetakan kebutuhan bisnis, data tersedia, dan KPI yang ingin dicapai dengan AI.",
+    title: "Pilih Platform",
+    description: "Tentukan tools AI yang sesuai kebutuhan — konten, video, sosial media, atau CRM.",
   },
   {
     step: "02",
-    title: "Proof of Concept",
-    description: "Pilot cepat dengan subset data untuk validasi nilai sebelum investasi skala penuh.",
+    title: "Trial & Evaluasi",
+    description: "Coba fitur dasar secara gratis dan evaluasi nilai platform sebelum berlangganan penuh.",
   },
   {
     step: "03",
-    title: "Build & Integrate",
-    description: "Pengembangan produk, integrasi API, CRM, dan kanal iklan sesuai roadmap Anda.",
+    title: "Berlangganan & Aktivasi",
+    description: "Pilih paket subscription, aktivasi akun, dan mulai produksi dari dashboard.",
   },
   {
     step: "04",
-    title: "Deploy & Optimize",
-    description: "Go-live, pelatihan tim, monitoring performa, dan iterasi model berkelanjutan.",
+    title: "Optimasi & Scale",
+    description: "Manfaatkan update fitur rutin, analytics, dan dukungan untuk memaksimalkan hasil.",
   },
 ];
 
 export const aiDifferentiators = [
-  "5+ tools AI siap pakai dalam satu ekosistem subscription",
-  "Produk dikembangkan di Indonesia, diperluas ke ASEAN & global",
-  "Winning creative & growth terintegrasi dengan strategi Meta, TikTok, Google Ads",
-  "Roadmap jelas dari UMKM lokal hingga infrastruktur B2B enterprise",
-  "Tim engineering + product yang memahami pasar Indonesia",
+  "5+ platform kecerdasan buatan siap pakai dalam satu ekosistem berlangganan",
+  "Penyedia produk AI dari Indonesia, diperluas ke ASEAN & pasar global",
+  "5.000+ pengguna aktif di seluruh platform SaaS kami",
+  "Model bisnis SaaS — bayar bulanan, langsung pakai, tanpa setup rumit",
+  "Update fitur rutin dan dukungan 24/7 untuk semua pelanggan berlangganan",
 ];
 
 export const aiEthics = {

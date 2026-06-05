@@ -20,15 +20,15 @@ export function CTASection() {
             />
             <div className="relative px-8 py-20 text-center sm:px-16 sm:py-24">
               <AnimatedText
-                text="Siap Transformasi Digital?"
+                text="Siap Mulai Berlangganan?"
                 as="h2"
                 className="font-display text-3xl font-normal text-zinc-900 sm:text-4xl lg:text-5xl"
                 triggerOnView
               />
               <AnimateIn delay={200}>
                 <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed font-light text-zinc-600 lg:text-lg">
-                  Bergabung dengan ribuan profesional yang sudah mempercayai{" "}
-                  {company.shortName} untuk solusi AI dan software mereka.
+                  Bergabung dengan ribuan pengguna yang sudah berlangganan{" "}
+                  {company.shortName} untuk produk kecerdasan buatan mereka.
                 </p>
               </AnimateIn>
               <AnimateIn delay={320}>
