@@ -145,6 +145,13 @@ export const uiId = {
     faqTitle: "Pertanyaan Umum",
     faqDesc: "Jawaban singkat seputar paket berlangganan dan platform kecerdasan buatan kami.",
   },
+  career: {
+    whyBadge: "Mengapa Kami",
+    benefitsBadge: "Benefit",
+    openingsBadge: "Lowongan",
+    processBadge: "Proses",
+    applyNow: "Lamar Sekarang",
+  },
   about: {
     leadershipBadge: "Kepemimpinan",
     leadershipTitle: "Founder & CEO",
@@ -162,6 +169,7 @@ export const uiId = {
     roadmap: { title: "Roadmap", description: "Roadmap Growth Ecosystem 2026+ Giga Vertex — timeline, pilar, dan visi global." },
     market: { title: "Pasar", description: "Jangkauan pasar Giga Vertex — Indonesia, ASEAN, Amerika, Oseania, Inggris, dan Eropa." },
     ads: { title: "Strategi Iklan", description: "Strategi Meta Ads, TikTok Ads, dan Google Ads Giga Vertex — mesin akuisisi pelanggan." },
+    career: { title: "Karier", description: "Bergabung dengan PT Giga Vertex Technology — lowongan kerja di produk AI, engineering, design, marketing, dan operasional." },
     servicesPageHeader: "Platform SaaS Kami",
     servicesPageDesc: "Ekosistem produk kecerdasan buatan berbasis langganan (SaaS) — langsung pakai, bayar bulanan, tanpa setup rumit.",
     productsPageHeader: "Produk & Platform SaaS",

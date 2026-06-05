@@ -27,6 +27,7 @@ export const constants = {
     { href: "/products", label: "Products" },
     { href: "/roadmap", label: "Roadmap" },
     { href: "/pasar", label: "Markets" },
+    { href: "/career", label: "Careers" },
     { href: "/contact", label: "Contact" },
   ],
   services: [

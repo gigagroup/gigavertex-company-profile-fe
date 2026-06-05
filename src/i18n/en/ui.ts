@@ -145,6 +145,13 @@ export const ui = {
     faqTitle: "Frequently Asked Questions",
     faqDesc: "Quick answers about subscription plans and our AI platforms.",
   },
+  career: {
+    whyBadge: "Why Us",
+    benefitsBadge: "Benefits",
+    openingsBadge: "Open Roles",
+    processBadge: "Process",
+    applyNow: "Apply Now",
+  },
   about: {
     leadershipBadge: "Leadership",
     leadershipTitle: "Founder & CEO",
@@ -162,6 +169,7 @@ export const ui = {
     roadmap: { title: "Roadmap", description: "Giga Vertex Growth Ecosystem 2026+ roadmap — timeline, pillars, and global vision." },
     market: { title: "Markets", description: "Giga Vertex market reach — Indonesia, ASEAN, Americas, Oceania, UK, and Europe." },
     ads: { title: "Ad Strategy", description: "Giga Vertex Meta Ads, TikTok Ads, and Google Ads strategy — customer acquisition engine." },
+    career: { title: "Careers", description: "Join PT Giga Vertex Technology — job openings in AI products, engineering, design, marketing, and operations." },
     servicesPageHeader: "Our SaaS Platforms",
     servicesPageDesc: "Artificial intelligence product ecosystem on subscription (SaaS) — ready to use, pay monthly, no complex setup.",
     productsPageHeader: "Products & SaaS Platforms",

@@ -1,5 +1,6 @@
 import type { Locale } from "@/i18n/config";
 import { about as aboutEn } from "@/i18n/en/about";
+import { career as careerEn } from "@/i18n/en/career";
 import { adsStrategy as adsEn } from "@/i18n/en/ads-strategy";
 import { aiIntelligence as aiEn } from "@/i18n/en/ai-intelligence";
 import { constants as constantsEn } from "@/i18n/en/constants";
@@ -7,6 +8,7 @@ import { markets as marketsEn } from "@/i18n/en/markets";
 import { roadmap as roadmapEn } from "@/i18n/en/roadmap";
 import { ui as uiEn } from "@/i18n/en/ui";
 import { getAbout } from "@/lib/about";
+import { getCareer } from "@/lib/career";
 import { getAdsStrategy } from "@/lib/ads-strategy";
 import { getAiIntelligence } from "@/lib/ai-intelligence";
 import { getConstants } from "@/lib/constants";
@@ -67,6 +69,7 @@ function buildEnglishContent() {
     },
     markets: marketsEn,
     ads: adsEn,
+    career: careerEn,
     ui: uiEn,
   };
 }
@@ -83,6 +86,7 @@ export function getContent(locale: Locale) {
     roadmap: getRoadmap(),
     markets: getMarkets(),
     ads: getAdsStrategy(),
+    career: getCareer(),
     ui: getUi(),
   };
 }

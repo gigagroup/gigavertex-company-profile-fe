@@ -31,6 +31,7 @@ const constantsId = {
     { href: "/products", label: "Produk" },
     { href: "/roadmap", label: "Roadmap" },
     { href: "/pasar", label: "Pasar" },
+    { href: "/career", label: "Karier" },
     { href: "/contact", label: "Kontak" },
   ],
   services: [

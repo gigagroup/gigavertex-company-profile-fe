@@ -11,7 +11,8 @@ type PageMetaKey =
   | "pricing"
   | "roadmap"
   | "market"
-  | "ads";
+  | "ads"
+  | "career";
 
 export function getPageMetadata(locale: Locale, key: PageMetaKey): Metadata {
   const { ui } = getContent(locale);
