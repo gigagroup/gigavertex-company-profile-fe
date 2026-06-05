@@ -1,9 +1,15 @@
-import Link from "next/link";
+"use client";
+
 import { Mail, Phone, MapPin, Globe, Share2, MessageCircle, PlayCircle } from "lucide-react";
 import { LogoLink } from "@/components/ui/LogoLink";
-import { company, navLinks, products } from "@/lib/constants";
+import { LocalizedLink } from "@/components/ui/LocalizedLink";
+import { useI18n } from "@/i18n/context";
 
 export function Footer() {
+  const { content } = useI18n();
+  const { constants, ui } = content;
+  const { company, navLinks, products } = constants;
+
   return (
     <footer className="border-t border-zinc-200 bg-white">
       <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
@@ -34,17 +40,17 @@ export function Footer() {
 
           <div>
             <h4 className="mb-5 text-xs font-semibold tracking-[0.15em] text-zinc-500 uppercase">
-              Navigasi
+              {ui.footer.navigation}
             </h4>
             <ul className="space-y-3.5">
               {navLinks.map((link) => (
                 <li key={link.href}>
-                  <Link
+                  <LocalizedLink
                     href={link.href}
                     className="text-sm text-zinc-600 transition-colors hover:text-indigo-600"
                   >
                     {link.label}
-                  </Link>
+                  </LocalizedLink>
                 </li>
               ))}
             </ul>
@@ -52,17 +58,17 @@ export function Footer() {
 
           <div>
             <h4 className="mb-5 text-xs font-semibold tracking-[0.15em] text-zinc-500 uppercase">
-              Produk
+              {ui.footer.products}
             </h4>
             <ul className="space-y-3.5">
               {products.slice(0, 6).map((product) => (
                 <li key={product.name}>
-                  <Link
+                  <LocalizedLink
                     href="/products"
                     className="text-sm text-zinc-600 transition-colors hover:text-indigo-600"
                   >
                     {product.name}
-                  </Link>
+                  </LocalizedLink>
                 </li>
               ))}
             </ul>
@@ -70,7 +76,7 @@ export function Footer() {
 
           <div>
             <h4 className="mb-5 text-xs font-semibold tracking-[0.15em] text-zinc-500 uppercase">
-              Kontak
+              {ui.footer.contact}
             </h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
@@ -103,15 +109,15 @@ export function Footer() {
 
         <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-zinc-200 pt-8 sm:flex-row">
           <p className="text-sm text-zinc-500">
-            &copy; {new Date().getFullYear()} {company.name}. All rights reserved.
+            &copy; {new Date().getFullYear()} {company.name}. {ui.common.allRightsReserved}
           </p>
           <div className="flex gap-8">
-            <Link href="#" className="text-sm text-zinc-500 transition-colors hover:text-zinc-700">
-              Privacy Policy
-            </Link>
-            <Link href="#" className="text-sm text-zinc-500 transition-colors hover:text-zinc-700">
-              Terms of Service
-            </Link>
+            <LocalizedLink href="#" className="text-sm text-zinc-500 transition-colors hover:text-zinc-700">
+              {ui.common.privacyPolicy}
+            </LocalizedLink>
+            <LocalizedLink href="#" className="text-sm text-zinc-500 transition-colors hover:text-zinc-700">
+              {ui.common.termsOfService}
+            </LocalizedLink>
           </div>
         </div>
       </div>

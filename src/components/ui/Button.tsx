@@ -1,4 +1,6 @@
-import Link from "next/link";
+"use client";
+
+import { LocalizedLink } from "@/components/ui/LocalizedLink";
 import { cn } from "@/lib/utils";
 
 type ButtonProps = {
@@ -47,9 +49,9 @@ export function Button({
 
   if (href) {
     return (
-      <Link href={href} className={classes}>
+      <LocalizedLink href={href} className={classes}>
         {children}
-      </Link>
+      </LocalizedLink>
     );
   }
 

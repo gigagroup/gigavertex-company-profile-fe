@@ -1,20 +1,25 @@
+"use client";
+
 import { AnimateIn } from "@/components/ui/AnimateIn";
-import { stats } from "@/lib/constants";
+import { useI18n } from "@/i18n/context";
 
 export function StatsSection() {
+  const { content } = useI18n();
+  const { stats } = content.constants;
+
   return (
-    <section className="border-y border-zinc-200 bg-indigo-50/30 py-20">
+    <section className="relative border-y border-zinc-200/80 bg-white py-14 lg:py-16">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="grid grid-cols-3 gap-8">
+        <div className="grid gap-8 sm:grid-cols-3">
           {stats.map((stat, i) => (
-            <AnimateIn key={stat.label} delay={i * 100} variant="scale">
+            <AnimateIn key={stat.label} delay={i * 80} variant="scale">
               <div className="text-center">
-                <div className="text-3xl font-bold text-zinc-900 sm:text-4xl lg:text-5xl">
-                  <span className="font-display text-gradient-brand text-gradient-animate">
-                    {stat.value}
-                  </span>
+                <div className="font-display text-4xl font-normal text-gradient-brand lg:text-5xl">
+                  {stat.value}
                 </div>
-                <div className="mt-2 text-sm text-zinc-500">{stat.label}</div>
+                <div className="mt-2 text-sm font-medium tracking-wide text-zinc-500 uppercase">
+                  {stat.label}
+                </div>
               </div>
             </AnimateIn>
           ))}

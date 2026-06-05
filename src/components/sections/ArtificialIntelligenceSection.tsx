@@ -1,4 +1,6 @@
-import Link from "next/link";
+"use client";
+
+import { LocalizedLink } from "@/components/ui/LocalizedLink";
 import Image from "next/image";
 import {
   Brain,
@@ -18,18 +20,8 @@ import {
 } from "lucide-react";
 import { AnimateIn } from "@/components/ui/AnimateIn";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { products } from "@/lib/constants";
 import { assets } from "@/lib/assets";
-import {
-  aiMeta,
-  aiCapabilities,
-  aiEcosystemPillars,
-  aiUseCases,
-  aiTechStack,
-  aiProcess,
-  aiDifferentiators,
-  aiEthics,
-} from "@/lib/ai-intelligence";
+import { useI18n } from "@/i18n/context";
 
 const productIcons: Record<string, LucideIcon> = {
   Sparkles,
@@ -43,7 +35,19 @@ const productIcons: Record<string, LucideIcon> = {
 const useCaseIcons = [Building2, Sparkles, Cpu, User];
 
 export function ArtificialIntelligenceSection() {
-  const aiProducts = products;
+  const { content } = useI18n();
+  const aiProducts = content.constants.products;
+  const {
+    aiMeta,
+    aiCapabilities,
+    aiEcosystemPillars,
+    aiUseCases,
+    aiTechStack,
+    aiProcess,
+    aiDifferentiators,
+    aiEthics,
+  } = content.ai;
+  const { ai: aiUi, common } = content.ui;
 
   return (
     <div className="overflow-x-hidden">
@@ -57,7 +61,7 @@ export function ArtificialIntelligenceSection() {
               loop
               playsInline
               preload="auto"
-              aria-label="Video ekosistem kecerdasan buatan Giga Vertex"
+              aria-label={aiUi.videoAriaLabel}
             >
               <source src={assets.videos.aiEcosystem} type="video/mp4" />
             </video>
@@ -81,20 +85,20 @@ export function ArtificialIntelligenceSection() {
               {aiMeta.intro}
             </p>
             <div className="mt-8 flex w-full flex-col items-stretch gap-3 sm:mt-10 sm:flex-row sm:flex-wrap sm:items-center sm:justify-center sm:gap-4">
-              <Link
+              <LocalizedLink
                 href="/products"
                 className="btn-primary-glow inline-flex w-full items-center justify-center gap-2 rounded-full px-7 py-3 text-sm font-medium text-white sm:w-auto"
               >
-                Lihat Produk AI
+                {aiUi.viewProducts}
                 <ArrowRight className="h-4 w-4 shrink-0" />
-              </Link>
-              <Link
+              </LocalizedLink>
+              <LocalizedLink
                 href="/contact"
                 className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-zinc-300 bg-white px-7 py-3 text-sm font-medium text-zinc-700 transition-colors hover:border-indigo-300 hover:text-indigo-700 sm:w-auto"
               >
-                Coba Gratis
+                {aiUi.tryFree}
                 <ArrowRight className="h-4 w-4 shrink-0" />
-              </Link>
+              </LocalizedLink>
             </div>
           </div>
         </div>
@@ -103,9 +107,9 @@ export function ArtificialIntelligenceSection() {
       <section className="py-12 lg:py-16">
         <div className="mx-auto w-full min-w-0 max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeader
-            badge="Kemampuan"
-            title="Teknologi di Balik Platform Kami"
-            description="Spektrum kecerdasan buatan yang menggerakkan setiap produk SaaS dalam ekosistem Giga Vertex."
+            badge={aiUi.capabilitiesBadge}
+            title={aiUi.capabilitiesTitle}
+            description={aiUi.capabilitiesDesc}
             className="mb-14"
           />
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -127,9 +131,9 @@ export function ArtificialIntelligenceSection() {
       <section className="border-y border-zinc-200/80 bg-indigo-50/25 py-16 lg:py-20">
         <div className="mx-auto w-full min-w-0 max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeader
-            badge="Ekosistem"
-            title="Ekosistem Produk SaaS AI"
-            description="Autonix, Terabyte, Giga, Newton AI, dan Growi — fondasi Growth Ecosystem kami."
+            badge={aiUi.ecosystemBadge}
+            title={aiUi.ecosystemTitle}
+            description={aiUi.ecosystemDesc}
             className="mb-14"
           />
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -155,9 +159,9 @@ export function ArtificialIntelligenceSection() {
       <section className="py-16 lg:py-20">
         <div className="mx-auto w-full min-w-0 max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeader
-            badge="Use case"
-            title="AI untuk Siapa?"
-            description="Setiap platform SaaS kami dirancang untuk kebutuhan pengguna di berbagai skala."
+            badge={aiUi.useCaseBadge}
+            title={aiUi.useCaseTitle}
+            description={aiUi.useCaseDesc}
             className="mb-14"
           />
           <div className="grid gap-6 sm:grid-cols-2">
@@ -194,8 +198,8 @@ export function ArtificialIntelligenceSection() {
       <section className="py-12 lg:py-16">
         <div className="mx-auto w-full min-w-0 max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeader
-            badge="Teknologi"
-            title="Pendekatan Teknis"
+            badge={aiUi.techBadge}
+            title={aiUi.techTitle}
             className="mb-14"
           />
           <div className="grid gap-5 md:grid-cols-2">
@@ -219,9 +223,9 @@ export function ArtificialIntelligenceSection() {
       <section className="border-t border-zinc-200/80 py-16 lg:py-20">
         <div className="mx-auto w-full min-w-0 max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeader
-            badge="Produk"
-            title="Portofolio Produk SaaS"
-            description="Autonix, Terabyte, Giga, Newton AI, dan Growi — platform subscription aktif dalam ekosistem Giga Vertex."
+            badge={aiUi.productsBadge}
+            title={aiUi.productsTitle}
+            description={aiUi.productsDesc}
             className="mb-14"
           />
           <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -251,7 +255,7 @@ export function ArtificialIntelligenceSection() {
                     <h3 className="font-semibold text-zinc-900">{product.name}</h3>
                     {product.users && (
                       <p className="mt-1 text-xs font-medium text-indigo-600">
-                        {product.users} pengguna aktif
+                        {product.users} {common.activeUsers}
                       </p>
                     )}
                     <p className="mt-2 text-sm leading-relaxed text-zinc-500">
@@ -274,13 +278,13 @@ export function ArtificialIntelligenceSection() {
             })}
           </div>
           <div className="mt-10 text-center">
-            <Link
+            <LocalizedLink
               href="/products"
               className="group inline-flex items-center gap-2 text-sm font-medium text-indigo-600 hover:text-indigo-800"
             >
-              Semua produk
+              {content.ui.products.allProducts}
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-            </Link>
+            </LocalizedLink>
           </div>
         </div>
       </section>
@@ -288,8 +292,8 @@ export function ArtificialIntelligenceSection() {
       <section className="bg-zinc-50/80 py-16 lg:py-20">
         <div className="mx-auto w-full min-w-0 max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeader
-            badge="Proses"
-            title="Cara Memulai Berlangganan"
+            badge={aiUi.processBadge}
+            title={aiUi.processTitle}
             className="mb-14"
           />
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -313,8 +317,8 @@ export function ArtificialIntelligenceSection() {
           <div className="grid min-w-0 grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-16">
             <AnimateIn className="min-w-0">
               <SectionHeader
-                badge="Keunggulan"
-                title="Mengapa Giga Vertex?"
+                badge={aiUi.whyBadge}
+                title={aiUi.whyTitle}
                 align="left"
                 className="mb-8 !max-w-none"
               />
@@ -326,13 +330,13 @@ export function ArtificialIntelligenceSection() {
                   </li>
                 ))}
               </ul>
-              <Link
+              <LocalizedLink
                 href="/roadmap"
                 className="group mt-8 inline-flex items-center gap-2 text-sm font-medium text-indigo-600"
               >
-                Lihat roadmap 2026+
+                {aiUi.viewRoadmap}
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-              </Link>
+              </LocalizedLink>
             </AnimateIn>
             <AnimateIn delay={100} variant="right">
               <div className="glass-card rounded-2xl p-8">

@@ -1,10 +1,15 @@
+"use client";
+
 import { Brain } from "lucide-react";
 import { AnimateIn } from "@/components/ui/AnimateIn";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { SectionFooterLink } from "@/components/ui/SectionFooterLink";
-import { aiMeta, aiEcosystemPillars, aiCapabilities } from "@/lib/ai-intelligence";
+import { useI18n } from "@/i18n/context";
 
 export function AiHomePreviewSection() {
+  const { content } = useI18n();
+  const { aiMeta, aiEcosystemPillars, aiCapabilities } = content.ai;
+  const { ai: aiUi } = content.ui;
   const capabilities = aiCapabilities.slice(0, 3);
 
   return (
@@ -12,8 +17,8 @@ export function AiHomePreviewSection() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <SectionHeader
           badge={aiMeta.badge}
-          title="Ekosistem AI untuk Semua Kalangan"
-          description="Platform berbasis langganan (SaaS) untuk generative AI, LLM, automasi, dan CRM — Autonix, Terabyte, Giga, Newton AI, dan Growi dengan ribuan pengguna aktif."
+          title={aiUi.homeTitle}
+          description={aiUi.homeDesc}
         />
 
         <div className="mb-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -48,7 +53,7 @@ export function AiHomePreviewSection() {
           ))}
         </div>
 
-        <SectionFooterLink href="/kecerdasan-buatan" label="Pelajari kecerdasan buatan" />
+        <SectionFooterLink href="/kecerdasan-buatan" label={aiUi.learnAi} />
       </div>
     </section>
   );

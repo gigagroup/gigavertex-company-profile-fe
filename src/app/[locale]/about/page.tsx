@@ -1,13 +1,17 @@
 import type { Metadata } from "next";
+import { isLocale, type Locale } from "@/i18n/config";
+import { getPageMetadata } from "@/lib/metadata";
 import { AboutSection } from "@/components/sections/AboutSection";
 import { StatsSection } from "@/components/sections/StatsSection";
 import { CTASection } from "@/components/sections/CTASection";
 
-export const metadata: Metadata = {
-  title: "Tentang Kami",
-  description:
-    "Pelajari lebih lanjut tentang PT Giga Vertex Technology — penyedia produk kecerdasan buatan (AI), perangkat lunak, dan platform berbasis langganan (SaaS).",
-};
+type PageProps = { params: Promise<{ locale: string }> };
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { locale } = await params;
+  if (!isLocale(locale)) return {};
+  return getPageMetadata(locale as Locale, "about");
+}
 
 export default function AboutPage() {
   return (

@@ -1,5 +1,6 @@
+"use client";
+
 import Image from "next/image";
-import Link from "next/link";
 import {
   Sparkles,
   Video,
@@ -14,7 +15,8 @@ import {
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { SectionFooterLink } from "@/components/ui/SectionFooterLink";
 import { AnimateIn } from "@/components/ui/AnimateIn";
-import { products } from "@/lib/constants";
+import { LocalizedLink } from "@/components/ui/LocalizedLink";
+import { useI18n } from "@/i18n/context";
 import { cn } from "@/lib/utils";
 
 const iconMap: Record<string, LucideIcon> = {
@@ -26,7 +28,9 @@ const iconMap: Record<string, LucideIcon> = {
   LineChart,
 };
 
-type Product = (typeof products)[number];
+import type { Content } from "@/i18n/get-content";
+
+type Product = Content["constants"]["products"][number];
 
 type ProductsSectionProps = {
   preview?: boolean;
@@ -48,9 +52,11 @@ function showcaseBadgeClass(badge: ProductBadge) {
 function ProductPreviewCard({
   product,
   index,
+  activeUsersLabel,
 }: {
   product: Product;
   index: number;
+  activeUsersLabel: string;
 }) {
   const Icon = iconMap[product.icon] || Sparkles;
 
@@ -77,7 +83,7 @@ function ProductPreviewCard({
           <h3 className="mt-1 mb-2 text-lg font-semibold text-zinc-900">{product.name}</h3>
           {product.users && (
             <p className="mb-2 text-xs font-medium text-indigo-600">
-              {product.users} pengguna aktif
+              {product.users} {activeUsersLabel}
             </p>
           )}
           <p className="mb-4 text-sm leading-relaxed text-zinc-500">{product.summary}</p>
@@ -101,9 +107,15 @@ function ProductPreviewCard({
 function ProductShowcaseCard({
   product,
   index,
+  activeUsersLabel,
+  startWithLabel,
+  viewAiLabel,
 }: {
   product: Product;
   index: number;
+  activeUsersLabel: string;
+  startWithLabel: string;
+  viewAiLabel: string;
 }) {
   const Icon = iconMap[product.icon] || Sparkles;
   const imageFirst = index % 2 === 0;
@@ -157,7 +169,7 @@ function ProductShowcaseCard({
 
             {product.users && (
               <p className="mt-2 text-sm font-medium text-indigo-600">
-                {product.users} pengguna aktif
+                {product.users} {activeUsersLabel}
               </p>
             )}
 
@@ -178,20 +190,20 @@ function ProductShowcaseCard({
             </ul>
 
             <div className="mt-8 flex flex-wrap items-center gap-4">
-              <Link
+              <LocalizedLink
                 href="/contact"
                 className="btn-primary-glow inline-flex items-center gap-2 rounded-full px-6 py-2.5 text-sm font-medium text-white transition-all hover:brightness-110"
               >
-                Mulai dengan {product.name}
+                {startWithLabel} {product.name}
                 <ArrowRight className="h-4 w-4" />
-              </Link>
-              <Link
+              </LocalizedLink>
+              <LocalizedLink
                 href="/kecerdasan-buatan"
                 className="inline-flex items-center gap-2 text-sm font-medium text-indigo-600 transition-colors hover:text-indigo-800"
               >
-                Lihat ekosistem AI
+                {viewAiLabel}
                 <ArrowRight className="h-4 w-4" />
-              </Link>
+              </LocalizedLink>
             </div>
           </div>
         </div>
@@ -204,6 +216,10 @@ export function ProductsSection({
   preview = false,
   showHeader = true,
 }: ProductsSectionProps) {
+  const { content } = useI18n();
+  const { products } = content.constants;
+  const { products: productsUi, common } = content.ui;
+
   return (
     <section
       className={cn(
@@ -217,13 +233,9 @@ export function ProductsSection({
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
         {showHeader && (
           <SectionHeader
-            badge="Produk"
-            title={preview ? "Portofolio Produk SaaS" : "Ekosistem Produk SaaS AI"}
-            description={
-              preview
-                ? "Autonix, Terabyte, Giga, Newton AI, dan Growi — platform SaaS andalan kami dengan ribuan pengguna aktif."
-                : "Lima platform SaaS AI & CRM untuk creator, bisnis, dan agency — dari konten, video, hingga penjualan. Sudah dipercaya ribuan pengguna."
-            }
+            badge={productsUi.badge}
+            title={preview ? productsUi.previewTitle : productsUi.fullTitle}
+            description={preview ? productsUi.previewDesc : productsUi.fullDesc}
             className={preview ? undefined : "mb-12 lg:mb-16"}
           />
         )}
@@ -231,18 +243,30 @@ export function ProductsSection({
         {preview ? (
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {products.map((product, i) => (
-              <ProductPreviewCard key={product.name} product={product} index={i} />
+              <ProductPreviewCard
+                key={product.name}
+                product={product}
+                index={i}
+                activeUsersLabel={common.activeUsers}
+              />
             ))}
           </div>
         ) : (
           <div className="flex flex-col gap-10 lg:gap-14">
             {products.map((product, i) => (
-              <ProductShowcaseCard key={product.name} product={product} index={i} />
+              <ProductShowcaseCard
+                key={product.name}
+                product={product}
+                index={i}
+                activeUsersLabel={common.activeUsers}
+                startWithLabel={common.startWith}
+                viewAiLabel={common.viewAiEcosystem}
+              />
             ))}
           </div>
         )}
 
-        {preview && <SectionFooterLink href="/products" label="Semua produk" />}
+        {preview && <SectionFooterLink href="/products" label={productsUi.allProducts} />}
       </div>
     </section>
   );

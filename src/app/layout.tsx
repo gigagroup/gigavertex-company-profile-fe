@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import { Instrument_Serif, Plus_Jakarta_Sans } from "next/font/google";
-import { Navbar } from "@/components/layout/Navbar";
-import { Footer } from "@/components/layout/Footer";
 import { company } from "@/lib/constants";
 import "./globals.css";
 
@@ -35,9 +33,7 @@ export const metadata: Metadata = {
     "Indonesia",
   ],
   icons: {
-    icon: [
-      { url: "/assets/images/logo-gigavertex-favicon.png", type: "image/png" },
-    ],
+    icon: [{ url: "/assets/images/logo-gigavertex-favicon.png", type: "image/png" }],
     shortcut: "/assets/images/logo-gigavertex-favicon.png",
     apple: "/assets/images/logo-gigavertex-favicon.png",
   },
@@ -62,9 +58,7 @@ export default function RootLayout({
               "radial-gradient(ellipse 80% 50% at 50% -20%, rgba(99,102,241,0.08), transparent), radial-gradient(ellipse 60% 40% at 100% 0%, rgba(139,92,246,0.05), transparent), linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%)",
           }}
         />
-        <Navbar />
-        <main className="min-w-0 flex-1 overflow-x-hidden">{children}</main>
-        <Footer />
+        {children}
       </body>
     </html>
   );

@@ -1,0 +1,118 @@
+export const roadmap = {
+  roadmapMeta: {
+    badge: "Growth Ecosystem",
+    title: "Growth Ecosystem Roadmap 2026+",
+    intro:
+      "PT Giga Vertex Technology provides a range of digital tools — from AI and automation to marketing and operational support — helping SMEs and companies work faster, more efficiently, and measurably. Our growth roadmap spans from domestic foundation to global market vision.",
+    footer: "Giga Vertex Technology • Roadmap 2026+",
+  },
+  roadmapFounder: {
+    name: "Muhamad Aziz",
+    role: "Founder & CEO",
+    since: "2020",
+    bio: "Leading Giga Vertex Technology and the Growth Ecosystem toward an AI tools & automation ecosystem for businesses.",
+  },
+  roadmapPhases: [
+    {
+      step: 1,
+      period: "January – June 2026",
+      quarter: "Q I–II 2026",
+      badge: "current position",
+      items: [
+        "Process of establishing PT Giga Vertex Technology in May 2026.",
+        "Focus on building three product pillars: Autonix, Terabyte, and Giga.",
+        "Developing new product Seedance Generate AI.",
+        "Primary market remains Indonesia — individual users and SMEs.",
+        "Branding direction: AI tools ecosystem & automation company.",
+        "Strengthen technical & operational foundation before large-scale ads — gradually scale Meta Ads budget while monitoring results and safe spend limits.",
+        "Begin building proprietary CRM as foundation for customer data, sales pipeline, and internal automation.",
+        "Currently using Scalev CRM operationally while internal CRM is being developed.",
+        "Continue developing winning creatives (champion material stock) ready for campaigns as budget increases.",
+      ],
+    },
+    {
+      step: 2,
+      period: "July – September 2026",
+      quarter: "Q III 2026",
+      items: [
+        "Dominate Meta Ads ecosystem as primary customer acquisition channel.",
+        "Streamline sales pipeline using Scalev CRM.",
+        "Still in proprietary CRM development phase.",
+        "Structured auto follow-up system via email and WhatsApp.",
+        "New product development such as Auto Clipper and AI language learning.",
+        "Add payments via Xendit gateway supporting Southeast Asian countries.",
+        "Landing pages and ad creatives in each country's language.",
+        "Multilingual artificial intelligence products.",
+        "Expansion to individual users or small business owners in Malaysia, Singapore, Thailand, Vietnam, and Philippines.",
+      ],
+    },
+    {
+      step: 3,
+      period: "October – December 2026",
+      quarter: "Q IV 2026 · end of Phase 1",
+      items: [
+        "Build \"Winning Creative System\": target 100+ winning ad materials.",
+        "Internal creative database + AI-assisted production.",
+        "Proprietary hook & angle framework + daily creative testing routine.",
+        "Strengthen personal & company branding; organic content & community.",
+        "Build authority in AI & automation niche in Indonesia.",
+        "Add AI products in various popular niches — health, parenting, and similar.",
+        "Strengthen CRM system for Southeast Asian sales.",
+      ],
+    },
+    {
+      step: 4,
+      period: "January – June 2027",
+      quarter: "Q I–II 2027 · Phase 1 — international expansion & infrastructure",
+      items: [
+        "Continue measured expansion to TikTok Ads and Google Ads.",
+        "Build multi-platform acquisition system one team can operate.",
+        "Portfolio target: 10+ web-based tools.",
+        "Connect ecosystem: AI automation, content & growth, social media, productivity, business automation.",
+        "Geographic expansion: Americas and Europe.",
+        "Multilingual landing pages, multi-currency payments, international support — using commercial stack (e.g. Shopify + integrated payment gateway).",
+        "Global targeting ads + international partners & affiliates.",
+      ],
+    },
+    {
+      step: 5,
+      period: "January – December 2027",
+      quarter: "Q I–IV 2027 · Phase two · Global market strengthening",
+      items: [
+        "Strengthen global market in Southeast Asia, Americas, and Europe.",
+        "Own CRM, internal analytics dashboard, automated workflows.",
+        "Customer service & affiliates managed internally.",
+        "AI for marketing, customer service, content; data tracking & optimization engine.",
+        "Shift major focus from web to Android & iOS app ecosystem.",
+        "Develop AI assistant & \"all-in-one\" packages for creators & businesses.",
+      ],
+    },
+    {
+      step: 6,
+      period: "January 2028 onwards",
+      quarter: "Next journey · B2B & AI infrastructure",
+      items: [
+        "B2B solutions: AI for SMEs, operations automation, enterprise dashboard.",
+        "Custom AI marketing & automation infrastructure per client needs.",
+        "Target clients: SMEs, agencies, startups, corporations, and large enterprises.",
+      ],
+    },
+  ],
+  roadmapPillars: [
+    { title: "Ad engine", items: ["Meta Ads", "TikTok Ads", "Google Ads"] },
+    { title: "AI products", items: ["Autonix, Terabyte, Giga", "Future AI tools ecosystem"] },
+    { title: "Creative engine", items: ["100+ winning creatives", "AI-based creative system", "Viral content framework"] },
+    { title: "Infrastructure", items: ["Proprietary CRM", "Automation system", "Analytics & data engine"] },
+    { title: "Global expansion", items: ["Indonesia & Southeast Asia", "Americas & Europe"] },
+  ],
+  roadmapVision: {
+    description:
+      "Providing the largest artificial intelligence product & automation ecosystem from Indonesia for global markets — multi-product, global SaaS, AI infrastructure, web & mobile ecosystem, and leading AI product provider position in Indonesia and Southeast Asia.",
+    tags: [
+      "Multi-product AI ecosystem",
+      "Global SaaS company",
+      "AI infrastructure company",
+      "Regional market leader",
+    ],
+  },
+};

@@ -1,9 +1,11 @@
+"use client";
+
 import { Megaphone, Music2, Search } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { AnimateIn } from "@/components/ui/AnimateIn";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { SectionFooterLink } from "@/components/ui/SectionFooterLink";
-import { adsStrategyMeta, adsChannels } from "@/lib/ads-strategy";
+import { useI18n } from "@/i18n/context";
 
 const icons: Record<string, LucideIcon> = {
   meta: Megaphone,
@@ -12,13 +14,17 @@ const icons: Record<string, LucideIcon> = {
 };
 
 export function AdsStrategyHomePreviewSection() {
+  const { content } = useI18n();
+  const { adsStrategyMeta, adsChannels } = content.ads;
+  const { ads: adsUi } = content.ui;
+
   return (
     <section className="relative py-20 lg:py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <SectionHeader
           badge={adsStrategyMeta.badge}
-          title="Meta, TikTok & Google Ads"
-          description="Tiga kanal akuisisi pelanggan — terukur, scalable, selaras roadmap pertumbuhan."
+          title={adsUi.homeTitle}
+          description={adsUi.homeDesc}
         />
 
         <div className="grid gap-5 lg:grid-cols-3">
@@ -44,7 +50,7 @@ export function AdsStrategyHomePreviewSection() {
           })}
         </div>
 
-        <SectionFooterLink href="/strategi-iklan" label="Detail strategi iklan" />
+        <SectionFooterLink href="/strategi-iklan" label={adsUi.detailLink} />
       </div>
     </section>
   );

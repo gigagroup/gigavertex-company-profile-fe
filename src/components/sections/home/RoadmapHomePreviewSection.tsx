@@ -1,9 +1,14 @@
+"use client";
+
 import { AnimateIn } from "@/components/ui/AnimateIn";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { SectionFooterLink } from "@/components/ui/SectionFooterLink";
-import { roadmapMeta, roadmapPhases } from "@/lib/roadmap";
+import { useI18n } from "@/i18n/context";
 
 export function RoadmapHomePreviewSection() {
+  const { content } = useI18n();
+  const { roadmapMeta, roadmapPhases } = content.roadmap;
+  const { roadmap: roadmapUi } = content.ui;
   const phases = roadmapPhases.slice(0, 3);
 
   return (
@@ -11,8 +16,8 @@ export function RoadmapHomePreviewSection() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <SectionHeader
           badge={roadmapMeta.badge}
-          title="Roadmap Growth Ecosystem 2026+"
-          description="Dari fondasi Indonesia & ASEAN hingga ekspansi global — perkiraan fase pertumbuhan ekosistem."
+          title={roadmapUi.homeTitle}
+          description={roadmapUi.homeDesc}
         />
 
         <div className="space-y-4">
@@ -38,7 +43,7 @@ export function RoadmapHomePreviewSection() {
           ))}
         </div>
 
-        <SectionFooterLink href="/roadmap" label="Lihat roadmap lengkap" />
+        <SectionFooterLink href="/roadmap" label={roadmapUi.fullLink} />
       </div>
     </section>
   );

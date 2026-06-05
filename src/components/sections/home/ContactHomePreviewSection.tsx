@@ -1,30 +1,31 @@
-import Link from "next/link";
+"use client";
+
 import { Mail, Phone, MapPin, Clock, ArrowRight } from "lucide-react";
 import { AnimateIn } from "@/components/ui/AnimateIn";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { SectionFooterLink } from "@/components/ui/SectionFooterLink";
-import { company } from "@/lib/constants";
-
-const contactItems = [
-  { icon: Mail, label: "Email", value: company.email, href: `mailto:${company.email}` },
-  {
-    icon: Phone,
-    label: "Telepon / WA",
-    value: company.phone,
-    href: company.whatsapp,
-  },
-  { icon: MapPin, label: "Alamat", value: company.address },
-  { icon: Clock, label: "Jam Operasional", value: "Senin - Jumat, 09:00 - 18:00 WIB" },
-];
+import { LocalizedLink } from "@/components/ui/LocalizedLink";
+import { useI18n } from "@/i18n/context";
 
 export function ContactHomePreviewSection() {
+  const { content } = useI18n();
+  const { company } = content.constants;
+  const { contact } = content.ui;
+
+  const contactItems = [
+    { icon: Mail, label: contact.emailLabel, value: company.email, href: `mailto:${company.email}` },
+    { icon: Phone, label: contact.phoneLabel, value: company.phone, href: company.whatsapp },
+    { icon: MapPin, label: contact.addressLabel, value: company.address },
+    { icon: Clock, label: contact.hoursLabel, value: contact.hoursValue },
+  ];
+
   return (
     <section className="relative py-20 lg:py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <SectionHeader
-          badge="Kontak"
-          title="Hubungi Kami"
-          description="Punya pertanyaan, ingin demo produk, atau diskusi kerjasama? Tim kami siap membantu."
+          badge={contact.badge}
+          title={contact.title}
+          description={contact.homeDescription}
         />
 
         <div className="grid gap-4 sm:grid-cols-2">
@@ -55,16 +56,16 @@ export function ContactHomePreviewSection() {
         </div>
 
         <AnimateIn delay={200} className="mt-8 flex justify-center">
-          <Link
+          <LocalizedLink
             href="/contact"
             className="btn-primary-glow inline-flex items-center gap-2 rounded-full px-8 py-3.5 text-sm font-medium text-white"
           >
-            Kirim pesan / formulir kontak
+            {contact.sendForm}
             <ArrowRight className="h-4 w-4" />
-          </Link>
+          </LocalizedLink>
         </AnimateIn>
 
-        <SectionFooterLink href="/contact" label="Ke halaman kontak" />
+        <SectionFooterLink href="/contact" label={contact.goToContact} />
       </div>
     </section>
   );

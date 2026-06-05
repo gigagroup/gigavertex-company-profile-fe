@@ -1,15 +1,21 @@
+"use client";
+
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { AnimateIn } from "@/components/ui/AnimateIn";
-import { pricingFaqs } from "@/lib/constants";
+import { useI18n } from "@/i18n/context";
 
 export function PricingFaqSection() {
+  const { content } = useI18n();
+  const { pricingFaqs } = content.constants;
+  const { pricing } = content.ui;
+
   return (
     <section className="relative border-t border-zinc-200 py-20 lg:py-28">
       <div className="mx-auto max-w-3xl px-6 lg:px-8">
         <SectionHeader
-          badge="FAQ"
-          title="Pertanyaan Umum"
-          description="Jawaban singkat seputar paket berlangganan dan platform kecerdasan buatan kami."
+          badge={pricing.faqBadge}
+          title={pricing.faqTitle}
+          description={pricing.faqDesc}
         />
         <div className="space-y-4">
           {pricingFaqs.map((faq, i) => (

@@ -1,8 +1,10 @@
+"use client";
+
 import { Globe2, MapPin } from "lucide-react";
 import { AnimateIn } from "@/components/ui/AnimateIn";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { marketRegions } from "@/lib/markets";
 import { SectionFooterLink } from "@/components/ui/SectionFooterLink";
+import { useI18n } from "@/i18n/context";
 
 const regionAccent = [
   "from-indigo-500/15 to-violet-500/10 border-indigo-200/80",
@@ -11,6 +13,10 @@ const regionAccent = [
 ];
 
 export function MarketReachSection() {
+  const { content } = useI18n();
+  const { marketRegions } = content.markets;
+  const { market: marketUi } = content.ui;
+
   return (
     <section className="relative border-y border-zinc-200/80 bg-zinc-50/50 py-20 lg:py-24">
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
@@ -19,9 +25,9 @@ export function MarketReachSection() {
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
         <SectionHeader
-          badge="Pasar"
-          title="Hadir untuk Pasar Lokal & Global"
-          description="Strategi ekspansi bertahap — dari Indonesia dan Asia Tenggara, ke pasar berbahasa Inggris, hingga Eropa."
+          badge={marketUi.badge}
+          title={marketUi.title}
+          description={marketUi.description}
         />
 
         <div className="grid gap-6 lg:grid-cols-3">
@@ -60,7 +66,7 @@ export function MarketReachSection() {
           ))}
         </div>
 
-        <SectionFooterLink href="/pasar" label="Detail jangkauan pasar" />
+        <SectionFooterLink href="/pasar" label={marketUi.detailLink} />
       </div>
     </section>
   );

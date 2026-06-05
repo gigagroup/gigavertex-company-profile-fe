@@ -1,18 +1,24 @@
+"use client";
+
 import { Search, PenTool, Rocket, Headphones } from "lucide-react";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { AnimateIn } from "@/components/ui/AnimateIn";
-import { serviceProcess } from "@/lib/constants";
+import { useI18n } from "@/i18n/context";
 
 const icons = [Search, PenTool, Rocket, Headphones];
 
 export function ServicesProcessSection() {
+  const { content } = useI18n();
+  const { serviceProcess } = content.constants;
+  const { servicesProcess } = content.ui;
+
   return (
     <section className="relative border-t border-zinc-200 py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <SectionHeader
-          badge="Proses"
-          title="Cara Memulai"
-          description="Alur berlangganan yang sederhana — dari trial gratis hingga dukungan berkelanjutan."
+          badge={servicesProcess.badge}
+          title={servicesProcess.title}
+          description={servicesProcess.description}
         />
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {serviceProcess.map((step, i) => {

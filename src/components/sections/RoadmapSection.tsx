@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import {
   Megaphone,
@@ -10,18 +12,17 @@ import {
 import { AnimateIn } from "@/components/ui/AnimateIn";
 import { AnimatedText } from "@/components/ui/AnimatedText";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import {
-  roadmapMeta,
-  roadmapFounder,
-  roadmapPhases,
-  roadmapPillars,
-  roadmapVision,
-} from "@/lib/roadmap";
+import { useI18n } from "@/i18n/context";
 import { cn } from "@/lib/utils";
 
 const pillarIcons = [Megaphone, Sparkles, Palette, Server, Globe2];
 
 export function RoadmapSection() {
+  const { content } = useI18n();
+  const { roadmapMeta, roadmapFounder, roadmapPhases, roadmapPillars, roadmapVision } =
+    content.roadmap;
+  const { roadmap: roadmapUi } = content.ui;
+
   return (
     <>
       <section className="relative pt-32 pb-12">
@@ -85,8 +86,8 @@ export function RoadmapSection() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <SectionHeader
             badge="Timeline"
-            title="Fase Pertumbuhan 2026+"
-            description="Perkiraan bulan dan tahun agar mudah dibaca — dari fondasi domestik hingga visi global."
+            title={roadmapUi.growthPhasesTitle}
+            description={roadmapUi.growthPhasesDesc}
             className="mb-14"
           />
 

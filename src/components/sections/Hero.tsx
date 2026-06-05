@@ -1,10 +1,16 @@
-import Link from "next/link";
+"use client";
+
+import { LocalizedLink } from "@/components/ui/LocalizedLink";
 import { ArrowRight } from "lucide-react";
 import { AnimatedText } from "@/components/ui/AnimatedText";
 import { assets } from "@/lib/assets";
-import { company } from "@/lib/constants";
+import { useI18n } from "@/i18n/context";
 
 export function Hero() {
+  const { content } = useI18n();
+  const { company } = content.constants;
+  const { hero, common } = content.ui;
+
   const taglineStart = company.tagline.split(" ").slice(0, 3).join(" ");
   const taglineEnd = company.tagline.split(" ").slice(3).join(" ");
 
@@ -37,11 +43,9 @@ export function Hero() {
       <div className="relative flex h-full flex-col justify-end pb-20 pt-28 lg:pb-28 lg:pt-32">
         <div className="mx-auto w-full max-w-7xl px-6 lg:px-8">
           <div className="max-w-3xl">
-            <div
-              className="animate-on-load badge-hero mb-6 inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-[10px] font-semibold tracking-[0.2em] uppercase"
-            >
+            <div className="animate-on-load badge-hero mb-6 inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-[10px] font-semibold tracking-[0.2em] uppercase">
               <span className="h-1 w-1 rounded-full bg-white" />
-              Penyedia Produk AI & Platform SaaS Terdepan di Indonesia
+              {hero.badge}
             </div>
 
             <h1 className="font-display text-4xl leading-[1.08] font-normal tracking-tight text-white sm:text-5xl lg:text-6xl xl:text-7xl">
@@ -54,28 +58,27 @@ export function Hero() {
               className="animate-on-load mt-6 max-w-xl text-base leading-relaxed text-white/75 sm:text-lg"
               style={{ animationDelay: "550ms" }}
             >
-              {company.name} — penyedia produk kecerdasan buatan (AI), perangkat lunak,
-              dan platform berbasis langganan (SaaS) untuk kreator, bisnis, dan individu.
+              {company.name} — {company.description.replace(/\.$/, "")} {hero.subtitleSuffix}
             </p>
 
             <div
               className="animate-on-load mt-10 flex flex-wrap items-center gap-4"
               style={{ animationDelay: "650ms" }}
             >
-              <Link
+              <LocalizedLink
                 href="/products"
                 className="btn-primary-glow inline-flex items-center gap-2 rounded-full px-8 py-3.5 text-sm font-medium tracking-wide text-white transition-all hover:brightness-110"
               >
-                Jelajahi Produk
+                {hero.exploreProducts}
                 <ArrowRight className="h-4 w-4" />
-              </Link>
-              <Link
+              </LocalizedLink>
+              <LocalizedLink
                 href="/contact"
                 className="inline-flex items-center gap-2 rounded-full border border-white/50 bg-white/5 px-8 py-3.5 text-sm font-medium tracking-wide text-white backdrop-blur-sm transition-all hover:border-white hover:bg-white/15"
               >
-                Hubungi Kami
+                {hero.contactUs}
                 <ArrowRight className="h-4 w-4" />
-              </Link>
+              </LocalizedLink>
             </div>
           </div>
         </div>
@@ -85,7 +88,7 @@ export function Hero() {
         className="pointer-events-none absolute bottom-8 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 text-white/40 lg:flex"
         aria-hidden
       >
-        <span className="text-[10px] tracking-[0.25em] uppercase">Scroll</span>
+        <span className="text-[10px] tracking-[0.25em] uppercase">{common.scroll}</span>
         <div className="h-8 w-px bg-gradient-to-b from-white/50 to-transparent" />
       </div>
     </section>

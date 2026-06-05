@@ -1,9 +1,11 @@
+"use client";
+
 import { Check } from "lucide-react";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { SectionFooterLink } from "@/components/ui/SectionFooterLink";
 import { AnimateIn } from "@/components/ui/AnimateIn";
 import { Button } from "@/components/ui/Button";
-import { pricingPlans } from "@/lib/constants";
+import { useI18n } from "@/i18n/context";
 import { cn } from "@/lib/utils";
 
 type PricingSectionProps = {
@@ -15,7 +17,8 @@ export function PricingSection({
   preview = false,
   showHeader = true,
 }: PricingSectionProps) {
-  const plans = pricingPlans;
+  const { content } = useI18n();
+  const plans = content.constants.pricingPlans;
 
   return (
     <section className={cn("relative", preview ? "py-20 lg:py-24" : "section-spacing")}>

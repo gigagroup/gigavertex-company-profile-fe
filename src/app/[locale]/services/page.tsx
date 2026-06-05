@@ -1,24 +1,24 @@
 import type { Metadata } from "next";
-import { PageHeader } from "@/components/ui/PageHeader";
+import { isLocale, type Locale } from "@/i18n/config";
+import { getPageMetadata } from "@/lib/metadata";
 import { ServicesSection } from "@/components/sections/ServicesSection";
 import { ServicesProcessSection } from "@/components/sections/ServicesProcessSection";
 import { FeaturesSection } from "@/components/sections/FeaturesSection";
 import { CTASection } from "@/components/sections/CTASection";
+import { ServicesPageHeader } from "@/components/pages/PageHeaders";
 
-export const metadata: Metadata = {
-  title: "Platform",
-  description:
-    "Platform kecerdasan buatan (SaaS) PT Giga Vertex Technology — produk kreatif, automasi sosial media, video AI, CRM, dan multi-model studio.",
-};
+type PageProps = { params: Promise<{ locale: string }> };
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { locale } = await params;
+  if (!isLocale(locale)) return {};
+  return getPageMetadata(locale as Locale, "services");
+}
 
 export default function ServicesPage() {
   return (
     <>
-      <PageHeader
-        badge="Platform"
-        title="Platform SaaS Kami"
-        description="Ekosistem produk kecerdasan buatan berbasis langganan (SaaS) — langsung pakai, bayar bulanan, tanpa setup rumit."
-      />
+      <ServicesPageHeader />
       <ServicesSection showHeader={false} />
       <ServicesProcessSection />
       <FeaturesSection showHeader={false} />

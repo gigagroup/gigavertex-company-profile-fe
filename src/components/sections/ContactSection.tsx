@@ -5,13 +5,16 @@ import { Send, Mail, Phone, MapPin, Clock } from "lucide-react";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { AnimateIn } from "@/components/ui/AnimateIn";
 import { Button } from "@/components/ui/Button";
-import { company } from "@/lib/constants";
+import { useI18n } from "@/i18n/context";
 
 type ContactSectionProps = {
   showHeader?: boolean;
 };
 
 export function ContactSection({ showHeader = true }: ContactSectionProps) {
+  const { content } = useI18n();
+  const { company } = content.constants;
+  const { contact } = content.ui;
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -24,9 +27,9 @@ export function ContactSection({ showHeader = true }: ContactSectionProps) {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {showHeader && (
           <SectionHeader
-            badge="Kontak"
-            title="Hubungi Kami"
-            description="Punya pertanyaan, ingin demo produk, atau butuh bantuan berlangganan? Tim kami siap membantu Anda."
+            badge={contact.badge}
+            title={contact.title}
+            description={contact.description}
           />
         )}
 
@@ -36,12 +39,12 @@ export function ContactSection({ showHeader = true }: ContactSectionProps) {
               { icon: Mail, label: "Email", value: company.email, href: `mailto:${company.email}` },
               {
                 icon: Phone,
-                label: "Telepon / WA",
+                label: contact.phoneLabel,
                 value: company.phone,
                 href: company.whatsapp,
               },
               { icon: MapPin, label: "Alamat", value: company.address },
-              { icon: Clock, label: "Jam Operasional", value: "Senin - Jumat, 09:00 - 18:00 WIB" },
+              { icon: Clock, label: contact.hoursLabel, value: contact.hoursValue },
             ].map((item, i) => (
               <AnimateIn key={item.label} delay={i * 80} variant="left">
               <div className="flex gap-4">
@@ -78,17 +81,15 @@ export function ContactSection({ showHeader = true }: ContactSectionProps) {
                   <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-emerald-500/20 text-emerald-400">
                     <Send className="h-7 w-7" />
                   </div>
-                  <h3 className="text-xl font-semibold text-zinc-900">Pesan Terkirim!</h3>
-                  <p className="mt-2 text-sm text-zinc-500">
-                    Terima kasih! Tim kami akan menghubungi Anda segera.
-                  </p>
+                  <h3 className="text-xl font-semibold text-zinc-900">{contact.sentTitle}</h3>
+                  <p className="mt-2 text-sm text-zinc-500">{contact.sentDesc}</p>
                 </div>
               ) : (
                 <>
                   <div className="grid gap-6 sm:grid-cols-2">
                     <div>
                       <label className="mb-2 block text-sm font-medium text-zinc-600">
-                        Nama Lengkap
+                        {contact.fullName}
                       </label>
                       <input
                         type="text"
@@ -99,7 +100,7 @@ export function ContactSection({ showHeader = true }: ContactSectionProps) {
                     </div>
                     <div>
                       <label className="mb-2 block text-sm font-medium text-zinc-600">
-                        Email
+                        {contact.email}
                       </label>
                       <input
                         type="email"
@@ -111,30 +112,30 @@ export function ContactSection({ showHeader = true }: ContactSectionProps) {
                   </div>
                   <div className="mt-6">
                     <label className="mb-2 block text-sm font-medium text-zinc-600">
-                      Subjek
+                      {contact.subject}
                     </label>
                     <input
                       type="text"
                       required
-                      placeholder="Demo Produk / Berlangganan"
+                      placeholder={contact.subjectPlaceholder}
                       className="w-full rounded-xl border border-zinc-200 bg-zinc-50 px-4 py-3.5 text-sm text-zinc-900 placeholder:text-zinc-600 transition-colors focus:border-indigo-500/40 focus:outline-none focus:ring-1 focus:ring-indigo-500/20"
                     />
                   </div>
                   <div className="mt-6">
                     <label className="mb-2 block text-sm font-medium text-zinc-600">
-                      Pesan
+                      {contact.message}
                     </label>
                     <textarea
                       required
                       rows={5}
-                      placeholder="Ceritakan produk yang ingin Anda coba atau kebutuhan berlangganan Anda..."
+                      placeholder={contact.messagePlaceholder}
                       className="w-full resize-none rounded-xl border border-zinc-200 bg-zinc-50 px-4 py-3.5 text-sm text-zinc-900 placeholder:text-zinc-600 transition-colors focus:border-indigo-500/40 focus:outline-none focus:ring-1 focus:ring-indigo-500/20"
                     />
                   </div>
                   <div className="mt-6">
                     <Button type="submit" size="lg" className="w-full sm:w-auto">
                       <Send className="h-4 w-4" />
-                      Kirim Pesan
+                      {contact.send}
                     </Button>
                   </div>
                 </>

@@ -1,10 +1,16 @@
+"use client";
+
 import { ArrowRight, Mail } from "lucide-react";
 import { AnimateIn } from "@/components/ui/AnimateIn";
 import { AnimatedText } from "@/components/ui/AnimatedText";
 import { Button } from "@/components/ui/Button";
-import { company } from "@/lib/constants";
+import { useI18n } from "@/i18n/context";
 
 export function CTASection() {
+  const { content } = useI18n();
+  const { company } = content.constants;
+  const { cta } = content.ui;
+
   return (
     <section className="section-spacing relative">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -20,21 +26,20 @@ export function CTASection() {
             />
             <div className="relative px-8 py-20 text-center sm:px-16 sm:py-24">
               <AnimatedText
-                text="Siap Mulai Berlangganan?"
+                text={cta.headline}
                 as="h2"
                 className="font-display text-3xl font-normal text-zinc-900 sm:text-4xl lg:text-5xl"
                 triggerOnView
               />
               <AnimateIn delay={200}>
                 <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed font-light text-zinc-600 lg:text-lg">
-                  Bergabung dengan ribuan pengguna yang sudah berlangganan{" "}
-                  {company.shortName} untuk produk kecerdasan buatan mereka.
+                  {cta.body} {company.shortName} {cta.bodySuffix}
                 </p>
               </AnimateIn>
               <AnimateIn delay={320}>
                 <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
                   <Button href="/contact" size="lg">
-                    Mulai Sekarang
+                    {cta.startNow}
                     <ArrowRight className="h-4 w-4" />
                   </Button>
                   <Button href={`mailto:${company.email}`} variant="secondary" size="lg">

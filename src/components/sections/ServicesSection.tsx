@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Brain,
   Code2,
@@ -10,7 +12,7 @@ import {
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { SectionFooterLink } from "@/components/ui/SectionFooterLink";
 import { AnimateIn } from "@/components/ui/AnimateIn";
-import { services } from "@/lib/constants";
+import { useI18n } from "@/i18n/context";
 import { cn } from "@/lib/utils";
 
 const iconMap: Record<string, LucideIcon> = {
@@ -31,6 +33,9 @@ export function ServicesSection({
   preview = false,
   showHeader = true,
 }: ServicesSectionProps) {
+  const { content } = useI18n();
+  const { services } = content.constants;
+  const { services: servicesUi } = content.ui;
   const items = preview ? services.slice(0, 3) : services;
 
   return (
@@ -38,13 +43,9 @@ export function ServicesSection({
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {showHeader && (
           <SectionHeader
-            badge="Platform"
-            title={preview ? "Platform Unggulan" : "Ekosistem Platform SaaS"}
-            description={
-              preview
-                ? "Cuplikan platform kecerdasan buatan kami. Detail lengkap tersedia di halaman Platform."
-                : "Lima platform berbasis langganan (SaaS) — dari konten kreatif, video AI, hingga CRM penjualan."
-            }
+            badge={servicesUi.badge}
+            title={preview ? servicesUi.previewTitle : servicesUi.fullTitle}
+            description={preview ? servicesUi.previewDesc : servicesUi.fullDesc}
           />
         )}
 
@@ -70,7 +71,7 @@ export function ServicesSection({
           })}
         </div>
 
-        {preview && <SectionFooterLink href="/services" label="Semua platform" />}
+        {preview && <SectionFooterLink href="/services" label={servicesUi.allPlatforms} />}
       </div>
     </section>
   );

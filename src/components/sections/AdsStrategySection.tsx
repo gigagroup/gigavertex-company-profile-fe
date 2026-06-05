@@ -1,12 +1,10 @@
+"use client";
+
 import { Megaphone, Music2, Search, Layers3, Target, LineChart } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { AnimateIn } from "@/components/ui/AnimateIn";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import {
-  adsStrategyMeta,
-  adsChannels,
-  adsStrategyPrinciples,
-} from "@/lib/ads-strategy";
+import { useI18n } from "@/i18n/context";
 import { cn } from "@/lib/utils";
 
 const channelIcons: Record<string, LucideIcon> = {
@@ -26,6 +24,9 @@ type AdsStrategySectionProps = {
 };
 
 export function AdsStrategySection({ showHeader = true }: AdsStrategySectionProps) {
+  const { content } = useI18n();
+  const { adsStrategyMeta, adsChannels, adsStrategyPrinciples } = content.ads;
+
   return (
     <>
       {showHeader && (

@@ -1,8 +1,10 @@
+"use client";
+
 import { Shield, Rocket, Palette, TrendingUp } from "lucide-react";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { AnimateIn } from "@/components/ui/AnimateIn";
 import { AnimatedProgress } from "@/components/ui/AnimatedProgress";
-import { features } from "@/lib/constants";
+import { useI18n } from "@/i18n/context";
 
 const icons = [Rocket, Shield, TrendingUp, Palette];
 
@@ -11,6 +13,10 @@ type FeaturesSectionProps = {
 };
 
 export function FeaturesSection({ showHeader = true }: FeaturesSectionProps) {
+  const { content } = useI18n();
+  const { features } = content.constants;
+  const { features: featuresUi } = content.ui;
+
   return (
     <section className="section-spacing relative">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -18,9 +24,9 @@ export function FeaturesSection({ showHeader = true }: FeaturesSectionProps) {
           <div>
             {showHeader && (
               <SectionHeader
-                badge="Keunggulan"
-                title="Mengapa Memilih Giga Vertex?"
-                description="Kami menggabungkan teknologi AI terdepan dengan desain premium untuk memberikan pengalaman terbaik."
+                badge={featuresUi.badge}
+                title={featuresUi.title}
+                description={featuresUi.description}
                 align="left"
                 className="mb-10"
               />
@@ -53,9 +59,9 @@ export function FeaturesSection({ showHeader = true }: FeaturesSectionProps) {
               <div className="absolute -inset-4 rounded-3xl bg-gradient-to-r from-indigo-500/10 to-violet-600/10 blur-2xl" />
               <div className="relative space-y-4">
                 {[
-                  { label: "AI Processing", value: 94, color: "bg-indigo-500" },
-                  { label: "User Satisfaction", value: 98, color: "bg-violet-500" },
-                  { label: "Platform Uptime", value: 99, color: "bg-emerald-500" },
+                  { label: featuresUi.metrics.aiProcessing, value: 94, color: "bg-indigo-500" },
+                  { label: featuresUi.metrics.userSatisfaction, value: 98, color: "bg-violet-500" },
+                  { label: featuresUi.metrics.platformUptime, value: 99, color: "bg-emerald-500" },
                 ].map((metric, i) => (
                   <AnimatedProgress
                     key={metric.label}
@@ -68,11 +74,10 @@ export function FeaturesSection({ showHeader = true }: FeaturesSectionProps) {
 
                 <div className="glass-card rounded-2xl p-6">
                   <p className="text-sm leading-relaxed text-zinc-700">
-                    &ldquo;Platform kami dirancang untuk skala — dari startup hingga enterprise,
-                    dengan infrastruktur yang handal dan support yang responsif.&rdquo;
+                    &ldquo;{featuresUi.quote}&rdquo;
                   </p>
                   <p className="mt-3 text-xs font-medium tracking-wide text-indigo-600">
-                    — Product Team, Giga Vertex
+                    {featuresUi.quoteAttribution}
                   </p>
                 </div>
               </div>

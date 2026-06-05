@@ -1,12 +1,14 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
-import { navLinks } from "@/lib/constants";
+import { LocalizedLink } from "@/components/ui/LocalizedLink";
+import { LanguageSwitcher } from "@/components/layout/LanguageSwitcher";
 import { LogoLink } from "@/components/ui/LogoLink";
 import { Button } from "@/components/ui/Button";
+import { useI18n } from "@/i18n/context";
+import { pathnameWithoutLocale } from "@/i18n/utils";
 import { cn } from "@/lib/utils";
 
 const linkClass =
@@ -18,8 +20,11 @@ const linkClassMobile =
   "rounded-lg px-4 py-3 text-sm font-medium text-zinc-300 transition-colors hover:bg-white/10 hover:text-white";
 
 export function Navbar() {
+  const { locale, content } = useI18n();
+  const { constants, ui } = content;
   const pathname = usePathname();
-  const isHome = pathname === "/";
+  const path = pathnameWithoutLocale(pathname);
+  const isHome = path === "/";
   const [isOpen, setIsOpen] = useState(false);
   const [pastHero, setPastHero] = useState(!isHome);
 
@@ -62,34 +67,35 @@ export function Navbar() {
 
           <div className="hidden justify-center overflow-x-auto lg:flex [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
             <div className="flex flex-nowrap items-center">
-              {navLinks.map((link) => (
-                <Link
+              {constants.navLinks.map((link) => (
+                <LocalizedLink
                   key={link.href}
                   href={link.href}
                   className={cn(
                     linkClass,
-                    pathname === link.href && "bg-white/10 text-white"
+                    path === link.href && "bg-white/10 text-white"
                   )}
                 >
                   {link.label}
-                </Link>
+                </LocalizedLink>
               ))}
             </div>
           </div>
 
           <div className="hidden shrink-0 items-center justify-end gap-1.5 lg:flex">
+            <LanguageSwitcher locale={locale} />
             <Button href="/contact" variant="hero-ghost" size="sm" className={navButtonClass}>
-              Masuk
+              {ui.navbar.signIn}
             </Button>
             <Button href="/contact" variant="primary" size="sm" className={navButtonClass}>
-              Mulai Sekarang
+              {ui.navbar.getStarted}
             </Button>
           </div>
 
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="col-start-3 rounded-lg p-2 text-zinc-300 transition-colors hover:bg-white/10 hover:text-white lg:hidden"
-            aria-label="Toggle menu"
+            aria-label={ui.common.toggleMenu}
           >
             {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
@@ -104,26 +110,29 @@ export function Navbar() {
                 : "border-t border-white/20 bg-black/50 backdrop-blur-md"
             )}
           >
+            <div className="mb-4 flex justify-end">
+              <LanguageSwitcher locale={locale} />
+            </div>
             <div className="flex flex-col gap-0.5">
-              {navLinks.map((link) => (
-                <Link
+              {constants.navLinks.map((link) => (
+                <LocalizedLink
                   key={link.href}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
                   className={cn(
                     linkClassMobile,
-                    pathname === link.href && "bg-white/10 text-white"
+                    path === link.href && "bg-white/10 text-white"
                   )}
                 >
                   {link.label}
-                </Link>
+                </LocalizedLink>
               ))}
               <div className="mt-4 flex flex-col gap-2 border-t border-white/10 pt-4">
                 <Button href="/contact" variant="hero-outline" size="sm">
-                  Masuk
+                  {ui.navbar.signIn}
                 </Button>
                 <Button href="/contact" size="sm">
-                  Mulai Sekarang
+                  {ui.navbar.getStarted}
                 </Button>
               </div>
             </div>

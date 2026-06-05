@@ -1,13 +1,10 @@
-import Link from "next/link";
+"use client";
+
+import { LocalizedLink } from "@/components/ui/LocalizedLink";
 import { Globe2, MapPin, ArrowRight, Languages, CreditCard, Megaphone, Database } from "lucide-react";
 import { AnimateIn } from "@/components/ui/AnimateIn";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import {
-  marketMeta,
-  marketRegionsDetail,
-  marketExpansionTimeline,
-  marketEnablers,
-} from "@/lib/markets";
+import { useI18n } from "@/i18n/context";
 import { cn } from "@/lib/utils";
 
 const regionAccent = [
@@ -19,6 +16,10 @@ const regionAccent = [
 const enablerIcons = [CreditCard, Languages, Megaphone, Database];
 
 export function MarketSection() {
+  const { content } = useI18n();
+  const { marketMeta, marketRegionsDetail, marketExpansionTimeline, marketEnablers } =
+    content.markets;
+
   return (
     <>
       <section className="relative pt-32 pb-12 lg:pt-36">
@@ -179,13 +180,13 @@ export function MarketSection() {
             </div>
           </div>
           <div className="mt-10 text-center">
-            <Link
+            <LocalizedLink
               href="/roadmap"
               className="group inline-flex items-center gap-2 text-sm font-medium text-indigo-600 hover:text-indigo-800"
             >
               Lihat roadmap lengkap
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-            </Link>
+            </LocalizedLink>
           </div>
         </div>
       </section>
@@ -216,20 +217,20 @@ export function MarketSection() {
             })}
           </div>
           <div className="mt-10 flex flex-wrap justify-center gap-4">
-            <Link
+            <LocalizedLink
               href="/strategi-iklan"
               className="inline-flex items-center gap-2 rounded-full border border-zinc-300 bg-white px-6 py-2.5 text-sm font-medium text-zinc-700 transition-colors hover:border-indigo-300 hover:text-indigo-700"
             >
               Strategi Meta, TikTok & Google Ads
               <ArrowRight className="h-4 w-4" />
-            </Link>
-            <Link
+            </LocalizedLink>
+            <LocalizedLink
               href="/kecerdasan-buatan"
               className="inline-flex items-center gap-2 rounded-full border border-zinc-300 bg-white px-6 py-2.5 text-sm font-medium text-zinc-700 transition-colors hover:border-indigo-300 hover:text-indigo-700"
             >
               Ekosistem AI
               <ArrowRight className="h-4 w-4" />
-            </Link>
+            </LocalizedLink>
           </div>
         </div>
       </section>

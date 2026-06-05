@@ -1,4 +1,6 @@
-import Link from "next/link";
+"use client";
+
+import { LocalizedLink } from "@/components/ui/LocalizedLink";
 import Image from "next/image";
 import {
   Target,
@@ -19,20 +21,24 @@ import {
   AboutIllustration,
   getValueIllustration,
 } from "@/components/illustrations/AboutIllustration";
-import {
-  aboutIntro,
-  aboutVision,
-  aboutMission,
-  aboutValuesIntro,
-  aboutCoreValues,
-  aboutJourney,
-  aboutFounder,
-} from "@/lib/about";
+import { useI18n } from "@/i18n/context";
 import { cn } from "@/lib/utils";
 
 const valueIcons: LucideIcon[] = [Sparkles, Shield, Users, Leaf, Zap];
 
 export function AboutSection() {
+  const { content } = useI18n();
+  const {
+    aboutIntro,
+    aboutVision,
+    aboutMission,
+    aboutValuesIntro,
+    aboutCoreValues,
+    aboutJourney,
+    aboutFounder,
+  } = content.about;
+  const { about: aboutUi } = content.ui;
+
   return (
     <>
       <section className="relative pt-32 pb-20 lg:pb-28">
@@ -222,13 +228,13 @@ export function AboutSection() {
                 align="left"
                 className="mb-0"
               />
-              <Link
+              <LocalizedLink
                 href="/roadmap"
                 className="group mt-8 inline-flex items-center gap-2 text-sm font-medium text-indigo-600"
               >
                 Roadmap 2026+
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-              </Link>
+              </LocalizedLink>
             </AnimateIn>
             <div className="relative space-y-0">
               <div
@@ -261,9 +267,9 @@ export function AboutSection() {
       <section className="border-t border-zinc-200 bg-indigo-50/30 py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <SectionHeader
-            badge="Kepemimpinan"
-            title="Founder & CEO"
-            description="Visi dan arah penyedia produk kecerdasan buatan dan platform SaaS Giga Vertex Technology."
+            badge={aboutUi.leadershipBadge}
+            title={aboutUi.leadershipTitle}
+            description={aboutUi.leadershipDesc}
           />
 
           <AnimateIn>
