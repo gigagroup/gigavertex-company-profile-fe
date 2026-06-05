@@ -9,6 +9,10 @@ export const assets = {
       giga: "/assets/images/products/giga.png",
       newtonAi: "/assets/images/products/newton-ai.png",
       growi: "/assets/images/products/crm.png",
+      intervoAi: "/assets/images/products/intervo-ai.png",
+      lingoraAi: "/assets/images/products/lingora-ai.png",
+      slimoraAi: "/assets/images/products/slimora-ai.png",
+      viraloAi: "/assets/images/products/viralo-ai.png",
     },
   },
   videos: {

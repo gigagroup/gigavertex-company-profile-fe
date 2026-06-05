@@ -31,21 +31,33 @@ const iconMap: Record<string, LucideIcon> = {
 import type { Content } from "@/i18n/get-content";
 
 type Product = Content["constants"]["products"][number];
+type ComingSoonProduct = Content["constants"]["comingSoonProducts"][number];
+type ShowcaseProduct = Product | ComingSoonProduct;
 
 type ProductsSectionProps = {
   preview?: boolean;
   showHeader?: boolean;
 };
 
-type ProductBadge = NonNullable<Product["badge"]>;
+type ProductBadge = NonNullable<Product["badge"]> | ComingSoonProduct["badge"];
+
+function isComingSoonProduct(product: ShowcaseProduct): product is ComingSoonProduct {
+  return "comingSoon" in product && product.comingSoon === true;
+}
 
 function previewBadgeClass(badge: ProductBadge) {
   if (badge === "Popular") return "bg-indigo-500/20 text-indigo-600";
+  if (badge === "Coming Soon" || badge === "Segera Hadir") {
+    return "bg-amber-500/20 text-amber-700";
+  }
   return "bg-emerald-500/20 text-emerald-400";
 }
 
 function showcaseBadgeClass(badge: ProductBadge) {
   if (badge === "Popular") return "bg-indigo-600 text-white shadow-sm";
+  if (badge === "Coming Soon" || badge === "Segera Hadir") {
+    return "bg-amber-500 text-white shadow-sm";
+  }
   return "bg-emerald-600 text-white shadow-sm";
 }
 
@@ -110,15 +122,19 @@ function ProductShowcaseCard({
   activeUsersLabel,
   startWithLabel,
   viewAiLabel,
+  comingSoonLabel,
 }: {
-  product: Product;
+  product: ShowcaseProduct;
   index: number;
   activeUsersLabel: string;
   startWithLabel: string;
   viewAiLabel: string;
+  comingSoonLabel: string;
 }) {
   const Icon = iconMap[product.icon] || Sparkles;
   const imageFirst = index % 2 === 0;
+  const comingSoon = isComingSoonProduct(product);
+  const users = "users" in product ? product.users : undefined;
 
   return (
     <AnimateIn delay={index * 80}>
@@ -167,9 +183,9 @@ function ProductShowcaseCard({
               {product.name}
             </h2>
 
-            {product.users && (
+            {users && (
               <p className="mt-2 text-sm font-medium text-indigo-600">
-                {product.users} {activeUsersLabel}
+                {users} {activeUsersLabel}
               </p>
             )}
 
@@ -190,20 +206,28 @@ function ProductShowcaseCard({
             </ul>
 
             <div className="mt-8 flex flex-wrap items-center gap-4">
-              <LocalizedLink
-                href="/contact"
-                className="btn-primary-glow inline-flex items-center gap-2 rounded-full px-6 py-2.5 text-sm font-medium text-white transition-all hover:brightness-110"
-              >
-                {startWithLabel} {product.name}
-                <ArrowRight className="h-4 w-4" />
-              </LocalizedLink>
-              <LocalizedLink
-                href="/kecerdasan-buatan"
-                className="inline-flex items-center gap-2 text-sm font-medium text-indigo-600 transition-colors hover:text-indigo-800"
-              >
-                {viewAiLabel}
-                <ArrowRight className="h-4 w-4" />
-              </LocalizedLink>
+              {comingSoon ? (
+                <span className="inline-flex items-center rounded-full border border-amber-200 bg-amber-50 px-5 py-2.5 text-sm font-medium text-amber-800">
+                  {comingSoonLabel}
+                </span>
+              ) : (
+                <>
+                  <LocalizedLink
+                    href="/contact"
+                    className="btn-primary-glow inline-flex items-center gap-2 rounded-full px-6 py-2.5 text-sm font-medium text-white transition-all hover:brightness-110"
+                  >
+                    {startWithLabel} {product.name}
+                    <ArrowRight className="h-4 w-4" />
+                  </LocalizedLink>
+                  <LocalizedLink
+                    href="/kecerdasan-buatan"
+                    className="inline-flex items-center gap-2 text-sm font-medium text-indigo-600 transition-colors hover:text-indigo-800"
+                  >
+                    {viewAiLabel}
+                    <ArrowRight className="h-4 w-4" />
+                  </LocalizedLink>
+                </>
+              )}
             </div>
           </div>
         </div>
@@ -217,8 +241,11 @@ export function ProductsSection({
   showHeader = true,
 }: ProductsSectionProps) {
   const { content } = useI18n();
-  const { products } = content.constants;
+  const { products, comingSoonProducts } = content.constants;
   const { products: productsUi, common } = content.ui;
+  const showcaseProducts: ShowcaseProduct[] = preview
+    ? products
+    : [...products, ...comingSoonProducts];
 
   return (
     <section
@@ -253,7 +280,7 @@ export function ProductsSection({
           </div>
         ) : (
           <div className="flex flex-col gap-10 lg:gap-14">
-            {products.map((product, i) => (
+            {showcaseProducts.map((product, i) => (
               <ProductShowcaseCard
                 key={product.name}
                 product={product}
@@ -261,6 +288,7 @@ export function ProductsSection({
                 activeUsersLabel={common.activeUsers}
                 startWithLabel={common.startWith}
                 viewAiLabel={common.viewAiEcosystem}
+                comingSoonLabel={productsUi.comingSoonLabel}
               />
             ))}
           </div>

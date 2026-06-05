@@ -12,6 +12,7 @@ import { getCareer } from "@/lib/career";
 import { getAdsStrategy } from "@/lib/ads-strategy";
 import { getAiIntelligence } from "@/lib/ai-intelligence";
 import { getConstants } from "@/lib/constants";
+import { getComingSoonProducts } from "@/lib/coming-soon-products";
 import { getMarkets } from "@/lib/markets";
 import { getRoadmap } from "@/lib/roadmap";
 import { getUi } from "@/lib/ui";
@@ -48,6 +49,7 @@ function buildEnglishContent() {
       badge: pillar.badge,
       users: pillar.users,
     })),
+    comingSoonProducts: getComingSoonProducts("en"),
   };
 
   return {

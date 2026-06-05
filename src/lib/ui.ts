@@ -72,6 +72,7 @@ export const uiId = {
     fullDesc: "Lima platform SaaS AI & CRM untuk creator, bisnis, dan agency — dari konten, video, hingga penjualan. Sudah dipercaya ribuan pengguna.",
     allProducts: "Semua produk",
     interfaceAlt: "Antarmuka",
+    comingSoonLabel: "Segera hadir",
   },
   ai: {
     videoAriaLabel: "Video ekosistem kecerdasan buatan Giga Vertex",

@@ -72,6 +72,7 @@ export const ui = {
     fullDesc: "Five AI SaaS & CRM platforms for creators, businesses, and agencies — from content, video, to sales. Trusted by thousands of users.",
     allProducts: "All products",
     interfaceAlt: "Interface",
+    comingSoonLabel: "Coming soon",
   },
   ai: {
     videoAriaLabel: "Giga Vertex artificial intelligence ecosystem video",

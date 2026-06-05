@@ -1,4 +1,5 @@
 import { getAiIntelligence } from "@/lib/ai-intelligence";
+import { getComingSoonProducts } from "@/lib/coming-soon-products";
 import type { Locale } from "@/i18n/config";
 import { constants as constantsEn } from "@/i18n/en/constants";
 
@@ -270,6 +271,7 @@ export function getConstants(locale?: Locale) {
       badge: pillar.badge,
       users: pillar.users,
     })),
+    comingSoonProducts: getComingSoonProducts(locale),
   };
 }
 
