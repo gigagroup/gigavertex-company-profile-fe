@@ -13,7 +13,7 @@ export function CTASection() {
 
   return (
     <section className="section-spacing relative">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="site-container">
         <AnimateIn variant="scale">
           <div className="glass-card relative overflow-hidden rounded-3xl">
             <div className="absolute inset-0 bg-gradient-to-br from-indigo-100/80 via-violet-50/50 to-transparent" />

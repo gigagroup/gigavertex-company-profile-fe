@@ -23,7 +23,7 @@ export function PricingSection({
   return (
     <section className={cn("relative", preview ? "py-20 lg:py-24" : "section-spacing")}>
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-indigo-100/50 to-transparent" />
-      <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="site-container relative">
         {showHeader && (
           <SectionHeader
             badge="Harga"

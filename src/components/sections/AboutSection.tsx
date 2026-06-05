@@ -45,7 +45,7 @@ export function AboutSection() {
         <div className="pointer-events-none absolute inset-0">
           <div className="absolute top-0 right-0 h-[360px] w-[480px] rounded-full bg-indigo-500/[0.06] blur-[100px]" />
         </div>
-        <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="site-container relative">
           <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
             <AnimateIn variant="left">
               <AboutIllustration
@@ -82,7 +82,7 @@ export function AboutSection() {
       </section>
 
       <section className="bg-zinc-950 py-20 text-white lg:py-28">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="site-container">
           <AnimateIn>
             <div className="max-w-3xl">
               <p className="text-xs font-semibold tracking-[0.2em] text-indigo-300 uppercase">
@@ -118,7 +118,7 @@ export function AboutSection() {
       </section>
 
       <section className="py-20 lg:py-28">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="site-container">
           <div className="grid gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)] lg:gap-20">
             <AnimateIn>
               <h2 className="font-display text-3xl text-zinc-900 sm:text-4xl">
@@ -155,7 +155,7 @@ export function AboutSection() {
       </section>
 
       <section className="border-t border-zinc-200 bg-zinc-50/80 py-20 lg:py-28">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="site-container">
           <SectionHeader
             badge="Nilai"
             title={aboutValuesIntro.title}
@@ -218,7 +218,7 @@ export function AboutSection() {
       </section>
 
       <section className="py-20 lg:py-28">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="site-container">
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
             <AnimateIn>
               <SectionHeader
@@ -265,7 +265,7 @@ export function AboutSection() {
       </section>
 
       <section className="border-t border-zinc-200 bg-indigo-50/30 py-20 lg:py-28">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="site-container">
           <SectionHeader
             badge={aboutUi.leadershipBadge}
             title={aboutUi.leadershipTitle}

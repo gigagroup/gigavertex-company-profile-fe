@@ -14,7 +14,7 @@ export function ServicesProcessSection() {
 
   return (
     <section className="relative border-t border-zinc-200 py-20 lg:py-28">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="site-container">
         <SectionHeader
           badge={servicesProcess.badge}
           title={servicesProcess.title}

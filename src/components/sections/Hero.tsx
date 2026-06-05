@@ -41,7 +41,7 @@ export function Hero() {
       />
 
       <div className="relative flex h-full flex-col justify-end pb-20 pt-28 lg:pb-28 lg:pt-32">
-        <div className="mx-auto w-full max-w-7xl px-6 lg:px-8">
+        <div className="site-container">
           <div className="max-w-3xl">
             <div className="animate-on-load badge-hero mb-6 inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-[10px] font-semibold tracking-[0.2em] uppercase">
               <span className="h-1 w-1 rounded-full bg-white" />

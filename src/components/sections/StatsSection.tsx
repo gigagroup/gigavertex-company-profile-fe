@@ -9,7 +9,7 @@ export function StatsSection() {
 
   return (
     <section className="relative border-y border-zinc-200/80 bg-white py-14 lg:py-16">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="site-container">
         <div className="grid gap-8 sm:grid-cols-3">
           {stats.map((stat, i) => (
             <AnimateIn key={stat.label} delay={i * 80} variant="scale">

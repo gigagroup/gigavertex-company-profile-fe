@@ -29,7 +29,7 @@ export function RoadmapSection() {
         <div className="pointer-events-none absolute inset-0">
           <div className="absolute top-0 left-1/2 h-[400px] w-[600px] -translate-x-1/2 rounded-full bg-indigo-600/[0.08] blur-[120px] animate-float" />
         </div>
-        <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="site-container relative">
           <div className="mx-auto max-w-3xl text-center">
             <div className="animate-on-load">
               <span className="badge-elegant mb-4 inline-block rounded-full px-4 py-1.5 text-[10px] font-semibold uppercase">
@@ -53,7 +53,7 @@ export function RoadmapSection() {
       </section>
 
       <section className="pb-16">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="site-container">
           <AnimateIn>
             <div className="glass-card mx-auto max-w-2xl rounded-2xl p-8 text-center lg:max-w-3xl">
               <div className="relative mx-auto mb-5 h-28 w-28 overflow-hidden rounded-full border-4 border-indigo-100 shadow-md">
@@ -83,7 +83,7 @@ export function RoadmapSection() {
       </section>
 
       <section className="py-12 lg:py-16">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="site-container">
           <SectionHeader
             badge="Timeline"
             title={roadmapUi.growthPhasesTitle}
@@ -146,7 +146,7 @@ export function RoadmapSection() {
       </section>
 
       <section className="py-16 lg:py-20">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="site-container">
           <SectionHeader badge="Pilar inti" title="Pilar Inti" className="mb-14" />
 
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -178,7 +178,7 @@ export function RoadmapSection() {
       </section>
 
       <section className="pb-24">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="site-container">
           <AnimateIn>
             <div className="relative overflow-hidden rounded-3xl border border-indigo-200/60 bg-gradient-to-br from-indigo-950 via-indigo-900 to-violet-950 px-8 py-12 text-center sm:px-12 lg:py-16">
               <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_0%,rgba(129,140,248,0.25),transparent)]" />

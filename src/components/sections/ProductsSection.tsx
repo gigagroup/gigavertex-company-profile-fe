@@ -257,7 +257,7 @@ export function ProductsSection({
       {!preview && (
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-indigo-50/30 via-transparent to-transparent" />
       )}
-      <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="site-container relative">
         {showHeader && (
           <SectionHeader
             badge={productsUi.badge}

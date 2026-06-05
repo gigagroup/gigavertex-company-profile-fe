@@ -40,7 +40,7 @@ export function ServicesSection({
 
   return (
     <section className={cn("relative", preview ? "py-20 lg:py-24" : "section-spacing")}>
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="site-container">
         {showHeader && (
           <SectionHeader
             badge={servicesUi.badge}

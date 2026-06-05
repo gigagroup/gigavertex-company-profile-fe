@@ -19,7 +19,7 @@ export function FeaturesSection({ showHeader = true }: FeaturesSectionProps) {
 
   return (
     <section className="section-spacing relative">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="site-container">
         <div className="grid items-center gap-16 lg:grid-cols-2">
           <div>
             {showHeader && (

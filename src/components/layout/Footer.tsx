@@ -12,7 +12,7 @@ export function Footer() {
 
   return (
     <footer className="border-t border-zinc-200 bg-white">
-      <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
+      <div className="site-container py-20">
         <div className="grid gap-14 lg:grid-cols-4">
           <div className="lg:col-span-1">
             <LogoLink size="md" />

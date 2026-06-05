@@ -52,7 +52,7 @@ export default function RootLayout({
       lang="id"
       className={`${jakarta.variable} ${instrument.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-slate-50 text-zinc-900">
+      <body className="min-h-full min-w-0 flex flex-col overflow-x-hidden bg-slate-50 text-zinc-900">
         <div
           className="pointer-events-none fixed inset-0 -z-10"
           aria-hidden

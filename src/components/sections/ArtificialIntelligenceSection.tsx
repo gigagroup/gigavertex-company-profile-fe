@@ -52,7 +52,7 @@ export function ArtificialIntelligenceSection() {
   return (
     <div className="overflow-x-hidden">
       <section className="relative overflow-hidden pt-24 pb-6 sm:pt-28 lg:pt-32 lg:pb-8">
-        <div className="mx-auto w-full min-w-0 max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="site-container">
           <div className="relative mx-auto w-full min-w-0 max-w-2xl overflow-hidden rounded-2xl bg-zinc-900 shadow-md ring-1 ring-zinc-200/60 lg:max-w-3xl">
             <video
               className="aspect-video w-full object-cover"
@@ -73,7 +73,7 @@ export function ArtificialIntelligenceSection() {
         <div className="pointer-events-none absolute inset-0 overflow-hidden">
           <div className="absolute top-0 left-1/2 h-[280px] w-[min(100%,36rem)] max-w-full -translate-x-1/2 rounded-full bg-violet-600/[0.08] blur-[100px] animate-float sm:h-[420px]" />
         </div>
-        <div className="relative mx-auto w-full min-w-0 max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="site-container relative">
           <div className="mx-auto w-full min-w-0 max-w-3xl text-center">
             <span className="badge-elegant mb-4 inline-block rounded-full px-4 py-1.5 text-[10px] font-semibold uppercase">
               {aiMeta.badge}
@@ -105,7 +105,7 @@ export function ArtificialIntelligenceSection() {
       </section>
 
       <section className="py-12 lg:py-16">
-        <div className="mx-auto w-full min-w-0 max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="site-container">
           <SectionHeader
             badge={aiUi.capabilitiesBadge}
             title={aiUi.capabilitiesTitle}
@@ -129,7 +129,7 @@ export function ArtificialIntelligenceSection() {
       </section>
 
       <section className="border-y border-zinc-200/80 bg-indigo-50/25 py-16 lg:py-20">
-        <div className="mx-auto w-full min-w-0 max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="site-container">
           <SectionHeader
             badge={aiUi.ecosystemBadge}
             title={aiUi.ecosystemTitle}
@@ -157,7 +157,7 @@ export function ArtificialIntelligenceSection() {
       </section>
 
       <section className="py-16 lg:py-20">
-        <div className="mx-auto w-full min-w-0 max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="site-container">
           <SectionHeader
             badge={aiUi.useCaseBadge}
             title={aiUi.useCaseTitle}
@@ -196,7 +196,7 @@ export function ArtificialIntelligenceSection() {
       </section>
 
       <section className="py-12 lg:py-16">
-        <div className="mx-auto w-full min-w-0 max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="site-container">
           <SectionHeader
             badge={aiUi.techBadge}
             title={aiUi.techTitle}
@@ -221,7 +221,7 @@ export function ArtificialIntelligenceSection() {
       </section>
 
       <section className="border-t border-zinc-200/80 py-16 lg:py-20">
-        <div className="mx-auto w-full min-w-0 max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="site-container">
           <SectionHeader
             badge={aiUi.productsBadge}
             title={aiUi.productsTitle}
@@ -290,7 +290,7 @@ export function ArtificialIntelligenceSection() {
       </section>
 
       <section className="bg-zinc-50/80 py-16 lg:py-20">
-        <div className="mx-auto w-full min-w-0 max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="site-container">
           <SectionHeader
             badge={aiUi.processBadge}
             title={aiUi.processTitle}
@@ -313,7 +313,7 @@ export function ArtificialIntelligenceSection() {
       </section>
 
       <section className="py-16 lg:py-20">
-        <div className="mx-auto w-full min-w-0 max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="site-container">
           <div className="grid min-w-0 grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-16">
             <AnimateIn className="min-w-0">
               <SectionHeader

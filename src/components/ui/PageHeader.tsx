@@ -14,7 +14,7 @@ export function PageHeader({ badge, title, description }: PageHeaderProps) {
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute top-0 left-1/2 h-[280px] w-[480px] -translate-x-1/2 rounded-full bg-indigo-200/40 blur-[100px] animate-float" />
       </div>
-      <div className="relative mx-auto max-w-7xl px-6 text-center lg:px-8">
+      <div className="site-container relative text-center">
         <div className="animate-on-load">
           <span className="badge-elegant inline-block rounded-full px-4 py-1.5 text-[10px] font-semibold uppercase">
             {badge}

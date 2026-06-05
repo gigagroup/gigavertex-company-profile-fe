@@ -11,7 +11,7 @@ export function PricingFaqSection() {
 
   return (
     <section className="relative border-t border-zinc-200 py-20 lg:py-28">
-      <div className="mx-auto max-w-3xl px-6 lg:px-8">
+      <div className="site-container max-w-3xl">
         <SectionHeader
           badge={pricing.faqBadge}
           title={pricing.faqTitle}

@@ -20,7 +20,7 @@ export function CareerSection() {
         <div className="pointer-events-none absolute inset-0">
           <div className="absolute top-0 left-1/2 h-[320px] w-[520px] -translate-x-1/2 rounded-full bg-indigo-600/[0.07] blur-[120px] animate-float" />
         </div>
-        <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="site-container relative">
           <div className="mx-auto max-w-3xl text-center">
             <span className="badge-elegant mb-4 inline-block rounded-full px-4 py-1.5 text-[10px] font-semibold uppercase">
               {careerMeta.badge}
@@ -36,7 +36,7 @@ export function CareerSection() {
       </section>
 
       <section className="pb-16 lg:pb-20">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="site-container">
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
             <AnimateIn variant="left">
               <SectionHeader
@@ -85,7 +85,7 @@ export function CareerSection() {
       </section>
 
       <section className="border-y border-zinc-200/80 bg-zinc-50/50 py-16 lg:py-20">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="site-container">
           <SectionHeader
             badge={careerUi.openingsBadge}
             title={careerOpenings.title}
@@ -119,7 +119,7 @@ export function CareerSection() {
       </section>
 
       <section className="py-16 lg:py-20">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="site-container">
           <SectionHeader
             badge={careerUi.processBadge}
             title={careerProcess.title}

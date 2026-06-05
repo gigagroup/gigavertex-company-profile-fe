@@ -14,7 +14,7 @@ export function AiHomePreviewSection() {
 
   return (
     <section className="relative border-y border-zinc-200/80 bg-indigo-50/20 py-20 lg:py-24">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="site-container">
         <SectionHeader
           badge={aiMeta.badge}
           title={aiUi.homeTitle}

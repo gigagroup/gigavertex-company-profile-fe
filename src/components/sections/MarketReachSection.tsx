@@ -23,7 +23,7 @@ export function MarketReachSection() {
         <div className="absolute right-0 top-1/2 h-[320px] w-[480px] -translate-y-1/2 rounded-full bg-indigo-500/[0.06] blur-[100px]" />
       </div>
 
-      <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="site-container relative">
         <SectionHeader
           badge={marketUi.badge}
           title={marketUi.title}

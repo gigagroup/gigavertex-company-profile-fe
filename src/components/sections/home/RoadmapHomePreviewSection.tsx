@@ -13,7 +13,7 @@ export function RoadmapHomePreviewSection() {
 
   return (
     <section className="relative border-y border-zinc-200/80 bg-zinc-50/50 py-20 lg:py-24">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="site-container">
         <SectionHeader
           badge={roadmapMeta.badge}
           title={roadmapUi.homeTitle}
