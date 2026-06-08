@@ -12,7 +12,10 @@ type PageMetaKey =
   | "roadmap"
   | "market"
   | "ads"
-  | "career";
+  | "career"
+  | "termsOfService"
+  | "privacyPolicy"
+  | "refundPolicy";
 
 export function getPageMetadata(locale: Locale, key: PageMetaKey): Metadata {
   const { ui } = getContent(locale);

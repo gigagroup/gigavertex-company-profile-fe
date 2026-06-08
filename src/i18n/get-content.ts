@@ -16,6 +16,8 @@ import { getComingSoonProducts } from "@/lib/coming-soon-products";
 import { getMarkets } from "@/lib/markets";
 import { getRoadmap } from "@/lib/roadmap";
 import { getUi } from "@/lib/ui";
+import { getLegal } from "@/lib/legal";
+import { legalEn } from "@/i18n/en/legal";
 import { assets } from "@/lib/assets";
 
 const { products: productImages } = assets.images;
@@ -72,6 +74,7 @@ function buildEnglishContent() {
     markets: marketsEn,
     ads: adsEn,
     career: careerEn,
+    legal: legalEn,
     ui: uiEn,
   };
 }
@@ -89,6 +92,7 @@ export function getContent(locale: Locale) {
     markets: getMarkets(),
     ads: getAdsStrategy(),
     career: getCareer(),
+    legal: getLegal(),
     ui: getUi(),
   };
 }

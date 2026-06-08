@@ -19,6 +19,8 @@ export function PricingSection({
 }: PricingSectionProps) {
   const { content } = useI18n();
   const plans = content.constants.pricingPlans;
+  const { pricing } = content.ui;
+  const visiblePlans = preview ? plans.slice(0, 3) : plans;
 
   return (
     <section className={cn("relative", preview ? "py-20 lg:py-24" : "section-spacing")}>
@@ -26,30 +28,19 @@ export function PricingSection({
       <div className="site-container relative">
         {showHeader && (
           <SectionHeader
-            badge="Harga"
-            title={preview ? "Paket Berlangganan" : "Paket Subscription Fleksibel"}
-            description={
-              preview
-                ? "Mulai dari paket Starter hingga Enterprise. Detail perbandingan di halaman Harga."
-                : "Pilih paket yang sesuai kebutuhan — upgrade atau downgrade kapan saja tanpa komitmen jangka panjang."
-            }
+            badge={pricing.badge}
+            title={preview ? pricing.previewTitle : pricing.fullTitle}
+            description={preview ? pricing.previewDesc : pricing.fullDesc}
           />
         )}
 
-        <div className="grid gap-8 lg:grid-cols-3">
-          {plans.map((plan, i) => (
-            <AnimateIn key={plan.name} delay={i * 120} variant="scale">
-              <div
-                className={cn(
-                  "relative flex h-full flex-col rounded-2xl border p-8 transition-all",
-                  plan.highlighted
-                    ? "glass-card border-indigo-300 bg-gradient-to-b from-indigo-50 to-white shadow-lg shadow-indigo-200/40"
-                    : "glass-card hover:border-zinc-200"
-                )}
-              >
-                {plan.highlighted && (
-                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full btn-primary-glow px-4 py-1 text-[10px] font-bold tracking-wider text-white uppercase">
-                    Paling Populer
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {visiblePlans.map((plan, i) => (
+            <AnimateIn key={plan.name} delay={i * 80} variant="scale">
+              <div className="glass-card relative flex h-full flex-col rounded-2xl border p-6 transition-all hover:border-zinc-200 sm:p-8">
+                {"comingSoon" in plan && plan.comingSoon && (
+                  <span className="absolute -top-3 right-4 rounded-full border border-amber-200 bg-amber-50 px-3 py-1 text-[10px] font-bold tracking-wider text-amber-800 uppercase">
+                    {pricing.comingSoon}
                   </span>
                 )}
                 <div className="mb-6">
@@ -61,18 +52,14 @@ export function PricingSection({
                   <span className="text-zinc-500">{plan.period}</span>
                 </div>
                 <ul className="mb-8 flex-1 space-y-3">
-                  {(preview ? plan.features.slice(0, 4) : plan.features).map((feature) => (
+                  {(preview ? plan.features.slice(0, 3) : plan.features).map((feature) => (
                     <li key={feature} className="flex items-center gap-3 text-sm text-zinc-600">
                       <Check className="h-4 w-4 shrink-0 text-indigo-400" />
                       {feature}
                     </li>
                   ))}
                 </ul>
-                <Button
-                  href="/contact"
-                  variant={plan.highlighted ? "primary" : "outline"}
-                  className="w-full"
-                >
+                <Button href="/contact" variant="outline" className="w-full">
                   {plan.cta}
                 </Button>
               </div>
@@ -82,10 +69,8 @@ export function PricingSection({
 
         {preview && (
           <>
-            <p className="mt-8 text-center text-sm text-zinc-600">
-              Paket Starter & Enterprise tersedia — lihat perbandingan lengkap.
-            </p>
-            <SectionFooterLink href="/pricing" label="Lihat semua paket" />
+            <p className="mt-8 text-center text-sm text-zinc-600">{pricing.previewNote}</p>
+            <SectionFooterLink href="/pricing" label={pricing.allPlans} />
           </>
         )}
       </div>

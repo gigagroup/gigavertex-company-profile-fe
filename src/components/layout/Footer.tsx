@@ -109,14 +109,27 @@ export function Footer() {
 
         <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-zinc-200 pt-8 sm:flex-row">
           <p className="text-sm text-zinc-500">
-            &copy; {new Date().getFullYear()} {company.name}. {ui.common.allRightsReserved}
+            &copy; {company.founded}—{new Date().getFullYear()} {company.name}.{" "}
+            {ui.common.allRightsReserved}
           </p>
-          <div className="flex gap-8">
-            <LocalizedLink href="#" className="text-sm text-zinc-500 transition-colors hover:text-zinc-700">
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
+            <LocalizedLink
+              href="/legal/terms-of-service"
+              className="text-sm text-zinc-500 transition-colors hover:text-zinc-800"
+            >
+              {ui.common.termsOfService}
+            </LocalizedLink>
+            <LocalizedLink
+              href="/legal/privacy-policy"
+              className="text-sm text-zinc-500 transition-colors hover:text-zinc-800"
+            >
               {ui.common.privacyPolicy}
             </LocalizedLink>
-            <LocalizedLink href="#" className="text-sm text-zinc-500 transition-colors hover:text-zinc-700">
-              {ui.common.termsOfService}
+            <LocalizedLink
+              href="/legal/refund-policy"
+              className="text-sm text-zinc-500 transition-colors hover:text-zinc-800"
+            >
+              {ui.common.refundPolicy}
             </LocalizedLink>
           </div>
         </div>
